@@ -108,7 +108,14 @@ fn is_installer_entry(app: &SuiteApp, display_name: &str, publisher: &str) -> bo
 /// and in each folder `<stem>.exe` for each stem, current first. Doesn't touch the disk.
 #[cfg_attr(not(windows), allow(dead_code))]
 fn exe_candidates(app: &SuiteApp, location: Option<&Path>, program_files: &[PathBuf]) -> Vec<PathBuf> {
-    let in_program_files = program_files.iter().flat_map(|root| app.names().map(move |n| root.join(n)));
+    // The package's folder is the ASCII name (`Lamina`), which differs from the display name (`Lámina`).
+    let folder_names: Vec<&str> = app.names().chain(std::iter::once(app.mac_bundle_name())).fold(Vec::new(), |mut all, n| {
+        if !all.contains(&n) {
+            all.push(n);
+        }
+        all
+    });
+    let in_program_files = program_files.iter().flat_map(|root| folder_names.iter().map(move |n| root.join(n)));
     let dirs = location.map(Path::to_path_buf).into_iter().chain(in_program_files);
     dirs.flat_map(|d| app.stems().map(move |s| d.join(format!("{s}.exe")))).collect()
 }
@@ -1130,7 +1137,13 @@ mod tests {
             assert!(!is_installer_entry(a, a.name, "Some Other Publisher"), "{}", a.name);
             assert!(!is_installer_entry(a, &a.name.to_lowercase(), publisher), "{}", a.name);
             let exe = format!("{}.exe", a.id);
-            let in_program_files: Vec<PathBuf> = roots.iter().map(|r| r.join(a.name).join(&exe)).collect();
+            // The display name first, then the package's ASCII folder when it differs (`Lámina`, `Lamina`).
+            let mut folders = vec![a.name];
+            if a.mac_bundle_name() != a.name {
+                folders.push(a.mac_bundle_name());
+            }
+            let in_program_files: Vec<PathBuf> =
+                roots.iter().flat_map(|r| folders.iter().map(|f| r.join(f).join(&exe)).collect::<Vec<_>>()).collect();
             assert_eq!(exe_candidates(a, None, &roots), in_program_files);
             let with_location: Vec<PathBuf> = std::iter::once(location.join(&exe)).chain(in_program_files).collect();
             assert_eq!(exe_candidates(a, Some(&location), &roots), with_location);
