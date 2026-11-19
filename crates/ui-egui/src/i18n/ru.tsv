@@ -1,0 +1,488 @@
+# Russian (ru) catalog for Nodalia Launcher.
+# Format: context<TAB>source<TAB>translation
+# Empty context = plain UI string (tl!, t).
+# @id = command-id keyed (tr_id).
+# @plural = plural forms: one|other (English) or one|few|many (Russian).
+# @msg = status/error message template (message, msg).
+# Other context = disambiguation for tr_ctx.
+#
+# Clean-room: written from the meaning of Nodalia Launcher's English labels in neutral,
+# international Russian, using terms Russian-speaking users of creative software know.
+#
+# Coverage: the whole interface — every menu string and tl! literal (complete_menus = true).
+# Left in English on purpose: product name "Nodalia Launcher" (and its "Launcher" tag), suite name "Nodalia apps",
+# app names (Letra, Celdas, Lámina, Papel, Buzón, Hito, Ágora, Lienzo, Pluma, Pliego, Luz, Toma, Pulso, Ánima, Trama, Forja, Torno, Vortia, Vinilo, Brújula), "GitHub", "Website".
+# Shortcut keys keep their key-cap names (Shift, Alt, Ctrl, Cmd, Esc).
+# Trailing "…" (U+2026) must be preserved. Placeholders {name}, {n}, {version}, {count}, {v},
+# {what}, {unit}, {real}, {e} must appear in translation.
+
+	Launcher	Launcher
+	Settings	Настройки
+	Check for updates	Проверить обновления
+	Grid	Сетка
+	Table	Таблица
+	Show apps as cards	Показывать приложения карточками
+	Show apps as a table	Показывать приложения таблицей
+	All	Все
+	Updates	Обновления
+	Not installed	Не установлены
+	Search apps	Поиск приложений
+	Sort	Сортировка
+	Suite order	По классу приложений
+	Name	Имя
+	Status	Статус
+	Installed version	Установленная версия
+	Latest version	Последняя версия
+	Newest release	Новый релиз
+	GitHub	GitHub
+	Website	Веб-сайт
+	Classic apps	Классические приложения
+	New apps	Новые приложения
+	NEW	НОВОЕ
+	Install	Установить
+	Update to {v}	Обновить до {v}
+	Open	Открыть
+	Open {version}	Открыть {version}
+	Open {installed} without updating. {latest} stays available.	Открыть {installed} без обновления. Версия {latest} останется доступной.
+	{latest} is out, but Nodalia Launcher can't install it over this copy.	Вышла версия {latest}, но Nodalia Launcher не может установить её поверх этой копии.
+	Nodalia Launcher can't install version {version} over this copy.	Nodalia Launcher не может установить версию {version} поверх этой копии.
+	Download for {os}	Скачать для {os}
+	Download	Скачать
+	Coming soon	Скоро
+	Checking…	Проверка…
+	Not available	Недоступно
+	Offline	Офлайн
+	Downloading {done} of {total}	Скачивание {done} из {total}
+	Downloading…	Скачивание…
+	Reconnecting…	Переподключение…
+	Verifying…	Проверка целостности…
+	Installing, then restarting…	Установка, затем перезапуск…
+	Installing…	Установка…
+	Removing…	Удаление…
+	Pause download	Приостановить скачивание
+	Cancel download	Отменить скачивание
+	Resume download	Продолжить скачивание
+	Discard download	Удалить скачанное
+	Release notes	Заметки к релизу
+	Show in Finder	Показать в Finder
+	Show in Explorer	Показать в Проводнике
+	Show in Files	Показать в файловом менеджере
+	Reinstall	Переустановить
+	Add desktop shortcut	Добавить ярлык на рабочий стол
+	Uninstall…	Удалить…
+	Launch options…	Параметры запуска…
+	{name} launch options	Параметры запуска {name}
+	Flags added each time the app is opened	Флаги, добавляемые при каждом открытии приложения
+	Separate flags with spaces. Quote a value that has spaces in it.	Разделяйте флаги пробелами. Значение с пробелами заключите в кавычки.
+	A quote isn't closed.	Кавычка не закрыта.
+	{name} wasn't opened: a quote in its launch options isn't closed.	{name} не открыто: в параметрах запуска не закрыта кавычка.
+	Save	Сохранить
+	All releases	Все релизы
+	Nodalia Launcher {version} is available.	Доступен Nodalia Launcher {version}.
+	Dismiss	Закрыть
+	Update and restart	Обновить и перезапустить
+	A new version is available. Would you like to relaunch with the updated version?	Доступна новая версия. Перезапустить с обновленной версией?
+	A new version is available. Download it to replace this version?	Доступна новая версия. Скачать её, чтобы заменить эту версию?
+	Later	Позже
+	What's new	Что нового
+	No notes were published with this release.	Заметки к этому релизу не публиковались.
+	Released {date}	Релиз {date}
+	Open on GitHub	Открыть на GitHub
+	Close	Закрыть
+	Nodalia Launcher {version}	Nodalia Launcher {version}
+	Only when I ask	Только по запросу
+	Automatically download and install updates	Автоматически скачивать и устанавливать обновления
+	Ask for permission once when updating all apps	Запрашивать разрешение один раз при обновлении всех приложений
+	Notify me when an installed app has an update	Уведомлять, когда у установленного приложения есть обновление
+	Include pre-releases (betas and release candidates)	Включать предварительные релизы (бета и RC)
+	Installing on Linux	Установка в Linux
+	Installing on Windows	Установка в Windows
+	Install new apps as	Устанавливать новые приложения как
+	System package (recommended)	Системный пакет (рек.)
+	Updates always use the format an app was installed with.	Обновления всегда используют формат, с которым приложение было установлено.
+	Running in the background	Работа в фоне
+	Keep running in the tray when the window is closed	Оставаться в трее при закрытии окна
+	Hide Nodalia Launcher from the Dock while in the background	Скрывать Nodalia Launcher из Dock при работе в фоне
+	Nodalia Launcher is still running	Nodalia Launcher продолжает работать
+	It's in the tray: open it or quit it from the tray icon, or turn this off in the settings.	Он в трее: откройте или закройте его через значок в трее, либо отключите это в настройках.
+	Show the window on the current desktop	Показывать окно на текущем рабочем столе
+	Start Nodalia Launcher when I log in	Запускать Nodalia Launcher при входе в систему
+	Questions, ideas and news from the Nodalia team	Вопросы, идеи и новости от команды Nodalia
+	Appearance	Внешний вид
+	Quit Nodalia Launcher	Выйти из Nodalia Launcher
+	Done	Готово
+	Uninstall {name}?	Удалить {name}?
+	The app will be moved to the Trash. Your documents and settings stay.	Приложение будет перемещено в Корзину. Ваши документы и настройки сохранятся.
+	Windows will remove it like any installed program. Your documents and settings stay.	Windows удалит его как любую установленную программу. Ваши документы и настройки сохранятся.
+	Your system's package manager will remove it, and may ask for your password. Your documents and settings stay.	Ваш системный менеджер пакетов удалит его и может запросить пароль. Ваши документы и настройки сохранятся.
+	The app will be removed. Your documents and settings stay.	Приложение будет удалено. Ваши документы и настройки сохранятся.
+	Uninstall	Удалить
+	Cancel	Отмена
+	Checked {ago}	Проверено {ago}
+	just now	только что
+	yesterday	вчера
+	{month} {day}, {year}	{day} {month} {year}
+
+	Automatically	Автоматически
+	Apps on this computer	Приложения на этом компьютере
+	Installed apps with a newer version	Установленные приложения, у которых есть новая версия
+	Apps you can install	Приложения, которые можно установить
+	Pin to top	Закрепить сверху
+	Unpin	Открепить
+	Pinned	Закреплённые
+	Pin {name} to top	Закрепить {name} сверху
+	Unpin {name}	Открепить {name}
+	Reorder {name}	Изменить порядок: {name}
+	Move up	Выше
+	Move down	Ниже
+	Hide App	Скрыть приложение
+	Unhide App	Показать приложение
+	Hidden Apps	Скрытые приложения
+	Apps you hid	Приложения, которые вы скрыли
+	{a} and {b}	{a} и {b}
+	Learn more	Подробнее
+	Minimize	Свернуть
+	Maximize	Развернуть
+	Restore	Восстановить
+	New	Новое
+	OK	ОК
+	Open link	Открыть ссылку
+	Update	Обновить
+	{name} icon	Значок {name}
+	Loading Nodalia Launcher…	Загрузка Nodalia Launcher…
+	Cancel update	Отменить обновление
+	Stop waiting; the update can be started again later	Не ждать; обновление можно будет запустить позже
+	Download again	Скачать заново
+	Install cancelled	Установка отменена
+	Install cancelled. The download is kept for the next try.	Установка отменена. Скачанный файл сохранён для следующей попытки.
+	Update cancelled	Обновление отменено
+	Uninstall cancelled	Удаление отменено
+	Retry install	Повторить установку
+	Retry update	Повторить обновление
+	Retry update to {version}	Повторить обновление до {version}
+	The download is still here. It's checked again, then installed.	Скачанный файл сохранён. Он будет проверен ещё раз, затем установлен.
+	Waiting for another app…	Ожидание другого приложения…
+	Waiting for another download…	Ожидание другой загрузки…
+	Simultaneous downloads	Одновременные загрузки
+	No limit	Без ограничений
+	Downloads running together share your connection, so each one is slower.	Одновременные загрузки делят ваше подключение, поэтому каждая идёт медленнее.
+	Waiting for other installs…	Ожидание других установок…
+
+# Package formats offered for download (PackageKind::label)
+	Installer (.msi)	Установщик (.msi)
+	Portable (.zip)	Портативная версия (.zip)
+	Disk image (.dmg)	Образ диска (.dmg)
+	Debian package (.deb)	Пакет Debian (.deb)
+	RPM package (.rpm)	Пакет RPM (.rpm)
+	Arch package (.pkg.tar.zst)	Пакет Arch (.pkg.tar.zst)
+	Flatpak bundle	Пакет Flatpak
+	Tarball (.tar.gz)	Архив (.tar.gz)
+
+# Contextual: each app's tagline, keyed by app id
+
+# Contextual: month abbreviations for date rendering
+month	Jan	янв.
+month	Feb	февр.
+month	Mar	март
+month	Apr	апр.
+month	May	май
+month	Jun	июнь
+month	Jul	июль
+month	Aug	авг.
+month	Sep	сент.
+month	Oct	окт.
+month	Nov	нояб.
+month	Dec	дек.
+	Not checked yet	Ещё не проверялось
+	GitHub's hourly limit was reached; full details return in {min} min	Достигнут часовой лимит GitHub; полные детали вернутся через {min} мин
+	GitHub limit hit; back in {min} min	Лимит GitHub исчерпан; вернётся через {min} мин
+	Installing for {platform}	Установка для {platform}
+	Downloads for {platform}	Скачивание для {platform}
+	No downloads for this system	Нет загрузок для этой системы
+	Nodalia on {name}	Nodalia в {name}
+	Couldn't open {name}: {e}	Не удалось открыть {name}: {e}
+	Download cancelled	Скачивание отменено
+	Available to install	Доступно для установки
+	Available	Доступно
+	Installed · up to date	Установлено · актуально
+	Update available	Доступно обновление
+	Installed	Установлено
+	installed	установлено
+	Not available here	Недоступно здесь
+	Updating…	Обновление…
+	Update paused	Обновление приостановлено
+	Download paused	Скачивание приостановлено
+	{version} installed → {latest} released	{version} установлено → {latest} выпущено
+	Version {version}	Версия {version}
+	{installed} installed · latest {latest}	{installed} установлено · последняя {latest}
+	Installed · latest {latest}	Установлено · последняя {latest}
+	Version {version} installed	Версия {version} установлена
+	Version {latest}	Версия {latest}
+	No release published yet	Релиз ещё не опубликован
+	Nodalia Launcher	Nodalia Launcher
+	App	Приложение
+	Latest	Последняя
+	Released	Релиз
+	Auto	Авто
+	Language	Язык
+	Ascending	По возрастанию
+	Descending	По убыванию
+	Click to reverse the order	Нажмите, чтобы изменить порядок
+	Click to sort by this column	Нажмите, чтобы сортировать по этому столбцу
+	{done} of {total}	{done} из {total}
+	Downloading	Скачивание
+	Verifying checksum…	Проверка контрольной суммы…
+	Resume	Продолжить
+	{done} of {total} downloaded	{done} из {total} скачано
+	{done} downloaded	Скачано {done}
+	Checking for updates…	Проверка обновлений…
+	Downloads the new version, replaces this one and opens it again	Скачивает новую версию, заменяет текущую и открывает её заново
+	Couldn't check for updates: {f}	Не удалось проверить обновления: {f}
+	GitHub repository	Репозиторий GitHub
+	Nodalia	Nodalia
+	Update 1 app	Обновить 1 приложение
+	Update all ({count})	Обновить все ({count})
+	⊞  Grid	⊞  Сетка
+	☰  Table	☰  Таблица
+	🔍  Search apps	🔍  Поиск приложений
+	{name} {version}	{name} {version}
+	Match system	Как в системе
+	Dark	Тёмная
+	Light	Светлая
+	Full changelog	Полный список изменений
+	link	ссылка
+	No apps match	Нет подходящих приложений
+	Open Nodalia Launcher to update.	Откройте Nodalia Launcher, чтобы обновить.
+	{name} {v} is available	Доступно обновление {name} {v}
+	{count} updates are available	Доступны обновления ({count})
+	These notes weren't fetched (GitHub's request limit was reached). They're on the release page.	Заметки не были загружены (достигнут лимит запросов GitHub). Они есть на странице релиза.
+	When on, opening the launcher from the menu bar brings its window to the desktop you're on. When off, macOS switches you to the desktop the window was on.	Когда включено, открытие лаунчера из строки меню переносит его окно на текущий рабочий стол. Когда выключено, macOS переключает вас на рабочий стол, где находилось окно.
+	Couldn't change the login item: {e}	Не удалось изменить пункт автозагрузки: {e}
+
+# Contextual: table column headers
+column	App	Приложение
+column	Installed	Текущая
+column	Latest	Последняя
+column	Released	Дата релиза
+
+# Contextual: the filter tab names a group (the status pill says "Installed")
+filter	Installed	Установлены
+	{name} details	{name}: подробности
+
+# Plural forms for Russian (one|few|many)
+@plural	{n} app|{n} apps	{n} приложение|{n} приложения|{n} приложений
+@plural	{n} min ago|{n} min ago	{n} минуту назад|{n} минуты назад|{n} минут назад
+@plural	{n} h ago|{n} h ago	{n} час назад|{n} часа назад|{n} часов назад
+@plural	{n} day ago|{n} days ago	{n} день назад|{n} дня назад|{n} дней назад
+
+# Message templates (@msg): toasts from the backend. {placeholders} match any text.
+@msg	Couldn't open {name}: {e}	Не удалось открыть {name}: {e}
+@msg	Nodalia Launcher couldn't start its window on {backend}: {e}	Не удалось открыть окно Nodalia Launcher на {backend}: {e}
+@msg	Download cancelled	Скачивание отменено
+@msg	{name} updated to {version}	Приложение {name} обновлено до {version}
+@msg	{name} installed: {version}	Приложение {name} установлено: {version}
+@msg	{name} updated to {version} (this release publishes no checksum, so only its size was checked)	Приложение {name} обновлено до {version} (в этом релизе нет контрольных сумм, поэтому проверен только размер)
+@msg	{name} installed: {version} (this release publishes no checksum, so only its size was checked)	Приложение {name} установлено: {version} (в этом релизе нет контрольных сумм, поэтому проверен только размер)
+@msg	{name} was removed	Приложение {name} удалено
+@msg	{name} is running. Quit it, then try again.	Приложение {name} запущено. Закройте его и попробуйте снова.
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with {cmd} or sudo pacman -Syu	Приложение {name} установлено из репозитория {repo} или из AUR ({pkg}). Обновите его командой {cmd} или sudo pacman -Syu
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg}) or sudo pacman -Syu	Приложение {name} установлено из репозитория {repo} или из AUR ({pkg}). Обновите его с помощью вашего помощника AUR (например: yay -S {pkg}) или командой sudo pacman -Syu
+@msg	{name} was installed from the AUR ({pkg}). Update it with {cmd}	Приложение {name} установлено из AUR ({pkg}). Обновите его командой {cmd}
+@msg	{name} was installed from the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg})	Приложение {name} установлено из AUR ({pkg}). Обновите его с помощью вашего помощника AUR (например: yay -S {pkg})
+
+# Command IDs for menu items (@id)
+# Format: @id<TAB>command_id<TAB>translation
+@id	app.install	Установить
+@id	app.update	Обновить до {v}
+@id	app.open	Открыть
+@id	app.download	Скачать для {os}
+@id	app.reveal	Показать в Finder
+@id	app.reinstall	Переустановить
+@id	app.uninstall	Удалить…
+@id	app.notes	Заметки к релизу
+@id	app.website	Веб-сайт
+@id	app.github	Репозиторий на GitHub
+@id	app.releases	Все релизы
+@id	launcher.update	Обновить и перезапустить
+@id	launcher.download	Скачать
+@id	launcher.notes	Что нового
+@id	launcher.dismiss	Закрыть
+@id	settings.open	Настройки
+@id	settings.quit	Выйти из Nodalia Launcher
+@id	view.grid	Сетка
+@id	view.table	Таблица
+@id	filter.all	Все
+@id	filter.installed	Установленные
+@id	filter.updates	Обновления
+@id	filter.notinstalled	Не установленные
+@id	sort.suite	По классу приложений
+@id	sort.name	Имя
+@id	sort.status	Статус
+@id	sort.installed	Установленная версия
+@id	sort.latest	Последняя версия
+@id	sort.released	Новый релиз
+@id	help.github	GitHub
+@id	help.website	Веб-сайт
+@id	update.check	Проверить обновления
+@id	update.check_auto	Проверять обновления автоматически
+@id	update.notify	Уведомлять, когда у установленного приложения есть обновление
+@id	update.prereleases	Включать предварительные релизы (бета и RC)
+@id	linux.preferred_kind	Устанавливать новые приложения как
+@id	tray.close_to_tray	Оставаться в трее при закрытии окна
+@id	tray.show_on_current_desktop	Показывать окно на текущем рабочем столе
+@id	tray.login_item	Запускать Nodalia Launcher при входе в систему
+@id	appearance.theme	Внешний вид
+
+# Tray (menu bar) menu and tooltip
+	Show Nodalia Launcher	Показать Nodalia Launcher
+	Check for Updates	Проверить обновления
+	Visit getnodalia.com	Открыть getnodalia.com
+	Nodalia on GitHub	Nodalia на GitHub
+	App details	О приложении
+	More actions for {name}	Другие действия для {name}
+	Close (Esc)	Закрыть (Esc)
+	Features	Возможности
+	Latest release	Последний релиз
+	Version	Версия
+	Platforms	Платформы
+	Releases	Релизы
+	Enlarge picture	Увеличить изображение
+	Click to enlarge	Нажмите, чтобы увеличить
+	Previous picture (←)	Предыдущее изображение (←)
+	Next picture (→)	Следующее изображение (→)
+	Loading pictures…	Загрузка изображений…
+	Pictures couldn't be loaded. Reopen this page to try again.	Не удалось загрузить изображения. Откройте страницу снова, чтобы повторить попытку.
+@plural	Nodalia Launcher · {n} update available|Nodalia Launcher · {n} updates available	Nodalia Launcher · {n} обновление|Nodalia Launcher · {n} обновления|Nodalia Launcher · {n} обновлений
+
+	Download size: {size}	Размер загрузки: {size}
+	Install folder	Папка установки
+	Default install folder	Папка установки по умолчанию
+	System default	По умолчанию в системе
+	Browse…	Обзор…
+	Use default	Использовать по умолчанию
+	New installs use this folder. Updates stay in their current location.	Новые приложения устанавливаются в эту папку. При обновлении текущее расположение сохраняется.
+	Custom folders use AppImage on Linux.	В Linux для установки в выбранную папку используется AppImage.
+	On Linux, custom folders use AppImage format.	В Linux для установки в выбранную папку используется AppImage.
+	The system manages install locations here.	В этой среде расположением приложений управляет система.
+@msg	couldn't use install folder {path}: {reason}	не удалось использовать папку установки {path}: {reason}
+@msg	this release has no AppImage for a custom install folder	в этом выпуске нет AppImage для установки в выбранную папку
+@msg	custom install folders aren't supported on this system	в этой системе выбор папки установки не поддерживается
+@msg	{path} already exists and wasn't installed by Nodalia Launcher	{path} уже существует и не был установлен через Nodalia Launcher
+@msg	couldn't move {path} to Trash ({reason}). Remove it in Finder instead.	не удалось переместить {path} в Корзину ({reason}). Удалите его через Finder.
+@msg	Desktop shortcut created for {name}	Ярлык на рабочем столе создан для {name}
+@msg	Couldn't create the desktop shortcut: {e}	Не удалось создать ярлык на рабочем столе: {e}
+@msg	A desktop shortcut named {name} already exists	Ярлык на рабочем столе с именем {name} уже существует
+	Apps are placed inside this folder.	Приложения размещаются внутри этой папки.
+	Replace what's there?	Заменить существующее?
+	{path} already exists. Installing {name} will overwrite it.	{path} уже существует. Установка {name} перезапишет его.
+	Replace	Заменить
+	Recently updated	Недавно обновлённые
+	Name (A–Z)	Имя (А–Я)
+	Name (Z–A)	Имя (Я–А)
+	Frequently used	Часто используемые
+	Next app	Следующее приложение
+	Previous app	Предыдущее приложение
+	Show {n} more changes	Показать ещё изменений: {n}
+	Last updated: {date}	Последнее обновление: {date}
+column	Version	Версия
+column	Author	Автор
+	Choose version	Выбрать версию
+	latest {version}	последняя {version}
+	{version} (latest release)	{version} (последний релиз)
+	Launcher version	Версия лаунчера
+	Nightly	Ночная сборка
+	Nightly (none published yet)	Ночная сборка (пока нет)
+	Install version {version}	Установить версию {version}
+	Download selected version	Скачать выбранную версию
+	Older launcher versions require a manual reinstall.	Для возврата к старой версии лаунчера нужна переустановка вручную.
+	Your files may not open in older versions.	В старой версии ваши файлы могут не открыться.
+	Enable automatic installs in Settings to follow new nightly builds.	Чтобы получать новые ночные сборки, включите автоматическую установку в настройках.
+	Migrate Flatpak bundles to Nodalia OCI (experimental)	Переводить пакеты Flatpak на Nodalia OCI (экспериментально)
+	On update, switch first party apps when the matching package is available. Otherwise, keep using bundles.	При обновлении переводить приложения Nodalia на репозиторий, если доступен соответствующий пакет. Иначе продолжать использовать отдельные пакеты.
+	Version pinned to {version}. Click to unlock.	Версия закреплена на {version}. Нажмите, чтобы разблокировать.
+	Unlock version?	Разблокировать версию?
+	{app} is pinned to {version}. Follow the latest release instead?	Для {app} закреплена версия {version}. Перейти на последнюю версию?
+	Unlock	Разблокировать
+
+	Apps agents can reach: {count}	Приложения, доступные агентам: {count}
+	Added	Добавлено
+	Remove	Удалить
+	Add	Добавить
+
+# Nodalia Launcher: the Nodalia apps (context = app id) and the launcher chrome.
+	About Nodalia Launcher	О Nodalia Launcher
+	Close this window	Закрыть это окно
+	Community	Сообщество
+	Install, update and open the Nodalia apps from one place.	Устанавливайте, обновляйте и открывайте приложения Nodalia в одном месте.
+	Keyboard shortcuts	Сочетания клавиш
+	Main menu	Главное меню
+	Nodalia apps	Nodalia apps
+	Office · Creator · Engineering	Office · Creator · Engineering
+	Report an issue	Сообщить о проблеме
+	Support	Поддержать
+	Support Nodalia	Поддержать Nodalia
+	Use the desktop's own window controls	Использовать собственные кнопки окна рабочего стола
+	Zoom in the release notes	Увеличить примечания к выпуску
+	Zoom out the release notes	Уменьшить примечания к выпуску
+suite	Everyday	Повседневные
+column	Suite	Набор
+letra	Writing and document design	Тексты и оформление документов
+letra	The word processor that stays out of your way.	Текстовый редактор, который не мешает.
+letra	Letters, reports and books in a fast native editor. It opens and saves DOCX and keeps your layout intact.	Письма, отчёты и книги в быстром нативном редакторе. Открывает и сохраняет DOCX и сохраняет вашу вёрстку без изменений.
+celdas	Spreadsheets and data	Электронные таблицы и данные
+celdas	Spreadsheets that open instantly.	Таблицы, которые открываются мгновенно.
+celdas	Formulas, charts and large tables in a native app, with XLSX files that round-trip.	Формулы, диаграммы и большие таблицы в нативном приложении, с файлами XLSX, которые без потерь открываются и сохраняются.
+lamina	Presentations and slide shows	Презентации и слайд-шоу
+lamina	Slides without the weight.	Презентации без лишнего веса.
+lamina	Build and present decks in a fast native app, and open and save PPTX files.	Создавайте и показывайте презентации в быстром нативном приложении, открывайте и сохраняйте файлы PPTX.
+papel	Reading, organizing and protecting PDFs	Чтение, упорядочивание и защита PDF
+papel	Read, organize and protect your PDFs.	Читайте, упорядочивайте и защищайте свои PDF.
+papel	View, annotate, fill, merge and sign PDF files, all on your own computer.	Просматривайте, комментируйте, заполняйте, объединяйте и подписывайте файлы PDF — всё на вашем компьютере.
+buzon	Mail, calendar and contacts	Почта, календарь и контакты
+buzon	Your mail, calendar and contacts in one place.	Ваша почта, календарь и контакты в одном месте.
+buzon	A native client for IMAP, POP3 and JMAP accounts, with mail rendered safely and your passwords kept in the system keyring.	Нативный клиент для учётных записей IMAP, POP3 и JMAP с безопасным отображением писем и паролями в системной связке ключей.
+hito	Tasks, milestones and progress	Задачи, вехи и прогресс
+hito	Tasks, milestones and progress for your team.	Задачи, вехи и прогресс для вашей команды.
+hito	Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption.	Планируйте проекты, отслеживайте задачи и смотрите прогресс на сервере, которым вы управляете сами, со сквозным шифрованием.
+agora	Team chat on your own server	Командный чат на вашем собственном сервере
+agora	Team chat on a server you run yourself.	Командный чат на сервере, которым вы управляете сами.
+agora	Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app.	Рабочие пространства, каналы, обсуждения и личные сообщения со сквозным шифрованием в нативном настольном приложении.
+lienzo	Image editing	Редактирование изображений
+lienzo	The image editor you already know how to use.	Графический редактор, которым вы уже умеете пользоваться.
+lienzo	Layers, masks, adjustment layers, layer styles, type and brushes in a native app, with PSD files that open and save.	Слои, маски, корректирующие слои, стили слоёв, текст и кисти в нативном приложении, с файлами PSD, которые открываются и сохраняются.
+pluma	Vector illustration	Векторная иллюстрация
+pluma	Vector illustration, drawn natively.	Векторная графика, нарисованная нативно.
+pluma	Paths, shapes, type and effects for logos and illustrations, with SVG and PDF in and out.	Контуры, фигуры, текст и эффекты для логотипов и иллюстраций, с импортом и экспортом SVG и PDF.
+pliego	Page layout and publishing	Вёрстка и издательское дело
+pliego	Page layout and publishing.	Верстка и публикация.
+pliego	Lay out magazines, books and posters with precise typography and print-ready PDF export.	Верстайте журналы, книги и плакаты с точной типографикой и экспортом в PDF, готовый к печати.
+luz	Photo library and raw development	Фотобиблиотека и проявка RAW
+luz	Your photo library and raw developer.	Ваша библиотека фото и проявка RAW.
+luz	Organize photos and develop raw files without ever touching the originals.	Упорядочивайте фото и проявляйте файлы RAW, никогда не трогая оригиналы.
+toma	Video editing, color and sound	Монтаж видео, цветокоррекция и звук
+toma	Video editing, color and sound.	Видеомонтаж, цвет и звук.
+toma	Cut, grade and mix video on a fast native timeline.	Монтируйте, цветокорректируйте и сводите видео на быстрой нативной монтажной линейке.
+pulso	Motion graphics and visual effects	Моушн-графика и визуальные эффекты
+pulso	Motion graphics and visual effects.	Моушн-графика и визуальные эффекты.
+pulso	Animate layers, shapes and text with keyframes, expressions and effects.	Анимируйте слои, фигуры и текст с помощью ключевых кадров, выражений и эффектов.
+anima	2D animation	2D-анимация
+anima	2D animation, frame by frame.	2D-анимация, кадр за кадром.
+anima	Draw, tween and animate on a timeline, then export to video, GIF or image sequences.	Рисуйте, создавайте твины и анимируйте на шкале времени, затем экспортируйте в видео, GIF или последовательности изображений.
+trama	Interface design and prototyping	Дизайн интерфейсов и прототипирование
+trama	Interface design and prototyping.	Проектирование интерфейсов и прототипирование.
+trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	Фреймы с автоматической компоновкой, компоненты, стили и кликабельные прототипы, с совместной работой в реальном времени.
+forja	Computer-aided design and drafting	Автоматизированное проектирование и черчение
+forja	Computer-aided design and drafting.	Автоматизированное проектирование и черчение.
+forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	Точное 2D-черчение и параметрическое рисование с файлами DXF и DWG.
+torno	Parametric 3D CAD	Параметрический 3D CAD
+torno	Parametric 3D CAD.	Параметрический 3D-CAD.
+torno	Sketch, constrain and extrude solid parts with a feature timeline and a kernel written in Rust.	Рисуйте эскизы, накладывайте ограничения и выдавливайте твёрдотельные детали с хронологией операций и ядром, написанным на Rust.
+vortia	Fluid simulation (CFD)	Моделирование течений (CFD)
+vortia	Fluid simulation, from geometry to results.	Моделирование течений: от геометрии до результатов.
+vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	Настраивайте, запускайте и анализируйте CFD-расчёты в одном настольном приложении с собственным решателем.
+vinilo	Apple Music, natively	Apple Music, нативно
+vinilo	Apple Music, drawn natively.	Apple Music, нарисованная нативно.
+vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	Быстрый нативный интерфейс Apple Music с непрерывным воспроизведением и управлением в медиапанели вашей системы.
+brujula	The Nodalix web browser	Веб-браузер Nodalix
+brujula	The browser of Nodalix.	Браузер Nodalix.
+brujula	A fast, private web browser that comes with Nodalix.	Быстрый и приватный веб-браузер, входящий в состав Nodalix.

@@ -1,0 +1,25 @@
+[package]
+name = "nodalia-launcher-core"
+description = "Nodalia Launcher core: the Nodalia apps catalog, versions, release parsing and asset choice (pure, wasm-safe)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+semver = { workspace = true }
+# Calendar conversion (jiff); see AGENTS.md. Only civil-date math is used, no time zone.
+jiff = { workspace = true }
+
+sha2 = "0.10"
+toml = { version = "=1.1.8", default-features = false, features = ["parse", "serde", "std"] }
+
+[build-dependencies]
+serde = { workspace = true }
+toml = { version = "=1.1.8", default-features = false, features = ["parse", "serde", "std"] }

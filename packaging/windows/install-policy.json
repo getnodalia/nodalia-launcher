@@ -1,0 +1,53 @@
+{
+  "id": "nodalia-launcher",
+  "name": "Nodalia Launcher",
+  "mode": "perUser",
+  "upgradeCode": "1AC08DBF-D4CF-4BA4-A81E-CAA5C1004974",
+  "sources": [
+    "nodalia-launcher.wxs"
+  ],
+  "icon": "assets/app-icon/nodalia-launcher.ico",
+  "localization": [
+    "nodalia-launcher.en-us.wxl"
+  ],
+  "extensions": [
+    "UI",
+    "Util"
+  ],
+  "payloads": [
+    "NOTICE",
+    "nodalia-launcher.exe"
+  ],
+  "registry": [
+    [
+      "1",
+      "Software\\Nodalia\\Nodalia Launcher",
+      "InstallDir",
+      "[INSTALLFOLDER]"
+    ],
+    [
+      "1",
+      "Software\\Nodalia\\Nodalia Launcher",
+      "DesktopShortcutChoice",
+      "[DESKTOPSHORTCUTCHOICE]"
+    ],
+    [
+      "1",
+      "Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\nodalia-launcher.exe",
+      "",
+      "[#NodaliaLauncherExe]"
+    ],
+    [
+      "1",
+      "Software\\Nodalia\\Nodalia Launcher",
+      "StartMenuShortcut",
+      "#1"
+    ],
+    [
+      "1",
+      "Software\\Nodalia\\Nodalia Launcher",
+      "DesktopShortcut",
+      "#1"
+    ]
+  ]
+}

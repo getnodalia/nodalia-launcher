@@ -1,0 +1,493 @@
+# Georgian (ka) catalog for Nodalia Launcher.
+# Format: context<TAB>source<TAB>translation
+# Empty context = plain UI string (tl!, t).
+# @id = command-id keyed (tr_id).
+# @plural = plural forms: one|other (English and Georgian).
+# @msg = status/error message template (message, msg).
+# Other context = disambiguation for tr_ctx.
+#
+# Clean-room: written from the meaning of Nodalia Launcher's English labels in neutral Georgian,
+# with the terms the other Craft apps use in Georgian. The user is addressed with the polite
+# plural (თქვენ), as in Georgian system software. Commands are verbal nouns (ინსტალაცია,
+# განახლება, გახსნა). Georgian has no letter case: no Mtavruli capitals, even where the English
+# uses capitals ("NEW").
+#
+# Coverage: the whole interface — every menu string and tl! literal (complete_menus = true).
+# Left in English on purpose: product name "Nodalia Launcher" (and its "Launcher" tag), suite name "Nodalia apps", app names (Letra, Celdas, Lámina, Papel, Buzón, Hito, Ágora, Lienzo, Pluma, Pliego, Luz, Toma, Pulso, Ánima, Trama, Forja, Torno, Vortia, Vinilo, Brújula), "GitHub",
+#. Georgian case endings attach to them with a hyphen (GitHub-ზე, ArtCraft-ის).
+# Shortcut keys keep their key-cap names (Shift, Alt, Ctrl, Cmd, Esc).
+# Trailing "…" (U+2026) must be preserved. Placeholders {name}, {n}, {version}, {count}, {v},
+# {what}, {unit}, {real}, {e} must appear in translation.
+# Georgian is drawn with the system's Georgian font (see cjk_font.rs); where the system has none,
+# the interface stays in English.
+
+	Launcher	Launcher
+	Settings	პარამეტრები
+	Check for updates	განახლებების შემოწმება
+	Grid	ბადე
+	Table	ცხრილი
+	Show apps as cards	აპლიკაციების ჩვენება ბარათებად
+	Show apps as a table	აპლიკაციების ჩვენება ცხრილად
+	All	ყველა
+	Updates	განახლებები
+	Not installed	არ არის დაინსტალირებული
+	Search apps	აპლიკაციების ძიება
+	Sort	სორტირება
+	Suite order	ნაკრების რიგით
+	Name	სახელი
+	Inspired by	შთაგონების წყარო
+	Status	სტატუსი
+	Installed version	დაინსტალირებული ვერსია
+	Latest version	უახლესი ვერსია
+	Newest release	უახლესი გამოშვება
+	GitHub	GitHub
+	Website	ვებსაიტი
+	Classic apps	კლასიკური აპლიკაციები
+	New apps	ახალი აპლიკაციები
+	NEW	ახალი
+	Install	ინსტალაცია
+	Update to {v}	განახლება ვერსიამდე {v}
+	Open	გახსნა
+	Open {version}	{version} ვერსიის გახსნა
+	Open {installed} without updating. {latest} stays available.	{installed} ვერსიის გახსნა განახლების გარეშე. {latest} ვერსია ხელმისაწვდომი რჩება.
+	{latest} is out, but Nodalia Launcher can't install it over this copy.	{latest} უკვე გამოვიდა, მაგრამ Nodalia Launcher ვერ დააინსტალირებს მას ამ ასლის ნაცვლად.
+	Nodalia Launcher can't install version {version} over this copy.	Nodalia Launcher ვერ დააინსტალირებს {version} ვერსიას ამ ასლის ნაცვლად.
+	Download for {os}	ჩამოტვირთვა {os}-ისთვის
+	Download	ჩამოტვირთვა
+	Coming soon	მალე
+	Checking…	მოწმდება…
+	Not available	მიუწვდომელია
+	Offline	ოფლაინ
+	Downloading {done} of {total}	ჩამოიტვირთება: {done} / {total}
+	Downloading…	ჩამოიტვირთება…
+	Reconnecting…	კავშირის აღდგენა…
+	Verifying…	გადამოწმება…
+	Installing, then restarting…	ინსტალაცია, შემდეგ გადატვირთვა…
+	Installing…	ინსტალაცია…
+	Removing…	იშლება…
+	Pause download	ჩამოტვირთვის შეჩერება
+	Cancel download	ჩამოტვირთვის გაუქმება
+	Resume download	ჩამოტვირთვის გაგრძელება
+	Discard download	ჩამოტვირთულის მოშორება
+	Release notes	გამოშვების შენიშვნები
+	Show in Finder	Finder-ში ჩვენება
+	Show in Explorer	Explorer-ში ჩვენება
+	Show in Files	Files-ში ჩვენება
+	Reinstall	ხელახლა ინსტალაცია
+	Add desktop shortcut	სამუშაო მაგიდის მალსახმობის დამატება
+	Uninstall…	დეინსტალაცია…
+	All releases	ყველა გამოშვება
+	Nodalia Launcher {version} is available.	ხელმისაწვდომია Nodalia Launcher {version}.
+	Dismiss	უგულებელყოფა
+	Update and restart	განახლება და გადატვირთვა
+	A new version is available. Would you like to relaunch with the updated version?	ხელმისაწვდომია ახალი ვერსია. გსურთ განახლებული ვერსიით ხელახლა გაშვება?
+	A new version is available. Download it to replace this version?	ხელმისაწვდომია ახალი ვერსია. ჩამოვტვირთოთ და ჩავანაცვლოთ ეს ვერსია?
+	Later	მოგვიანებით
+	What's new	რა არის ახალი
+	No notes were published with this release.	ამ გამოშვებას შენიშვნები არ ახლავს.
+	Released {date}	გამოშვების თარიღი: {date}
+	Open on GitHub	GitHub-ზე გახსნა
+	Close	დახურვა
+	Nodalia Launcher {version}	Nodalia Launcher {version}
+	Only when I ask	მხოლოდ მოთხოვნისას
+	Automatically download and install updates	განახლებების ავტომატური ჩამოტვირთვა და ინსტალაცია
+	Ask for permission once when updating all apps	ყველა აპლიკაციის განახლებისას ნებართვის მოთხოვნა მხოლოდ ერთხელ
+	Notify me when an installed app has an update	შეტყობინება, როცა დაინსტალირებულ აპლიკაციას განახლება აქვს
+	Include pre-releases (betas and release candidates)	წინასწარი ვერსიების ჩართვა (ბეტა-ვერსიები და გამოშვების კანდიდატები)
+	Installing on Linux	ინსტალაცია Linux-ზე
+	Installing on Windows	ინსტალაცია Windows-ზე
+	Install new apps as	ახალი აპლიკაციების ინსტალაციის ფორმატი
+	System package (recommended)	სისტემის პაკეტი (რეკომენდებული)
+	Updates always use the format an app was installed with.	განახლება ყოველთვის იმ ფორმატს იყენებს, რომლითაც აპლიკაცია დაინსტალირდა.
+	Running in the background	ფონურ რეჟიმში მუშაობა
+	Keep running in the tray when the window is closed	ფანჯრის დახურვის შემდეგ მუშაობის გაგრძელება შეტყობინებების არეში
+	Hide Nodalia Launcher from the Dock while in the background	ფონურ რეჟიმში Nodalia Launcher-ის Dock-იდან დამალვა
+	Nodalia Launcher is still running	Nodalia Launcher კვლავ მუშაობს
+	It's in the tray: open it or quit it from the tray icon, or turn this off in the settings.	ის შეტყობინებების არეშია: გახსენით ან დახურეთ მისი ხატულით, ან გამორთეთ ეს ფუნქცია პარამეტრებში.
+	Show the window on the current desktop	ფანჯრის ჩვენება მიმდინარე სამუშაო მაგიდაზე
+	Start Nodalia Launcher when I log in	Nodalia Launcher-ის გაშვება სისტემაში შესვლისას
+	Questions, ideas and news from the Nodalia team	კითხვები, იდეები და სიახლეები Nodalia-ის გუნდისგან
+	Appearance	იერსახე
+	Quit Nodalia Launcher	Nodalia Launcher-იდან გასვლა
+	Done	მზადაა
+	Uninstall {name}?	{name}-ის დეინსტალაცია?
+	The app will be moved to the Trash. Your documents and settings stay.	აპლიკაცია ნაგავში გადავა. თქვენი დოკუმენტები და პარამეტრები შენარჩუნდება.
+	Windows will remove it like any installed program. Your documents and settings stay.	Windows მას ისე წაშლის, როგორც ნებისმიერ დაინსტალირებულ პროგრამას. თქვენი დოკუმენტები და პარამეტრები შენარჩუნდება.
+	Your system's package manager will remove it, and may ask for your password. Your documents and settings stay.	მას თქვენი სისტემის პაკეტების მენეჯერი წაშლის და შეიძლება პაროლი მოგთხოვოთ. თქვენი დოკუმენტები და პარამეტრები შენარჩუნდება.
+	The app will be removed. Your documents and settings stay.	აპლიკაცია წაიშლება. თქვენი დოკუმენტები და პარამეტრები შენარჩუნდება.
+	Uninstall	დეინსტალაცია
+	Cancel	გაუქმება
+	Save	შენახვა
+	Launch options…	გაშვების პარამეტრები…
+	{name} launch options	{name}-ის გაშვების პარამეტრები
+	Flags added each time the app is opened	ფლაგები, რომლებიც აპლიკაციის ყოველ გახსნისას ემატება
+	Separate flags with spaces. Quote a value that has spaces in it.	ფლაგები ჰარით გამოყავით. ჰარის შემცველი მნიშვნელობა ბრჭყალებში ჩასვით.
+	A quote isn't closed.	ბრჭყალი არ არის დახურული.
+	{name} wasn't opened: a quote in its launch options isn't closed.	{name} არ გაიხსნა: მისი გაშვების პარამეტრებში ბრჭყალი არ არის დახურული.
+	Checked {ago}	ბოლო შემოწმება: {ago}
+	just now	ახლახან
+	yesterday	გუშინ
+	{month} {day}, {year}	{day} {month}, {year}
+
+	Automatically	ავტომატურად
+	Apps on this computer	ამ კომპიუტერზე არსებული აპლიკაციები
+	Installed apps with a newer version	დაინსტალირებული აპლიკაციები, რომელთაც უფრო ახალი ვერსია აქვთ
+	Apps you can install	აპლიკაციები, რომელთა ინსტალაციაც შეგიძლიათ
+	Hide App	აპლიკაციის დამალვა
+	Unhide App	აპლიკაციის გამოჩენა
+	Hidden Apps	დამალული აპლიკაციები
+	Apps you hid	თქვენ მიერ დამალული აპლიკაციები
+	{a} and {b}	{a} და {b}
+	Learn more	დაწვრილებით
+	Minimize	ჩაკეცვა
+	Maximize	გაშლა
+	Restore	აღდგენა
+	New	ახალი
+	OK	OK
+	Open link	ბმულის გახსნა
+	Update	განახლება
+	{name} icon	{name}-ის ხატულა
+	Loading Nodalia Launcher…	Nodalia Launcher იტვირთება…
+	Cancel update	განახლების გაუქმება
+	Stop waiting; the update can be started again later	ლოდინის შეწყვეტა; განახლების დაწყება მოგვიანებითაც შეიძლება
+	Download again	ხელახლა ჩამოტვირთვა
+	Install cancelled	ინსტალაცია გაუქმდა
+	Install cancelled. The download is kept for the next try.	ინსტალაცია გაუქმდა. ჩამოტვირთული ფაილი შემდეგი ცდისთვის შენახულია.
+	Update cancelled	განახლება გაუქმდა
+	Uninstall cancelled	დეინსტალაცია გაუქმდა
+	Retry install	ინსტალაციის ხელახლა ცდა
+	Retry update	განახლების ხელახლა ცდა
+	Retry update to {version}	განახლების ხელახლა ცდა: {version}
+	Move down	ქვემოთ გადატანა
+	Move up	ზემოთ გადატანა
+	Pin to top	ზევით დამაგრება
+	Pinned	დამაგრებული
+	Pin {name} to top	{name}-ის ზევით დამაგრება
+	Unpin {name}	{name}-ის დამაგრების მოხსნა
+	Reorder {name}	{name}-ის თანმიმდევრობის შეცვლა
+	Unpin	დამაგრების მოხსნა
+	The download is still here. It's checked again, then installed.	ჩამოტვირთული ფაილი ისევ აქ არის. ჯერ ხელახლა შემოწმდება, შემდეგ დაინსტალირდება.
+	Waiting for another app…	სხვა აპლიკაციის მოლოდინი…
+	Waiting for another download…	სხვა ჩამოტვირთვის მოლოდინი…
+	Simultaneous downloads	ერთდროული ჩამოტვირთვები
+	No limit	შეზღუდვის გარეშე
+	Downloads running together share your connection, so each one is slower.	ერთად მიმდინარე ჩამოტვირთვები კავშირს იზიარებენ, ამიტომ თითოეული უფრო ნელია.
+	Waiting for other installs…	სხვა ინსტალაციების მოლოდინი…
+
+# Package formats offered for download (PackageKind::label)
+	Installer (.msi)	ინსტალერი (.msi)
+	Portable (.zip)	პორტატული (.zip)
+	Disk image (.dmg)	დისკის იმიჯი (.dmg)
+	Debian package (.deb)	Debian-ის პაკეტი (.deb)
+	RPM package (.rpm)	RPM პაკეტი (.rpm)
+	Arch package (.pkg.tar.zst)	Arch-ის პაკეტი (.pkg.tar.zst)
+	Flatpak bundle	Flatpak პაკეტი
+	Tarball (.tar.gz)	tar-არქივი (.tar.gz)
+
+# Contextual: each app's tagline, keyed by app id
+
+# Contextual: month abbreviations for date rendering
+month	Jan	იან
+month	Feb	თებ
+month	Mar	მარ
+month	Apr	აპრ
+month	May	მაი
+month	Jun	ივნ
+month	Jul	ივლ
+month	Aug	აგვ
+month	Sep	სექ
+month	Oct	ოქტ
+month	Nov	ნოე
+month	Dec	დეკ
+	Not checked yet	ჯერ არ შემოწმებულა
+	GitHub's hourly limit was reached; full details return in {min} min	GitHub-ის საათობრივი ლიმიტი ამოიწურა; სრული ინფორმაცია {min} წუთში დაბრუნდება
+	GitHub limit hit; back in {min} min	GitHub-ის ლიმიტი ამოიწურა; {min} წუთში დაბრუნდება
+	Installing for {platform}	ინსტალაცია პლატფორმისთვის: {platform}
+	Downloads for {platform}	ჩამოტვირთვები პლატფორმისთვის: {platform}
+	No downloads for this system	ამ სისტემისთვის ჩამოსატვირთი არაფერია
+	Nodalia on {name}	Nodalia {name}-ზე
+	Couldn't open {name}: {e}	{name} ვერ გაიხსნა: {e}
+	Download cancelled	ჩამოტვირთვა გაუქმდა
+	Available to install	ხელმისაწვდომია
+	Available	ხელმისაწვდომია
+	Installed · up to date	დაინსტალირებულია · უახლესი ვერსია
+	Update available	ხელმისაწვდომია განახლება
+	Installed	დაინსტალირებულია
+	installed	დაინსტალირებულია
+	Not available here	აქ მიუწვდომელია
+	Updating…	ახლდება…
+	Update paused	განახლება შეჩერებულია
+	Download paused	ჩამოტვირთვა შეჩერებულია
+	{version} installed → {latest} released	დაინსტალირებულია {version} → გამოვიდა {latest}
+	Version {version}	ვერსია {version}
+	{installed} installed · latest {latest}	დაინსტალირებულია {installed} · უახლესი: {latest}
+	Installed · latest {latest}	დაინსტალირებულია · უახლესი: {latest}
+	Version {version} installed	დაინსტალირებულია ვერსია {version}
+	Version {latest}	ვერსია {latest}
+	No release published yet	გამოშვება ჯერ არ გამოქვეყნებულა
+	Nodalia Launcher	Nodalia Launcher
+	App	აპლიკაცია
+	Latest	უახლესი
+	Released	გამოვიდა
+	Auto	ავტომატური
+	Language	ენა
+	Ascending	ზრდადობით
+	Descending	კლებადობით
+	Click to reverse the order	დაწკაპეთ რიგის შესაბრუნებლად
+	Click to sort by this column	დაწკაპეთ ამ სვეტით სორტირებისთვის
+	Like {name}	{name}-ის მსგავსი
+	{done} of {total}	{done} / {total}
+	Downloading	ჩამოტვირთვა
+	Verifying checksum…	საკონტროლო ჯამის შემოწმება…
+	Resume	გაგრძელება
+	{done} of {total} downloaded	ჩამოტვირთულია {done} / {total}
+	{done} downloaded	ჩამოტვირთულია {done}
+	Checking for updates…	განახლებების შემოწმება…
+	Downloads the new version, replaces this one and opens it again	ჩამოტვირთავს ახალ ვერსიას, ჩაანაცვლებს ამას და ხელახლა გახსნის
+	Couldn't check for updates: {f}	განახლებების შემოწმება ვერ მოხერხდა: {f}
+	GitHub repository	GitHub-ის რეპოზიტორია
+	Nodalia	Nodalia
+	Update 1 app	1 აპლიკაციის განახლება
+	Update all ({count})	ყველას განახლება ({count})
+	⊞  Grid	⊞  ბადე
+	☰  Table	☰  ცხრილი
+	🔍  Search apps	🔍  აპლიკაციების ძიება
+	{name} {version}	{name} {version}
+	Match system	სისტემის მიხედვით
+	Dark	ბნელი
+	Light	ღია
+	Full changelog	ცვლილებების სრული სია
+	link	ბმული
+	No apps match	შესაბამისი აპლიკაცია ვერ მოიძებნა
+	Open Nodalia Launcher to update.	განახლებისთვის გახსენით Nodalia Launcher.
+	{name} {v} is available	ხელმისაწვდომია {name} {v}
+	{count} updates are available	ხელმისაწვდომია {count} განახლება
+	These notes weren't fetched (GitHub's request limit was reached). They're on the release page.	ეს შენიშვნები ვერ ჩაიტვირთა (GitHub-ის მოთხოვნების ლიმიტი ამოიწურა). ისინი გამოშვების გვერდზეა.
+	When on, opening the launcher from the menu bar brings its window to the desktop you're on. When off, macOS switches you to the desktop the window was on.	ჩართვისას მენიუს ზოლიდან გახსნილი Nodalia Launcher-ის ფანჯარა იმ სამუშაო მაგიდაზე გამოჩნდება, რომელზეც ახლა ხართ. გამორთვისას macOS გადაგიყვანთ იმ სამუშაო მაგიდაზე, სადაც ფანჯარა იყო.
+	Couldn't change the login item: {e}	სისტემაში შესვლისას გაშვების შეცვლა ვერ მოხერხდა: {e}
+
+# Contextual: table column headers
+column	App	აპლიკაცია
+column	Installed	დაინსტალირებული
+column	Latest	უახლესი
+column	Released	გამოშვება
+
+# Contextual: the filter tab names a group (the status pill says "Installed")
+filter	Installed	დაინსტალირებული
+	App details	აპლიკაციის დეტალები
+	More actions for {name}	{name}: სხვა მოქმედებები
+	Close (Esc)	დახურვა (Esc)
+	Features	შესაძლებლობები
+	Latest release	უახლესი გამოშვება
+	Version	ვერსია
+	Platforms	პლატფორმები
+	Releases	გამოშვებები
+	Enlarge picture	სურათის გადიდება
+	Click to enlarge	დაწკაპეთ გასადიდებლად
+	Previous picture (←)	წინა სურათი (←)
+	Next picture (→)	შემდეგი სურათი (→)
+	Loading pictures…	სურათები იტვირთება…
+	Pictures couldn't be loaded. Reopen this page to try again.	სურათები ვერ ჩაიტვირთა. ხელახლა საცდელად თავიდან გახსენით ეს გვერდი.
+	{name} details	{name}-ის დეტალები
+
+# Plural forms for Georgian (one|other; a noun after a numeral stays singular, so both forms match)
+@plural	{n} app|{n} apps	{n} აპლიკაცია|{n} აპლიკაცია
+@plural	{n} min ago|{n} min ago	{n} წუთის წინ|{n} წუთის წინ
+@plural	{n} h ago|{n} h ago	{n} საათის წინ|{n} საათის წინ
+@plural	{n} day ago|{n} days ago	{n} დღის წინ|{n} დღის წინ
+
+# Message templates (@msg): toasts from the backend. {placeholders} match any text.
+@msg	Couldn't open {name}: {e}	{name} ვერ გაიხსნა: {e}
+@msg	Nodalia Launcher couldn't start its window on {backend}: {e}	Nodalia Launcher-ის ფანჯარა ვერ გაეშვა {backend}-ზე: {e}
+@msg	Download cancelled	ჩამოტვირთვა გაუქმდა
+@msg	{name} updated to {version}	{name} განახლდა ვერსიამდე {version}
+@msg	{name} installed: {version}	{name} დაინსტალირდა: {version}
+@msg	{name} updated to {version} (this release publishes no checksum, so only its size was checked)	{name} განახლდა ვერსიამდე {version} (ეს გამოშვება საკონტროლო ჯამს არ აქვეყნებს, ამიტომ მხოლოდ ზომა შემოწმდა)
+@msg	{name} installed: {version} (this release publishes no checksum, so only its size was checked)	{name} დაინსტალირდა: {version} (ეს გამოშვება საკონტროლო ჯამს არ აქვეყნებს, ამიტომ მხოლოდ ზომა შემოწმდა)
+@msg	{name} was removed	{name} წაიშალა
+@msg	{name} is running. Quit it, then try again.	{name} გაშვებულია. დახურეთ და კვლავ სცადეთ.
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with {cmd} or sudo pacman -Syu	{name} დაინსტალირდა {repo} რეპოზიტორიიდან ან AUR-იდან ({pkg}). განაახლეთ ბრძანებით {cmd} ან sudo pacman -Syu
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg}) or sudo pacman -Syu	{name} დაინსტალირდა {repo} რეპოზიტორიიდან ან AUR-იდან ({pkg}). განაახლეთ AUR-ის დამხმარე პროგრამით (მაგალითად: yay -S {pkg}) ან sudo pacman -Syu
+@msg	{name} was installed from the AUR ({pkg}). Update it with {cmd}	{name} დაინსტალირდა AUR-იდან ({pkg}). განაახლეთ ბრძანებით {cmd}
+@msg	{name} was installed from the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg})	{name} დაინსტალირდა AUR-იდან ({pkg}). განაახლეთ AUR-ის დამხმარე პროგრამით (მაგალითად: yay -S {pkg})
+
+# Command IDs for menu items (@id)
+# Format: @id<TAB>command_id<TAB>translation
+@id	app.install	ინსტალაცია
+@id	app.update	განახლება: {v}
+@id	app.open	გახსნა
+@id	app.download	ჩამოტვირთვა {os}-ისთვის
+@id	app.reveal	Finder-ში ჩვენება
+@id	app.reinstall	ხელახლა ინსტალაცია
+@id	app.uninstall	დეინსტალაცია…
+@id	app.notes	გამოშვების შენიშვნები
+@id	app.website	ვებსაიტი
+@id	app.github	GitHub-ის რეპოზიტორია
+@id	app.releases	ყველა გამოშვება
+@id	launcher.update	განახლება და გადატვირთვა
+@id	launcher.download	ჩამოტვირთვა
+@id	launcher.notes	რა არის ახალი
+@id	launcher.dismiss	უგულებელყოფა
+@id	settings.open	პარამეტრები
+@id	settings.quit	Nodalia Launcher-იდან გასვლა
+@id	view.grid	ბადე
+@id	view.table	ცხრილი
+@id	filter.all	ყველა
+@id	filter.installed	დაინსტალირებული
+@id	filter.updates	განახლებები
+@id	filter.notinstalled	არ არის დაინსტალირებული
+@id	sort.suite	ნაკრების რიგით
+@id	sort.name	სახელი
+@id	sort.inspired	შთაგონების წყარო
+@id	sort.status	სტატუსი
+@id	sort.installed	დაინსტალირებული ვერსია
+@id	sort.latest	უახლესი ვერსია
+@id	sort.released	უახლესი გამოშვება
+@id	help.github	GitHub
+@id	help.website	ვებსაიტი
+@id	update.check	განახლებების შემოწმება
+@id	update.check_auto	განახლებების ავტომატური შემოწმება
+@id	update.notify	შეტყობინება, როცა დაინსტალირებულ აპლიკაციას განახლება აქვს
+@id	update.prereleases	წინასწარი ვერსიების ჩართვა (ბეტა-ვერსიები და გამოშვების კანდიდატები)
+@id	linux.preferred_kind	ახალი აპლიკაციების ინსტალაციის ფორმატი
+@id	tray.close_to_tray	ფანჯრის დახურვის შემდეგ მუშაობის გაგრძელება შეტყობინებების არეში
+@id	tray.show_on_current_desktop	ფანჯრის ჩვენება მიმდინარე სამუშაო მაგიდაზე
+@id	tray.login_item	Nodalia Launcher-ის გაშვება სისტემაში შესვლისას
+@id	appearance.theme	იერსახე
+
+# Tray (menu bar) menu and tooltip
+	Show Nodalia Launcher	Nodalia Launcher-ის ჩვენება
+	Check for Updates	განახლებების შემოწმება
+	Visit getnodalia.com	getnodalia.com-ის გახსნა
+	Nodalia on GitHub	Nodalia GitHub-ზე
+@plural	Nodalia Launcher · {n} update available|Nodalia Launcher · {n} updates available	Nodalia Launcher · ხელმისაწვდომია {n} განახლება|Nodalia Launcher · ხელმისაწვდომია {n} განახლება
+	Install folder	ინსტალაციის საქაღალდე
+	Default install folder	ნაგულისხმევი ინსტალაციის საქაღალდე
+	System default	სისტემის ნაგულისხმევი
+	Browse…	არჩევა…
+	Use default	ნაგულისხმევის გამოყენება
+	New installs use this folder. Updates stay in their current location.	ახალი ინსტალაციები ამ საქაღალდეს იყენებს. განახლებები ამჟამინდელ ადგილას რჩება.
+	Custom folders use AppImage on Linux.	Linux-ზე არჩეულ საქაღალდეში ინსტალაცია AppImage-ით ხდება.
+	On Linux, custom folders use AppImage format.	Linux-ზე არჩეულ საქაღალდეში ინსტალაცია AppImage ფორმატით ხდება.
+	The system manages install locations here.	აქ ინსტალაციის ადგილს სისტემა მართავს.
+@msg	couldn't use install folder {path}: {reason}	ინსტალაციის საქაღალდის ({path}) გამოყენება ვერ მოხერხდა: {reason}
+@msg	this release has no AppImage for a custom install folder	ამ გამოშვებას არჩეული ინსტალაციის საქაღალდისთვის AppImage არ აქვს
+@msg	custom install folders aren't supported on this system	ამ სისტემაზე ინსტალაციის საქაღალდის არჩევა არ არის მხარდაჭერილი
+@msg	{path} already exists and wasn't installed by Nodalia Launcher	{path} უკვე არსებობს და ის Nodalia Launcher-ს არ დაუინსტალირებია
+@msg	couldn't move {path} to Trash ({reason}). Remove it in Finder instead.	{path} ნაგავში ვერ გადავიდა ({reason}). წაშალეთ ის Finder-ში.
+@msg	Desktop shortcut created for {name}	{name}-ის სამუშაო მაგიდის მალსახმობი შეიქმნა
+@msg	Couldn't create the desktop shortcut: {e}	სამუშაო მაგიდის მალსახმობის შექმნა ვერ მოხერხდა: {e}
+@msg	A desktop shortcut named {name} already exists	სამუშაო მაგიდის მალსახმობი სახელით {name} უკვე არსებობს
+	Apps are placed inside this folder.	აპლიკაციები ამ საქაღალდეში განთავსდება.
+	Replace what's there?	ჩანაცვლდეს არსებული?
+	{path} already exists. Installing {name} will overwrite it.	{path} უკვე არსებობს. {name}-ის ინსტალაცია მას გადააწერს.
+	Replace	ჩანაცვლება
+	Recently updated	ბოლოს განახლებული
+	Name (A–Z)	სახელი (A–Z)
+	Name (Z–A)	სახელი (Z–A)
+	Frequently used	ხშირად გამოყენებული
+	Next app	შემდეგი აპლიკაცია
+	Previous app	წინა აპლიკაცია
+	Show {n} more changes	კიდევ {n} ცვლილების ჩვენება
+	Last updated: {date}	ბოლო განახლება: {date}
+column	Version	ვერსია
+column	Author	ავტორი
+	Choose version	ვერსიის არჩევა
+	latest {version}	უახლესი {version}
+	{version} (latest release)	{version} (უახლესი გამოშვება)
+	Launcher version	Launcher-ის ვერსია
+	Nightly	ღამის ვერსია
+	Nightly (none published yet)	ღამის ვერსია (ჯერ არ გამოქვეყნებულა)
+	Install version {version}	{version} ვერსიის ინსტალაცია
+	Download selected version	არჩეული ვერსიის ჩამოტვირთვა
+	Older launcher versions require a manual reinstall.	Launcher-ის ძველ ვერსიებს ხელით ხელახალი ინსტალაცია სჭირდება.
+	Your files may not open in older versions.	თქვენი ფაილები შეიძლება ძველ ვერსიებში არ გაიხსნას.
+	Enable automatic installs in Settings to follow new nightly builds.	ახალი ღამის ვერსიების მისაღებად პარამეტრებში ჩართეთ ავტომატური ინსტალაცია.
+	Download size: {size}	ჩამოტვირთვის ზომა: {size}
+	Version pinned to {version}. Click to unlock.	ვერსია ფიქსირებულია {version}-ზე. განსაბლოკად დააწკაპუნეთ.
+	Unlock version?	განიბლოკოს ვერსია?
+	{app} is pinned to {version}. Follow the latest release instead?	{app} ფიქსირებულია {version} ვერსიაზე. სანაცვლოდ გამოიყენოთ უახლესი გამოშვება?
+	Unlock	განბლოკვა
+
+	Apps agents can reach: {count}	აგენტებისთვის ხელმისაწვდომი აპები: {count}
+	Added	დამატებულია
+	Remove	წაშლა
+	Add	დამატება
+
+# Nodalia Launcher: the Nodalia apps (context = app id) and the launcher chrome.
+	About Nodalia Launcher	Nodalia Launcher-ის შესახებ
+	Close this window	ამ ფანჯრის დახურვა
+	Community	საზოგადოება
+	Install, update and open the Nodalia apps from one place.	დააინსტალირეთ, განაახლეთ და გახსენით Nodalia-ს აპები ერთ ადგილას.
+	Keyboard shortcuts	კლავიატურის მალსახმობები
+	Main menu	მთავარი მენიუ
+	Nodalia apps	Nodalia apps
+	Office · Creator · Engineering	Office · Creator · Engineering
+	Report an issue	პრობლემის შეტყობინება
+	Support	მხარდაჭერა
+	Support Nodalia	Nodalia-ს მხარდაჭერა
+	Use the desktop's own window controls	დესკტოპის საკუთარი ფანჯრის მართვის ელემენტების გამოყენება
+	Zoom in the release notes	გამოშვების შენიშვნების გადიდება
+	Zoom out the release notes	გამოშვების შენიშვნების დაპატარავება
+suite	Everyday	ყოველდღიური
+column	Suite	კრებული
+letra	Writing and document design	წერა და დოკუმენტების დიზაინი
+letra	The word processor that stays out of your way.	ტექსტური რედაქტორი, რომელიც ხელს არ გიშლით.
+letra	Letters, reports and books in a fast native editor. It opens and saves DOCX and keeps your layout intact.	წერილები, ანგარიშები და წიგნები სწრაფ ნატიურ რედაქტორში. ხსნის და ინახავს DOCX-ს და თქვენს მაკეტს უცვლელად ტოვებს.
+celdas	Spreadsheets and data	ელცხრილები და მონაცემები
+celdas	Spreadsheets that open instantly.	ცხრილები, რომლებიც მყისვე იხსნება.
+celdas	Formulas, charts and large tables in a native app, with XLSX files that round-trip.	ფორმულები, დიაგრამები და დიდი ცხრილები ნატიურ აპში, XLSX ფაილებით, რომლებიც დანაკარგის გარეშე იხსნება და ინახება.
+lamina	Presentations and slide shows	პრეზენტაციები და სლაიდშოუები
+lamina	Slides without the weight.	სლაიდები ზედმეტი სიმძიმის გარეშე.
+lamina	Build and present decks in a fast native app, and open and save PPTX files.	შექმენით და წარადგინეთ პრეზენტაციები სწრაფ ნატიურ აპში, გახსენით და შეინახეთ PPTX ფაილები.
+papel	Reading, organizing and protecting PDFs	PDF-ების კითხვა, ორგანიზება და დაცვა
+papel	Read, organize and protect your PDFs.	წაიკითხეთ, დაალაგეთ და დაიცავით თქვენი PDF-ები.
+papel	View, annotate, fill, merge and sign PDF files, all on your own computer.	ნახეთ, დააკომენტარეთ, შეავსეთ, გააერთიანეთ და მოაწერეთ ხელი PDF ფაილებს, ყველაფერი თქვენს კომპიუტერში.
+buzon	Mail, calendar and contacts	ფოსტა, კალენდარი და კონტაქტები
+buzon	Your mail, calendar and contacts in one place.	თქვენი ფოსტა, კალენდარი და კონტაქტები ერთ ადგილას.
+buzon	A native client for IMAP, POP3 and JMAP accounts, with mail rendered safely and your passwords kept in the system keyring.	ნატიური კლიენტი IMAP, POP3 და JMAP ანგარიშებისთვის, უსაფრთხოდ ნაჩვენები წერილებითა და სისტემის გასაღებების საცავში შენახული პაროლებით.
+hito	Tasks, milestones and progress	ამოცანები, ეტაპები და პროგრესი
+hito	Tasks, milestones and progress for your team.	ამოცანები, ეტაპები და პროგრესი თქვენი გუნდისთვის.
+hito	Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption.	დაგეგმეთ პროექტები, თვალყური ადევნეთ ამოცანებს და ნახეთ პროგრესი სერვერზე, რომელსაც თავად მართავთ, ბოლომდე დაშიფვრით.
+agora	Team chat on your own server	გუნდური ჩატი თქვენს საკუთარ სერვერზე
+agora	Team chat on a server you run yourself.	გუნდური ჩატი სერვერზე, რომელსაც თავად მართავთ.
+agora	Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app.	სამუშაო სივრცეები, არხები, თემები და პირდაპირი შეტყობინებები ბოლომდე დაშიფვრით, ნატიურ დესკტოპ აპში.
+lienzo	Image editing	გამოსახულებების რედაქტირება
+lienzo	The image editor you already know how to use.	გამოსახულებების რედაქტორი, რომლის გამოყენებაც უკვე იცით.
+lienzo	Layers, masks, adjustment layers, layer styles, type and brushes in a native app, with PSD files that open and save.	ფენები, ნიღბები, მარეგულირებელი ფენები, ფენის სტილები, ტექსტი და ფუნჯები ნატიურ აპში, PSD ფაილებით, რომლებიც იხსნება და ინახება.
+pluma	Vector illustration	ვექტორული ილუსტრაცია
+pluma	Vector illustration, drawn natively.	ვექტორული ილუსტრაცია, ნატიურად დახატული.
+pluma	Paths, shapes, type and effects for logos and illustrations, with SVG and PDF in and out.	კონტურები, ფიგურები, ტექსტი და ეფექტები ლოგოებისა და ილუსტრაციებისთვის, SVG-ისა და PDF-ის იმპორტითა და ექსპორტით.
+pliego	Page layout and publishing	გვერდების მაკეტირება და გამოცემა
+pliego	Page layout and publishing.	გვერდების მაკეტირება და გამოცემა.
+pliego	Lay out magazines, books and posters with precise typography and print-ready PDF export.	მოაწყვეთ ჟურნალები, წიგნები და პოსტერები ზუსტი ტიპოგრაფიით და ბეჭდვისთვის მზა PDF-ის ექსპორტით.
+luz	Photo library and raw development	ფოტოთეკა და RAW-ის დამუშავება
+luz	Your photo library and raw developer.	თქვენი ფოტობიბლიოთეკა და RAW-ის დამუშავება.
+luz	Organize photos and develop raw files without ever touching the originals.	დაალაგეთ ფოტოები და დაამუშავეთ RAW ფაილები ორიგინალებზე შეხების გარეშე.
+toma	Video editing, color and sound	ვიდეოს მონტაჟი, ფერი და ხმა
+toma	Video editing, color and sound.	ვიდეომონტაჟი, ფერი და ხმა.
+toma	Cut, grade and mix video on a fast native timeline.	გაჭერით, ფერი შეასწორეთ და ააწყვეთ ვიდეო სწრაფ ნატიურ დროის ღერძზე.
+pulso	Motion graphics and visual effects	მოძრავი გრაფიკა და ეფექტები
+pulso	Motion graphics and visual effects.	მოძრავი გრაფიკა და ვიზუალური ეფექტები.
+pulso	Animate layers, shapes and text with keyframes, expressions and effects.	დააანიმირეთ ფენები, ფიგურები და ტექსტი საკვანძო კადრებით, გამოსახულებებითა და ეფექტებით.
+anima	2D animation	2D ანიმაცია
+anima	2D animation, frame by frame.	2D ანიმაცია, კადრ-კადრ.
+anima	Draw, tween and animate on a timeline, then export to video, GIF or image sequences.	დახატეთ, შეავსეთ და დააანიმირეთ დროის ღერძზე, შემდეგ კი გაიტანეთ ვიდეოდ, GIF-ად ან გამოსახულებათა მიმდევრობად.
+trama	Interface design and prototyping	ინტერფეისის დიზაინი და პროტოტიპირება
+trama	Interface design and prototyping.	ინტერფეისის დიზაინი და პროტოტიპირება.
+trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	ავტომატური განლაგების ჩარჩოები, კომპონენტები, სტილები და დაწკაპუნებადი პროტოტიპები, რეალურ დროში თანამშრომლობით.
+forja	Computer-aided design and drafting	დაპროექტება და ნახაზები
+forja	Computer-aided design and drafting.	კომპიუტერით მხარდაჭერილი დაპროექტება და ნახაზები.
+forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	ზუსტი 2D ნახაზები და პარამეტრული ხატვა DXF და DWG ფაილებით.
+torno	Parametric 3D CAD	პარამეტრული 3D დაპროექტება
+torno	Parametric 3D CAD.	პარამეტრული 3D CAD.
+torno	Sketch, constrain and extrude solid parts with a feature timeline and a kernel written in Rust.	დახაზეთ ესკიზები, დააწესეთ შეზღუდვები და გაჭიმეთ მყარი დეტალები ფუნქციების დროის ღერძითა და Rust-ზე დაწერილი ბირთვით.
+vortia	Fluid simulation (CFD)	სითხეების სიმულაცია (CFD)
+vortia	Fluid simulation, from geometry to results.	სითხეების სიმულაცია გეომეტრიიდან შედეგებამდე.
+vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	დააყენეთ, გაუშვით და შეამოწმეთ CFD სიმულაციები ერთ დესკტოპ აპში საკუთარი ამომხსნელი ძრავით.
+vinilo	Apple Music, natively	Apple Music ნატიურად
+vinilo	Apple Music, drawn natively.	Apple Music, ნატიურად დახატული.
+vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	სწრაფი ნატიური ინტერფეისი Apple Music-ისთვის, უწყვეტი დაკვრითა და მართვით სისტემის მედია პანელიდან.
+brujula	The Nodalix web browser	Nodalix-ის ვებბრაუზერი
+brujula	The browser of Nodalix.	Nodalix-ის ბრაუზერი.
+brujula	A fast, private web browser that comes with Nodalix.	სწრაფი და კონფიდენციალური ვებბრაუზერი, რომელიც Nodalix-ს მოჰყვება.

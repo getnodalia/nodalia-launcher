@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Nodalia Launcher
+GenericName=App Launcher
+Comment=Install, update and launch the Nodalia apps
+Exec=nodalia-launcher
+TryExec=nodalia-launcher
+Icon=dev.danielmiguelt.NodaliaLauncher
+Terminal=false
+StartupNotify=true
+StartupWMClass=dev.danielmiguelt.NodaliaLauncher
+Categories=Utility;PackageManager;
+Keywords=nodalia;launcher;installer;updater;lienzo;toma;apps;

@@ -1,0 +1,68 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "apps/*", "xtask"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.95"
+repository = "https://github.com/getnodalia/nodalia-launcher"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+cognitive_complexity = "deny"
+too_many_arguments = "deny"
+wildcard_imports = "deny"
+dbg_macro = "warn"
+todo = "warn"
+
+[workspace.dependencies]
+nodalia-launcher-core = { path = "crates/core" }
+nodalia-launcher-ui-egui = { path = "crates/ui-egui" }
+nodalia-launcher-native = { path = "crates/native" }
+egui = { version = "0.37", features = ["monochrome_emoji_fonts"] }
+eframe = { version = "0.37", default-features = false }
+egui_extras = { version = "0.37", default-features = false }
+egui_kittest = "0.37"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+semver = { version = "1", features = ["serde"] }
+log = "0.4"
+# All date/time conversion goes through jiff (no hand-rolled calendar code beyond the 400-year range extension; AGENTS.md).
+jiff = "0.2"
+# The Nodalia Design Language for egui, and the update flow the apps share (the launcher updates itself with it).
+nodalia-theme = { git = "https://github.com/getnodalia/nodalia-design", rev = "a384b5cb520c81ac2157c93c5a263c35a5c80ed9", features = ["creator"] }
+nodalia-update = { git = "https://github.com/getnodalia/nodalia-design", rev = "a384b5cb520c81ac2157c93c5a263c35a5c80ed9", features = ["egui"] }
+nodalia-quit = { version = "0.1.0", git = "https://github.com/getnodalia/foundation", rev = "7e52986747f361f86799feaaacc5af8281bdcaa5", features = ["egui"] }
+
+[profile.dev.package."*"]
+opt-level = 2
+debug = false
+
+# Line tables keep file:line in panic backtraces but drop variable info, as in the other Nodalia
+# apps: full debug info made Windows test links slow and the CI cache large. To inspect locals in
+# a debugger, build with CARGO_PROFILE_DEV_DEBUG=true.
+[profile.dev]
+opt-level = 1
+debug = "line-tables-only"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+[patch.crates-io]
+ecolor = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+emath = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+epaint = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+epaint_default_fonts = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui-winit = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui-wgpu = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_glow = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_extras = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_kittest = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+eframe = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+winit = { git = "https://github.com/getnodalia/foundation", rev = "a517b3846ee8457d84ee4975110bfda6797c44dc" }

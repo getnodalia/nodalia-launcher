@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AppStream metadata (software centres, Flathub). Template: package.sh and the Flatpak
+     manifest substitute @VERSION@ and @DATE@ from Cargo.toml and the build date. -->
+<component type="desktop-application">
+  <id>dev.danielmiguelt.NodaliaLauncher</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT OR Apache-2.0</project_license>
+  <name>Nodalia Launcher</name>
+  <summary>Install, update and launch the Nodalia apps</summary>
+  <developer id="ai.storyteller">
+    <name>Nodalia</name>
+  </developer>
+  <description>
+    <p>
+      Nodalia Launcher lists every app in the Nodalia apps (Lienzo, Luz, Toma,
+      Pliego, Pluma, Papel, Pulso, Letra, Lamina, Celdas, Forja,
+      Vinilo and Trama), installs the right build for your computer, and keeps them up to date.
+    </p>
+    <ul>
+      <li>One place to find, install and open every Nodalia app</li>
+      <li>Checks GitHub releases for updates and installs them for you</li>
+      <li>Lives in the system tray and tells you when updates are ready</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">dev.danielmiguelt.NodaliaLauncher.desktop</launchable>
+  <icon type="stock">dev.danielmiguelt.NodaliaLauncher</icon>
+  <!-- Only url types known to appstream 0.15 (Ubuntu 22.04, where CI validates): no vcs-browser. -->
+  <url type="homepage">https://getnodalia.com/apps</url>
+  <url type="bugtracker">https://github.com/getnodalia/nodalia-launcher/issues</url>
+  <url type="help">https://github.com/getnodalia/nodalia-launcher</url>
+  <url type="contact">https://github.com/getnodalia/nodalia-launcher/issues</url>
+  <categories>
+    <category>Utility</category>
+    <category>PackageManager</category>
+  </categories>
+  <keywords>
+    <keyword>launcher</keyword>
+    <keyword>installer</keyword>
+    <keyword>updater</keyword>
+    <keyword>nodalia</keyword>
+  </keywords>
+  <branding>
+    <color type="primary" scheme_preference="light">#d9dce3</color>
+    <color type="primary" scheme_preference="dark">#26282e</color>
+  </branding>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </supports>
+  <provides>
+    <binary>nodalia-launcher</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="@VERSION@" date="@DATE@"/>
+  </releases>
+</component>
