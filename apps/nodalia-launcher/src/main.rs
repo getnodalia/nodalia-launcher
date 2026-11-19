@@ -42,11 +42,6 @@ fn main() -> ExitCode {
     // First, so the panic report and every start-up warning are recorded (`logging`).
     let logs = logging::install();
     logging::install_panic_hook();
-    // A copy of the launcher finishing a self-update: no window, log file or single-instance claim.
-    #[cfg(windows)]
-    if let Some(done) = nodalia_launcher_native::self_update::finish(&std::env::args_os().skip(1).collect::<Vec<_>>()) {
-        return if done.is_ok() { ExitCode::SUCCESS } else { ExitCode::FAILURE };
-    }
     // `std::env::args` panics on an argument that is not UTF-8, and the launcher is started with
     // whatever the desktop hands it: a login entry, a file manager, a terminal in a Latin-1
     // locale. It only ever looks for the two flags below, so an argument it cannot read is one it
@@ -67,7 +62,7 @@ fn main() -> ExitCode {
         return ExitCode::SUCCESS;
     }
     // An elevated copy running one batch of MSI installs ("update all" behind one permission
-    // prompt): no window, log file or single-instance claim, like the self-update helper above.
+    // prompt): no window, log file or single-instance claim.
     #[cfg(windows)]
     if let Some(at) = args.iter().position(|a| a == "--install-msis")
         && let Some(manifest) = args.get(at + 1)
