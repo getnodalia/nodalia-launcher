@@ -11,6 +11,8 @@ name: Release macOS
 # land on main, and publishes the release once every platform is attached. Run it by hand with
 # tag=vX.Y.Z to rebuild a release's files; without a tag it only uploads workflow artifacts.
 
+# Runs only when a release calls it (release-auto.yml) or by hand (workflow_dispatch), never on pull
+# requests or pushes: the organization's 5 macOS slots are kept for releases.
 on:
   workflow_dispatch:
     inputs:
