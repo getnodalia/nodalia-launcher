@@ -1,0 +1,30 @@
+# Builds and tests the workspace on FreeBSD, inside a FreeBSD VM on a Linux runner (GitHub has no
+# FreeBSD runners), then runs packaging/freebsd/package.sh, the script the release uses, and
+# checks the tarball. Nothing is uploaded and no secrets are used.
+name: FreeBSD
+
+# The VM build is slow, so it runs nightly rather than on every push: a drifted dependency still
+# shows up within a day. Changes to the FreeBSD packaging itself run it too.
+on:
+  schedule:
+    - cron: "23 2 * * *"
+  pull_request:
+    paths:
+      - .github/workflows/freebsd.yml
+      - packaging/freebsd/**
+      - packaging/env.sh
+  workflow_dispatch:
+
+concurrency:
+  group: freebsd-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  freebsd:
+    uses: getnodalia/foundation/.github/workflows/freebsd.yml@976581262c95c0d95c0184149c0e1ba55485ccb3 # foundation main
+    with:
+      release: "15.1"
+      command: "cargo build --workspace --locked && CARGO_PROFILE_DEV_DEBUG=0 cargo test --workspace --locked --exclude nodalia-launcher-ui-egui && CARGO_PROFILE_DEV_DEBUG=0 cargo test -p nodalia-launcher-ui-egui --locked --lib && CARGO_PROFILE_DEV_DEBUG=0 cargo test -p nodalia-launcher-ui-egui --locked --test '*' -- --test-threads=1"

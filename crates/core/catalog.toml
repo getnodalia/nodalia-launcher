@@ -1,0 +1,307 @@
+# The Nodalia apps the launcher offers.
+# Compiled by build.rs into `SUITE` and `DETAILS`. Text is English: the UI translates it by app id.
+# Colours come from NDL's per-app accents (nodalia-design, tokens): `color` is the light accent,
+# `ink_light` / `ink_dark` the accent as text on a light / dark surface.
+
+[[apps]]
+id = "letra"
+name = "Letra"
+suite = "office"
+tagline = "Writing and document design"
+color = [25, 122, 192]
+ink_light = [18, 96, 153]
+ink_dark = [115, 186, 247]
+repo = "getnodalia/letra"
+bundle = "dev.danielmiguelt.Letra"
+mac_bundle_name = "Letra"
+[apps.details]
+headline = "The word processor that stays out of your way."
+about = "Letters, reports and books in a fast native editor. It opens and saves DOCX and keeps your layout intact."
+
+[[apps]]
+id = "celdas"
+name = "Celdas"
+suite = "office"
+tagline = "Spreadsheets and data"
+color = [39, 134, 75]
+ink_light = [29, 106, 59]
+ink_dark = [73, 203, 120]
+repo = "getnodalia/celdas"
+bundle = "dev.danielmiguelt.Celdas"
+mac_bundle_name = "Celdas"
+[apps.details]
+headline = "Spreadsheets that open instantly."
+about = "Formulas, charts and large tables in a native app, with XLSX files that round-trip."
+
+[[apps]]
+id = "lamina"
+name = "Lámina"
+suite = "office"
+tagline = "Presentations and slide shows"
+color = [209, 59, 114]
+ink_light = [167, 46, 90]
+ink_dark = [240, 156, 177]
+repo = "getnodalia/lamina"
+bundle = "dev.danielmiguelt.Lamina"
+mac_bundle_name = "Lamina"
+[apps.details]
+headline = "Slides without the weight."
+about = "Build and present decks in a fast native app, and open and save PPTX files."
+
+[[apps]]
+id = "papel"
+name = "Papel"
+suite = "office"
+tagline = "Reading, organizing and protecting PDFs"
+color = [104, 118, 142]
+ink_light = [81, 93, 113]
+ink_dark = [172, 180, 193]
+repo = "getnodalia/papel"
+bundle = "dev.danielmiguelt.Papel"
+mac_bundle_name = "Papel"
+[apps.details]
+headline = "Read, organize and protect your PDFs."
+about = "View, annotate, fill, merge and sign PDF files, all on your own computer."
+
+[[apps]]
+id = "buzon"
+name = "Buzón"
+suite = "office"
+tagline = "Mail, calendar and contacts"
+color = [228, 39, 30]
+ink_light = [181, 30, 22]
+ink_dark = [247, 156, 142]
+repo = "getnodalia/buzon"
+bundle = "dev.danielmiguelt.Buzon"
+mac_bundle_name = "Buzon"
+[apps.details]
+headline = "Your mail, calendar and contacts in one place."
+about = "A native client for IMAP, POP3 and JMAP accounts, with mail rendered safely and your passwords kept in the system keyring."
+
+[[apps]]
+id = "hito"
+name = "Hito"
+suite = "office"
+tagline = "Tasks, milestones and progress"
+color = [52, 134, 36]
+ink_light = [40, 106, 28]
+ink_dark = [89, 203, 68]
+repo = "getnodalia/hito"
+bundle = "dev.danielmiguelt.Hito"
+mac_bundle_name = "Hito"
+[apps.details]
+headline = "Tasks, milestones and progress for your team."
+about = "Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption."
+
+[[apps]]
+id = "agora"
+name = "Ágora"
+suite = "office"
+tagline = "Team chat on your own server"
+color = [16, 130, 135]
+ink_light = [12, 103, 107]
+ink_dark = [49, 198, 203]
+repo = "getnodalia/agora"
+bundle = "dev.danielmiguelt.Agora"
+mac_bundle_name = "Agora"
+[apps.details]
+headline = "Team chat on a server you run yourself."
+about = "Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app."
+
+[[apps]]
+id = "lienzo"
+name = "Lienzo"
+suite = "creator"
+tagline = "Image editing"
+color = [216, 53, 97]
+ink_light = [172, 41, 76]
+ink_dark = [243, 155, 167]
+repo = "getnodalia/lienzo"
+bundle = "dev.danielmiguelt.Lienzo"
+mac_bundle_name = "Lienzo"
+[apps.details]
+headline = "The image editor you already know how to use."
+about = "Layers, masks, adjustment layers, layer styles, type and brushes in a native app, with PSD files that open and save."
+
+[[apps]]
+id = "pluma"
+name = "Pluma"
+suite = "creator"
+tagline = "Vector illustration"
+color = [204, 76, 15]
+ink_light = [162, 59, 11]
+ink_dark = [250, 156, 122]
+repo = "getnodalia/pluma"
+bundle = "dev.danielmiguelt.Pluma"
+mac_bundle_name = "Pluma"
+[apps.details]
+headline = "Vector illustration, drawn natively."
+about = "Paths, shapes, type and effects for logos and illustrations, with SVG and PDF in and out."
+
+[[apps]]
+id = "pliego"
+name = "Pliego"
+suite = "creator"
+tagline = "Page layout and publishing"
+color = [85, 109, 218]
+ink_light = [59, 77, 210]
+ink_dark = [161, 178, 232]
+repo = "getnodalia/pliego"
+bundle = "dev.danielmiguelt.Pliego"
+mac_bundle_name = "Pliego"
+[apps.details]
+headline = "Page layout and publishing."
+about = "Lay out magazines, books and posters with precise typography and print-ready PDF export."
+
+[[apps]]
+id = "luz"
+name = "Luz"
+suite = "creator"
+tagline = "Photo library and raw development"
+color = [171, 101, 0]
+ink_light = [136, 79, 2]
+ink_dark = [252, 158, 45]
+repo = "getnodalia/luz"
+bundle = "dev.danielmiguelt.Luz"
+mac_bundle_name = "Luz"
+[apps.details]
+headline = "Your photo library and raw developer."
+about = "Organize photos and develop raw files without ever touching the originals."
+
+[[apps]]
+id = "toma"
+name = "Toma"
+suite = "creator"
+tagline = "Video editing, color and sound"
+color = [216, 28, 160]
+ink_light = [172, 22, 127]
+ink_dark = [249, 146, 207]
+repo = "getnodalia/toma"
+bundle = "dev.danielmiguelt.Toma"
+mac_bundle_name = "Toma"
+[apps.details]
+headline = "Video editing, color and sound."
+about = "Cut, grade and mix video on a fast native timeline."
+
+[[apps]]
+id = "pulso"
+name = "Pulso"
+suite = "creator"
+tagline = "Motion graphics and visual effects"
+color = [80, 131, 10]
+ink_light = [62, 103, 8]
+ink_dark = [127, 199, 41]
+repo = "getnodalia/pulso"
+bundle = "dev.danielmiguelt.Pulso"
+mac_bundle_name = "Pulso"
+[apps.details]
+headline = "Motion graphics and visual effects."
+about = "Animate layers, shapes and text with keyframes, expressions and effects."
+
+[[apps]]
+id = "anima"
+name = "Ánima"
+suite = "creator"
+tagline = "2D animation"
+color = [117, 95, 234]
+ink_light = [98, 54, 229]
+ink_dark = [175, 173, 241]
+repo = "getnodalia/anima"
+bundle = "dev.danielmiguelt.Anima"
+mac_bundle_name = "Anima"
+[apps.details]
+headline = "2D animation, frame by frame."
+about = "Draw, tween and animate on a timeline, then export to video, GIF or image sequences."
+
+[[apps]]
+id = "trama"
+name = "Trama"
+suite = "creator"
+tagline = "Interface design and prototyping"
+color = [159, 71, 237]
+ink_light = [131, 45, 201]
+ink_dark = [199, 165, 242]
+repo = "getnodalia/trama"
+bundle = "dev.danielmiguelt.Trama"
+mac_bundle_name = "Trama"
+[apps.details]
+headline = "Interface design and prototyping."
+about = "Frames with auto layout, components, styles and clickable prototypes, with live collaboration."
+
+[[apps]]
+id = "forja"
+name = "Forja"
+suite = "engineering"
+tagline = "Computer-aided design and drafting"
+color = [178, 96, 39]
+ink_light = [141, 75, 29]
+ink_dark = [243, 160, 108]
+repo = "getnodalia/forja"
+bundle = "dev.danielmiguelt.Forja"
+mac_bundle_name = "Forja"
+[apps.details]
+headline = "Computer-aided design and drafting."
+about = "Precise 2D drafting and parametric drawing, with DXF and DWG files."
+
+[[apps]]
+id = "torno"
+name = "Torno"
+suite = "engineering"
+tagline = "Parametric 3D CAD"
+color = [139, 115, 25]
+ink_light = [111, 91, 19]
+ink_dark = [210, 177, 55]
+repo = "getnodalia/torno"
+bundle = "dev.danielmiguelt.Torno"
+mac_bundle_name = "Torno"
+[apps.details]
+headline = "Parametric 3D CAD."
+about = "Sketch, constrain and extrude solid parts with a feature timeline and a kernel written in Rust."
+
+[[apps]]
+id = "vortia"
+name = "Vortia"
+suite = "engineering"
+tagline = "Fluid simulation (CFD)"
+color = [35, 108, 249]
+ink_light = [12, 82, 212]
+ink_dark = [143, 180, 248]
+repo = "getnodalia/vortia"
+bundle = "dev.danielmiguelt.Vortia"
+mac_bundle_name = "Vortia"
+systems = ["linux", "macos"]
+[apps.details]
+headline = "Fluid simulation, from geometry to results."
+about = "Set up, run and inspect CFD simulations in one desktop app with its own solver engine."
+
+[[apps]]
+id = "vinilo"
+name = "Vinilo"
+suite = "everyday"
+tagline = "Apple Music, natively"
+color = [119, 93, 240]
+ink_light = [101, 47, 236]
+ink_dark = [176, 172, 244]
+repo = "getnodalia/vinilo"
+bundle = "dev.danielmiguelt.Vinilo"
+mac_bundle_name = "Vinilo Nodalia"
+systems = ["linux", "macos"]
+[apps.details]
+headline = "Apple Music, drawn natively."
+about = "A fast native interface for Apple Music with gapless playback and controls in your system's media panel."
+
+[[apps]]
+id = "brujula"
+name = "Brújula"
+suite = "everyday"
+tagline = "The Nodalix web browser"
+color = [9, 135, 77]
+ink_light = [7, 107, 60]
+ink_dark = [43, 205, 122]
+repo = "getnodalia/brujula"
+bundle = "dev.danielmiguelt.Brujula"
+mac_bundle_name = "Brujula"
+systems = ["linux"]
+[apps.details]
+headline = "The browser of Nodalix."
+about = "A fast, private web browser that comes with Nodalix."

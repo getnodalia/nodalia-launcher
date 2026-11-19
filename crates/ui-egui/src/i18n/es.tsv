@@ -1,0 +1,472 @@
+# Spanish (es) catalog for Nodalia Launcher.
+# Format: context<TAB>source<TAB>translation
+# Empty context = plain UI string (tl!, t).
+# @id = command-id keyed (tr_id).
+# @plural = plural forms: one|other (only 1 is "one" in Spanish).
+# @msg = status/error message template (message, msg).
+# Other context = disambiguation for tr_ctx.
+#
+# Clean-room: written from the meaning of Nodalia Launcher's English labels, in neutral
+# international Spanish for Spain and Latin America (the interface addresses the user as "tú";
+# no regional words such as "ordenador").
+#
+# Coverage: the whole interface: every menu string and tl! literal (complete_menus = true).
+# Left in English on purpose: product name "Nodalia Launcher" (and its "Launcher" tag), suite name "Nodalia apps", app names (Letra, Celdas, Lámina, Papel, Buzón, Hito, Ágora, Lienzo, Pluma, Pliego, Luz, Toma, Pulso, Ánima, Trama, Forja, Torno, Vortia, Vinilo, Brújula), "GitHub", "Finder".
+# Trailing "…" (U+2026) must be preserved. Placeholders must appear in the translation:
+# {ago}, {a}, {b}, {count}, {date}, {day}, {done}, {e}, {f}, {installed}, {latest}, {min},
+# {month}, {name}, {n}, {os}, {platform}, {sources}, {total}, {version}, {v}, {year}.
+
+	Launcher	Launcher
+	Settings	Ajustes
+	Check for updates	Buscar actualizaciones
+	Grid	Cuadrícula
+	Table	Tabla
+	Show apps as cards	Mostrar las aplicaciones como tarjetas
+	Show apps as a table	Mostrar las aplicaciones como tabla
+	All	Todas
+	Updates	Actualizaciones
+	Not installed	No instaladas
+	Search apps	Buscar aplicaciones
+	Sort	Ordenar
+	Suite order	Orden de la suite
+	Name	Nombre
+	Inspired by	Inspirada en
+	Status	Estado
+	Installed version	Versión instalada
+	Latest version	Última versión
+	Newest release	Publicación más reciente
+	GitHub	GitHub
+	Website	Sitio web
+	Classic apps	Aplicaciones clásicas
+	New apps	Aplicaciones nuevas
+	NEW	NUEVA
+	Install	Instalar
+	Update to {v}	Actualizar a {v}
+	Open	Abrir
+	Open {version}	Abrir {version}
+	Open {installed} without updating. {latest} stays available.	Abrir {installed} sin actualizar. {latest} sigue disponible.
+	{latest} is out, but Nodalia Launcher can't install it over this copy.	{latest} ya está disponible, pero Nodalia Launcher no puede instalarla sobre esta copia.
+	Nodalia Launcher can't install version {version} over this copy.	Nodalia Launcher no puede instalar la versión {version} sobre esta copia.
+	Download for {os}	Descargar para {os}
+	Download	Descargar
+	Coming soon	Próximamente
+	Checking…	Comprobando…
+	Not available	No disponible
+	Offline	Sin conexión
+	Downloading {done} of {total}	Descargando {done} de {total}
+	Downloading…	Descargando…
+	Reconnecting…	Reconectando…
+	Verifying…	Verificando…
+	Installing, then restarting…	Instalando y reiniciando…
+	Installing…	Instalando…
+	Removing…	Quitando…
+	Pause download	Pausar la descarga
+	Cancel download	Cancelar la descarga
+	Resume download	Reanudar la descarga
+	Discard download	Descartar la descarga
+	Release notes	Notas de la versión
+	Show in Finder	Mostrar en el Finder
+	Show in Explorer	Mostrar en el Explorador
+	Show in Files	Mostrar en Archivos
+	Reinstall	Reinstalar
+	Add desktop shortcut	Añadir acceso directo al escritorio
+	Uninstall…	Desinstalar…
+	Launch options…	Opciones de inicio…
+	{name} launch options	Opciones de inicio de {name}
+	Flags added each time the app is opened	Parámetros que se añaden cada vez que se abre la aplicación
+	Separate flags with spaces. Quote a value that has spaces in it.	Separa los parámetros con espacios. Pon entre comillas un valor que contenga espacios.
+	A quote isn't closed.	Hay unas comillas sin cerrar.
+	{name} wasn't opened: a quote in its launch options isn't closed.	{name} no se abrió: hay unas comillas sin cerrar en sus opciones de inicio.
+	Save	Guardar
+	All releases	Todas las versiones
+	Nodalia Launcher {version} is available.	Nodalia Launcher {version} está disponible.
+	Dismiss	Descartar
+	Update and restart	Actualizar y reiniciar
+	A new version is available. Would you like to relaunch with the updated version?	Hay una versión nueva. ¿Quieres reiniciar con la versión actualizada?
+	A new version is available. Download it to replace this version?	Hay una versión nueva. ¿Quieres descargarla para reemplazar esta versión?
+	Later	Más tarde
+	What's new	Novedades
+	No notes were published with this release.	Esta versión no se publicó con notas.
+	Released {date}	Publicada el {date}
+	Open on GitHub	Abrir en GitHub
+	Close	Cerrar
+	Nodalia Launcher {version}	Nodalia Launcher {version}
+	Only when I ask	Solo cuando lo pida
+	Automatically download and install updates	Descargar e instalar actualizaciones automáticamente
+	Ask for permission once when updating all apps	Pedir permiso una sola vez al actualizar todas las aplicaciones
+	Notify me when an installed app has an update	Avisarme cuando una aplicación instalada tenga una actualización
+	Include pre-releases (betas and release candidates)	Incluir versiones preliminares (betas y versiones candidatas)
+	Installing on Linux	Instalación en Linux
+	Installing on Windows	Instalación en Windows
+	Install new apps as	Instalar las aplicaciones nuevas como
+	System package (recommended)	Paquete del sistema (recomendado)
+	Updates always use the format an app was installed with.	Las actualizaciones siempre usan el formato con el que se instaló cada aplicación.
+	Running in the background	En segundo plano
+	Keep running in the tray when the window is closed	Seguir abierto en la bandeja del sistema al cerrar la ventana
+	Hide Nodalia Launcher from the Dock while in the background	Ocultar Nodalia Launcher del Dock en segundo plano
+	Nodalia Launcher is still running	Nodalia Launcher sigue abierto
+	It's in the tray: open it or quit it from the tray icon, or turn this off in the settings.	Está en la bandeja del sistema: ábrelo o ciérralo desde su icono, o desactiva esto en los ajustes.
+	Show the window on the current desktop	Mostrar la ventana en el escritorio actual
+	Start Nodalia Launcher when I log in	Abrir Nodalia Launcher al iniciar sesión
+	Questions, ideas and news from the Nodalia team	Preguntas, ideas y noticias del equipo de Nodalia
+	Appearance	Apariencia
+	Quit Nodalia Launcher	Salir de Nodalia Launcher
+	Done	Listo
+	Uninstall {name}?	¿Desinstalar {name}?
+	The app will be moved to the Trash. Your documents and settings stay.	La aplicación se moverá a la Papelera. Tus documentos y ajustes se conservan.
+	Windows will remove it like any installed program. Your documents and settings stay.	Windows la quitará como cualquier programa instalado. Tus documentos y ajustes se conservan.
+	Your system's package manager will remove it, and may ask for your password. Your documents and settings stay.	El gestor de paquetes del sistema la quitará y puede pedirte la contraseña. Tus documentos y ajustes se conservan.
+	The app will be removed. Your documents and settings stay.	La aplicación se quitará. Tus documentos y ajustes se conservan.
+	Uninstall	Desinstalar
+	Cancel	Cancelar
+	Checked {ago}	Comprobado {ago}
+	just now	ahora mismo
+	yesterday	ayer
+	{month} {day}, {year}	{day} {month} {year}
+	Automatically	Automáticamente
+	Apps on this computer	Aplicaciones en este equipo
+	Installed apps with a newer version	Aplicaciones instaladas con una versión más reciente
+	Apps you can install	Aplicaciones que puedes instalar
+	Pin to top	Fijar arriba
+	Unpin	Quitar fijación
+	Pinned	Fijadas
+	Pin {name} to top	Fijar {name} arriba
+	Unpin {name}	Quitar fijación de {name}
+	Reorder {name}	Reordenar {name}
+	Move up	Subir
+	Move down	Bajar
+	Hide App	Ocultar aplicación
+	Unhide App	Mostrar aplicación
+	Hidden Apps	Aplicaciones ocultas
+	Apps you hid	Aplicaciones que ocultaste
+	{a} and {b}	{a} y {b}
+	Learn more	Más información
+	Minimize	Minimizar
+	Maximize	Maximizar
+	Restore	Restaurar
+	New	Nueva
+	OK	Aceptar
+	Open link	Abrir enlace
+	Update	Actualizar
+	{name} icon	Icono de {name}
+	Loading Nodalia Launcher…	Cargando Nodalia Launcher…
+	Cancel update	Cancelar la actualización
+	Stop waiting; the update can be started again later	Dejar de esperar; la actualización se puede volver a iniciar más tarde
+	Download again	Volver a descargar
+	Install cancelled	Instalación cancelada
+	Install cancelled. The download is kept for the next try.	Instalación cancelada. La descarga se guarda para el próximo intento.
+	Update cancelled	Actualización cancelada
+	Uninstall cancelled	Desinstalación cancelada
+	Retry install	Reintentar la instalación
+	Retry update	Reintentar la actualización
+	Retry update to {version}	Reintentar la actualización a {version}
+	The download is still here. It's checked again, then installed.	La descarga sigue aquí. Se vuelve a comprobar y luego se instala.
+	Waiting for another app…	Esperando a otra aplicación…
+	Waiting for another download…	Esperando a otra descarga…
+	Simultaneous downloads	Descargas simultáneas
+	No limit	Sin límite
+	Downloads running together share your connection, so each one is slower.	Las descargas simultáneas comparten tu conexión, así que cada una es más lenta.
+	Waiting for other installs…	Esperando a otras instalaciones…
+	Installer (.msi)	Instalador (.msi)
+	Portable (.zip)	Portátil (.zip)
+	Disk image (.dmg)	Imagen de disco (.dmg)
+	Debian package (.deb)	Paquete Debian (.deb)
+	RPM package (.rpm)	Paquete RPM (.rpm)
+	Arch package (.pkg.tar.zst)	Paquete Arch (.pkg.tar.zst)
+	Flatpak bundle	Paquete Flatpak
+	Tarball (.tar.gz)	Archivo tar (.tar.gz)
+month	Jan	ene.
+month	Feb	feb.
+month	Mar	mar.
+month	Apr	abr.
+month	May	may.
+month	Jun	jun.
+month	Jul	jul.
+month	Aug	ago.
+month	Sep	sept.
+month	Oct	oct.
+month	Nov	nov.
+month	Dec	dic.
+	Not checked yet	Aún sin comprobar
+	GitHub's hourly limit was reached; full details return in {min} min	Se alcanzó el límite por hora de GitHub; todos los detalles estarán disponibles de nuevo en {min} min
+	GitHub limit hit; back in {min} min	Límite de GitHub alcanzado; disponible de nuevo en {min} min
+	Installing for {platform}	Instalación para {platform}
+	Downloads for {platform}	Descargas para {platform}
+	No downloads for this system	No hay descargas para este sistema
+	Nodalia on {name}	Nodalia en {name}
+	Couldn't open {name}: {e}	No se pudo abrir {name}: {e}
+	Download cancelled	Descarga cancelada
+	Available to install	Disponible para instalar
+	Available	Disponible
+	Installed · up to date	Instalada · al día
+	Update available	Actualización disponible
+	Installed	Instalada
+	installed	instalada
+	Not available here	No disponible aquí
+	Updating…	Actualizando…
+	Update paused	Actualización en pausa
+	Download paused	Descarga en pausa
+	{version} installed → {latest} released	{version} instalada → {latest} publicada
+	Version {version}	Versión {version}
+	{installed} installed · latest {latest}	{installed} instalada · última {latest}
+	Installed · latest {latest}	Instalada · última {latest}
+	Version {version} installed	Versión {version} instalada
+	Version {latest}	Versión {latest}
+	No release published yet	Aún no hay ninguna versión publicada
+	Nodalia Launcher	Nodalia Launcher
+	App	Aplicación
+	Latest	Última
+	Released	Publicada
+	Auto	Automático
+	Language	Idioma
+	Ascending	Ascendente
+	Descending	Descendente
+	Click to reverse the order	Haz clic para invertir el orden
+	Click to sort by this column	Haz clic para ordenar por esta columna
+	Like {name}	Al estilo de {name}
+	{done} of {total}	{done} de {total}
+	Downloading	Descargando
+	Verifying checksum…	Verificando la suma de comprobación…
+	Resume	Reanudar
+	{done} of {total} downloaded	{done} de {total} descargados
+	{done} downloaded	{done} descargados
+	Checking for updates…	Buscando actualizaciones…
+	Downloads the new version, replaces this one and opens it again	Descarga la versión nueva, reemplaza esta y vuelve a abrirla
+	Couldn't check for updates: {f}	No se pudieron buscar actualizaciones: {f}
+	Website (coming soon)	Sitio web (próximamente)
+	GitHub repository	Repositorio en GitHub
+	Nodalia	Nodalia
+	Update 1 app	Actualizar 1 aplicación
+	Update all ({count})	Actualizar todas ({count})
+	⊞  Grid	⊞  Cuadrícula
+	☰  Table	☰  Tabla
+	🔍  Search apps	🔍  Buscar aplicaciones
+	{name} {version}	{name} {version}
+	Match system	Igual que el sistema
+	Dark	Oscuro
+	Light	Claro
+	Full changelog	Registro de cambios completo
+	link	enlace
+	No apps match	Ninguna aplicación coincide
+	Open Nodalia Launcher to update.	Abre Nodalia Launcher para actualizar.
+	{name} {v} is available	{name} {v} está disponible
+	{count} updates are available	Hay {count} actualizaciones disponibles
+	These notes weren't fetched (GitHub's request limit was reached). They're on the release page.	Estas notas no se descargaron (se alcanzó el límite de solicitudes de GitHub). Están en la página de la versión.
+	When on, opening the launcher from the menu bar brings its window to the desktop you're on. When off, macOS switches you to the desktop the window was on.	Si está activado, abrir Nodalia Launcher desde la barra de menús lleva su ventana al escritorio en el que estás. Si está desactivado, macOS te cambia al escritorio en el que estaba la ventana.
+	Couldn't change the login item: {e}	No se pudo cambiar el elemento de inicio de sesión: {e}
+column	App	Aplicación
+column	Installed	Instalada
+column	Latest	Última
+column	Released	Publicada
+filter	Installed	Instaladas
+	App details	Detalles de la app
+	More actions for {name}	Más acciones para {name}
+	Close (Esc)	Cerrar (Esc)
+	Features	Funciones
+	Latest release	Última versión
+	Version	Versión
+	Platforms	Plataformas
+	Releases	Versiones
+	Enlarge picture	Ampliar imagen
+	Click to enlarge	Haz clic para ampliar
+	Previous picture (←)	Imagen anterior (←)
+	Next picture (→)	Imagen siguiente (→)
+	Loading pictures…	Cargando imágenes…
+	Pictures couldn't be loaded. Reopen this page to try again.	No se pudieron cargar las imágenes. Vuelve a abrir esta página para intentarlo de nuevo.
+	{name} details	Detalles de {name}
+@plural	{n} app|{n} apps	{n} aplicación|{n} aplicaciones
+@plural	{n} min ago|{n} min ago	hace {n} min|hace {n} min
+@plural	{n} h ago|{n} h ago	hace {n} h|hace {n} h
+@plural	{n} day ago|{n} days ago	hace {n} día|hace {n} días
+@msg	Couldn't open {name}: {e}	No se pudo abrir {name}: {e}
+@msg	Nodalia Launcher couldn't start its window on {backend}: {e}	No se pudo iniciar la ventana de Nodalia Launcher con {backend}: {e}
+@msg	Download cancelled	Descarga cancelada
+@msg	{name} updated to {version}	{name} actualizada a {version}
+@msg	{name} installed: {version}	{name} instalada: {version}
+@msg	{name} updated to {version} (this release publishes no checksum, so only its size was checked)	{name} actualizada a {version} (esta versión no publica la suma de comprobación, así que solo se comprobó su tamaño)
+@msg	{name} installed: {version} (this release publishes no checksum, so only its size was checked)	{name} instalada: {version} (esta versión no publica la suma de comprobación, así que solo se comprobó su tamaño)
+@msg	{name} was removed	Se quitó {name}
+@msg	{name} is running. Quit it, then try again.	{name} está abierta. Ciérrala y vuelve a intentarlo.
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with {cmd} or sudo pacman -Syu	{name} se instaló desde el repositorio {repo} o AUR ({pkg}). Actualízala con {cmd} o con sudo pacman -Syu
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg}) or sudo pacman -Syu	{name} se instaló desde el repositorio {repo} o AUR ({pkg}). Actualízala con tu asistente de AUR (por ejemplo: yay -S {pkg}) o con sudo pacman -Syu
+@msg	{name} was installed from the AUR ({pkg}). Update it with {cmd}	{name} se instaló desde AUR ({pkg}). Actualízala con {cmd}
+@msg	{name} was installed from the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg})	{name} se instaló desde AUR ({pkg}). Actualízala con tu asistente de AUR (por ejemplo: yay -S {pkg})
+@id	app.install	Instalar
+@id	app.update	Actualizar a {v}
+@id	app.open	Abrir
+@id	app.download	Descargar para {os}
+@id	app.reveal	Mostrar en el Finder
+@id	app.reinstall	Reinstalar
+@id	app.uninstall	Desinstalar…
+@id	app.notes	Notas de la versión
+@id	app.website	Sitio web
+@id	app.github	Repositorio en GitHub
+@id	app.releases	Todas las versiones
+@id	launcher.update	Actualizar y reiniciar
+@id	launcher.download	Descargar
+@id	launcher.notes	Novedades
+@id	launcher.dismiss	Descartar
+@id	settings.open	Ajustes
+@id	settings.quit	Salir de Nodalia Launcher
+@id	view.grid	Cuadrícula
+@id	view.table	Tabla
+@id	filter.all	Todas
+@id	filter.installed	Instaladas
+@id	filter.updates	Actualizaciones
+@id	filter.notinstalled	No instaladas
+@id	sort.suite	Orden de la suite
+@id	sort.name	Nombre
+@id	sort.inspired	Inspirada en
+@id	sort.status	Estado
+@id	sort.installed	Versión instalada
+@id	sort.latest	Última versión
+@id	sort.released	Publicación más reciente
+@id	help.github	GitHub
+@id	help.website	Sitio web
+@id	update.check	Buscar actualizaciones
+@id	update.check_auto	Buscar actualizaciones automáticamente
+@id	update.notify	Avisarme cuando una aplicación instalada tenga una actualización
+@id	update.prereleases	Incluir versiones preliminares (betas y versiones candidatas)
+@id	linux.preferred_kind	Instalar las aplicaciones nuevas como
+@id	tray.close_to_tray	Seguir abierto en la bandeja del sistema al cerrar la ventana
+@id	tray.show_on_current_desktop	Mostrar la ventana en el escritorio actual
+@id	tray.login_item	Abrir Nodalia Launcher al iniciar sesión
+@id	appearance.theme	Apariencia
+	Show Nodalia Launcher	Mostrar Nodalia Launcher
+	Check for Updates	Buscar actualizaciones
+	Visit getnodalia.com	Visitar getnodalia.com
+	Nodalia on GitHub	Nodalia en GitHub
+@plural	Nodalia Launcher · {n} update available|Nodalia Launcher · {n} updates available	Nodalia Launcher · {n} actualización disponible|Nodalia Launcher · {n} actualizaciones disponibles
+
+	Download size: {size}	Tamaño de descarga: {size}
+	Install folder	Carpeta de instalación
+	Default install folder	Carpeta de instalación predeterminada
+	System default	Predeterminada del sistema
+	Browse…	Examinar…
+	Use default	Usar predeterminada
+	New installs use this folder. Updates stay in their current location.	Las nuevas instalaciones usan esta carpeta. Las actualizaciones conservan su ubicación actual.
+	Custom folders use AppImage on Linux.	Las carpetas personalizadas usan AppImage en Linux.
+	On Linux, custom folders use AppImage format.	Las carpetas personalizadas usan AppImage en Linux.
+	The system manages install locations here.	El sistema gestiona las ubicaciones de instalación aquí.
+@msg	couldn't use install folder {path}: {reason}	no se pudo usar la carpeta de instalación {path}: {reason}
+@msg	this release has no AppImage for a custom install folder	esta versión no tiene un AppImage para una carpeta de instalación personalizada
+@msg	custom install folders aren't supported on this system	este sistema no admite carpetas de instalación personalizadas
+@msg	{path} already exists and wasn't installed by Nodalia Launcher	{path} ya existe y no fue instalado por Nodalia Launcher
+@msg	couldn't move {path} to Trash ({reason}). Remove it in Finder instead.	no se pudo mover {path} a la Papelera ({reason}). Elimínalo desde Finder.
+@msg	Desktop shortcut created for {name}	Acceso directo al escritorio creado para {name}
+@msg	Couldn't create the desktop shortcut: {e}	No se pudo crear el acceso directo al escritorio: {e}
+@msg	A desktop shortcut named {name} already exists	Ya existe un acceso directo al escritorio llamado {name}
+	Apps are placed inside this folder.	Las aplicaciones se guardan dentro de esta carpeta.
+	Replace what's there?	¿Reemplazar lo que hay?
+	{path} already exists. Installing {name} will overwrite it.	{path} ya existe. Instalar {name} lo sobrescribirá.
+	Replace	Reemplazar
+	Recently updated	Actualizadas recientemente
+	Name (A–Z)	Nombre (A–Z)
+	Name (Z–A)	Nombre (Z–A)
+	Frequently used	Más usadas
+	Next app	Aplicación siguiente
+	Previous app	Aplicación anterior
+	Show {n} more changes	Mostrar {n} cambios más
+	Last updated: {date}	Última actualización: {date}
+column	Version	Versión
+column	Author	Autor
+	Choose version	Elegir versión
+	latest {version}	última {version}
+	{version} (latest release)	{version} (última versión)
+	Launcher version	Versión del iniciador
+	Nightly	Nocturna
+	Nightly (none published yet)	Nocturna (aún no publicada)
+	Install version {version}	Instalar la versión {version}
+	Download selected version	Descargar la versión seleccionada
+	Older launcher versions require a manual reinstall.	Las versiones anteriores del iniciador requieren una reinstalación manual.
+	Your files may not open in older versions.	Es posible que tus archivos no se abran en versiones antiguas.
+	Enable automatic installs in Settings to follow new nightly builds.	Activa las instalaciones automáticas en Ajustes para recibir las nuevas versiones nocturnas.
+	Migrate Flatpak bundles to Nodalia OCI (experimental)	Migrar paquetes Flatpak a Nodalia OCI (experimental)
+	On update, switch first party apps when the matching package is available. Otherwise, keep using bundles.	Al actualizar, migrar las aplicaciones de Nodalia si está disponible el paquete correspondiente. De lo contrario, seguir usando paquetes independientes.
+	Version pinned to {version}. Click to unlock.	Versión fijada en {version}. Haz clic para desbloquear.
+	Unlock version?	¿Desbloquear la versión?
+	{app} is pinned to {version}. Follow the latest release instead?	{app} está fijado en la versión {version}. ¿Usar la versión más reciente?
+	Unlock	Desbloquear
+
+	Apps agents can reach: {count}	Apps que los agentes pueden usar: {count}
+	Added	Añadida
+	Remove	Quitar
+	Add	Añadir
+
+# Nodalia Launcher: the Nodalia apps (context = app id) and the launcher chrome.
+	About Nodalia Launcher	Acerca de Nodalia Launcher
+	Close this window	Cerrar esta ventana
+	Community	Comunidad
+	Install, update and open the Nodalia apps from one place.	Instala, actualiza y abre las aplicaciones de Nodalia desde un solo lugar.
+	Keyboard shortcuts	Atajos de teclado
+	Main menu	Menú principal
+	Nodalia apps	Nodalia apps
+	Office · Creator · Engineering	Office · Creator · Engineering
+	Report an issue	Informar de un problema
+	Support	Apoyar
+	Support Nodalia	Apoyar a Nodalia
+	Use the desktop's own window controls	Usar los controles de ventana del escritorio
+	Zoom in the release notes	Acercar las notas de la versión
+	Zoom out the release notes	Alejar las notas de la versión
+suite	Everyday	Día a día
+column	Suite	Suite
+letra	Writing and document design	Escritura y diseño de documentos
+letra	The word processor that stays out of your way.	El procesador de textos que no se interpone en tu camino.
+letra	Letters, reports and books in a fast native editor. It opens and saves DOCX and keeps your layout intact.	Cartas, informes y libros en un editor nativo y rápido. Abre y guarda DOCX y conserva intacta tu maquetación.
+celdas	Spreadsheets and data	Hojas de cálculo y datos
+celdas	Spreadsheets that open instantly.	Hojas de cálculo que se abren al instante.
+celdas	Formulas, charts and large tables in a native app, with XLSX files that round-trip.	Fórmulas, gráficos y tablas grandes en una app nativa, con archivos XLSX que se guardan sin pérdidas.
+lamina	Presentations and slide shows	Presentaciones y diapositivas
+lamina	Slides without the weight.	Diapositivas sin peso de más.
+lamina	Build and present decks in a fast native app, and open and save PPTX files.	Crea y presenta presentaciones en una app nativa y rápida, y abre y guarda archivos PPTX.
+papel	Reading, organizing and protecting PDFs	Leer, organizar y proteger PDF
+papel	Read, organize and protect your PDFs.	Lee, organiza y protege tus PDF.
+papel	View, annotate, fill, merge and sign PDF files, all on your own computer.	Visualiza, anota, rellena, une y firma archivos PDF, todo en tu propio ordenador.
+buzon	Mail, calendar and contacts	Correo, calendario y contactos
+buzon	Your mail, calendar and contacts in one place.	Tu correo, calendario y contactos en un solo lugar.
+buzon	A native client for IMAP, POP3 and JMAP accounts, with mail rendered safely and your passwords kept in the system keyring.	Un cliente nativo para cuentas IMAP, POP3 y JMAP, con el correo mostrado de forma segura y tus contraseñas guardadas en el llavero del sistema.
+hito	Tasks, milestones and progress	Tareas, hitos y progreso
+hito	Tasks, milestones and progress for your team.	Tareas, hitos y progreso para tu equipo.
+hito	Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption.	Planifica proyectos, sigue tareas y consulta el progreso en un servidor que gestionas tú, con cifrado de extremo a extremo.
+agora	Team chat on your own server	Chat de equipo en tu propio servidor
+agora	Team chat on a server you run yourself.	Chat de equipo en un servidor que gestionas tú.
+agora	Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app.	Espacios de trabajo, canales, hilos y mensajes directos con cifrado de extremo a extremo, en una app de escritorio nativa.
+lienzo	Image editing	Edición de imágenes
+lienzo	The image editor you already know how to use.	El editor de imágenes que ya sabes usar.
+lienzo	Layers, masks, adjustment layers, layer styles, type and brushes in a native app, with PSD files that open and save.	Capas, máscaras, capas de ajuste, estilos de capa, texto y pinceles en una app nativa, con archivos PSD que se abren y se guardan.
+pluma	Vector illustration	Ilustración vectorial
+pluma	Vector illustration, drawn natively.	Ilustración vectorial, dibujada de forma nativa.
+pluma	Paths, shapes, type and effects for logos and illustrations, with SVG and PDF in and out.	Trazados, formas, texto y efectos para logotipos e ilustraciones, con SVG y PDF de entrada y salida.
+pliego	Page layout and publishing	Maquetación y publicación
+pliego	Page layout and publishing.	Maquetación y publicación.
+pliego	Lay out magazines, books and posters with precise typography and print-ready PDF export.	Maqueta revistas, libros y carteles con tipografía precisa y exportación a PDF lista para imprimir.
+luz	Photo library and raw development	Fototeca y revelado RAW
+luz	Your photo library and raw developer.	Tu fototeca y revelador de RAW.
+luz	Organize photos and develop raw files without ever touching the originals.	Organiza tus fotos y revela archivos RAW sin tocar nunca los originales.
+toma	Video editing, color and sound	Edición de video, color y sonido
+toma	Video editing, color and sound.	Edición de vídeo, color y sonido.
+toma	Cut, grade and mix video on a fast native timeline.	Corta, etalona y mezcla vídeo en una línea de tiempo nativa y rápida.
+pulso	Motion graphics and visual effects	Gráficos en movimiento y efectos visuales
+pulso	Motion graphics and visual effects.	Gráficos en movimiento y efectos visuales.
+pulso	Animate layers, shapes and text with keyframes, expressions and effects.	Anima capas, formas y texto con fotogramas clave, expresiones y efectos.
+anima	2D animation	Animación 2D
+anima	2D animation, frame by frame.	Animación 2D, fotograma a fotograma.
+anima	Draw, tween and animate on a timeline, then export to video, GIF or image sequences.	Dibuja, interpola y anima en una línea de tiempo, y exporta a vídeo, GIF o secuencias de imágenes.
+trama	Interface design and prototyping	Diseño de interfaces y prototipos
+trama	Interface design and prototyping.	Diseño de interfaces y prototipos.
+trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	Marcos con diseño automático, componentes, estilos y prototipos interactivos, con colaboración en vivo.
+forja	Computer-aided design and drafting	CAD: diseño y dibujo técnico
+forja	Computer-aided design and drafting.	Diseño y delineación asistidos por ordenador.
+forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	Delineación 2D precisa y dibujo paramétrico, con archivos DXF y DWG.
+torno	Parametric 3D CAD	CAD 3D paramétrico
+torno	Parametric 3D CAD.	CAD 3D paramétrico.
+torno	Sketch, constrain and extrude solid parts with a feature timeline and a kernel written in Rust.	Dibuja bocetos, aplica restricciones y extruye piezas sólidas con una línea de tiempo de operaciones y un núcleo escrito en Rust.
+vortia	Fluid simulation (CFD)	Simulación de fluidos (CFD)
+vortia	Fluid simulation, from geometry to results.	Simulación de fluidos, de la geometría a los resultados.
+vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	Configura, ejecuta e inspecciona simulaciones CFD en una sola app de escritorio con su propio motor de resolución.
+vinilo	Apple Music, natively	Apple Music, de forma nativa
+vinilo	Apple Music, drawn natively.	Apple Music, dibujado de forma nativa.
+vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	Una interfaz nativa y rápida para Apple Music con reproducción sin pausas y controles en el panel multimedia de tu sistema.
+brujula	The Nodalix web browser	El navegador web de Nodalix
+brujula	The browser of Nodalix.	El navegador de Nodalix.
+brujula	A fast, private web browser that comes with Nodalix.	Un navegador web rápido y privado que se incluye con Nodalix.

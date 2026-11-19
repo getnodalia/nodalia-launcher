@@ -1,0 +1,52 @@
+{
+  "tag_name": "v0.2.7",
+  "name": "Vinilo v0.2.7",
+  "html_url": "https://github.com/getnodalia/vinilo/releases/tag/v0.2.7",
+  "published_at": "2026-11-18T10:00:00Z",
+  "prerelease": false,
+  "draft": false,
+  "assets": [
+    {
+      "name": "Vinilo-0.2.7-x86_64.AppImage",
+      "size": 1000,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/Vinilo-0.2.7-x86_64.AppImage",
+      "digest": "sha256:0101010101010101010101010101010101010101010101010101010101010101"
+    },
+    {
+      "name": "Vinilo-0.2.7-x86_64.AppImage.zsync",
+      "size": 1001,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/Vinilo-0.2.7-x86_64.AppImage.zsync",
+      "digest": "sha256:0202020202020202020202020202020202020202020202020202020202020202"
+    },
+    {
+      "name": "Vinilo-0.2.7-nodalia-macos-arm64.dmg",
+      "size": 1002,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/Vinilo-0.2.7-nodalia-macos-arm64.dmg",
+      "digest": "sha256:0303030303030303030303030303030303030303030303030303030303030303"
+    },
+    {
+      "name": "Vinilo-0.2.7-native-macos-arm64.dmg",
+      "size": 1003,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/Vinilo-0.2.7-native-macos-arm64.dmg",
+      "digest": "sha256:0404040404040404040404040404040404040404040404040404040404040404"
+    },
+    {
+      "name": "vinilo-0.2.7-linux-x86_64.flatpak",
+      "size": 1004,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/vinilo-0.2.7-linux-x86_64.flatpak",
+      "digest": "sha256:0505050505050505050505050505050505050505050505050505050505050505"
+    },
+    {
+      "name": "vinilo_0.2.7_amd64.deb",
+      "size": 1005,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/vinilo_0.2.7_amd64.deb",
+      "digest": "sha256:0606060606060606060606060606060606060606060606060606060606060606"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 1006,
+      "browser_download_url": "https://github.com/getnodalia/vinilo/releases/download/v0.2.7/SHA256SUMS",
+      "digest": "sha256:0707070707070707070707070707070707070707070707070707070707070707"
+    }
+  ]
+}

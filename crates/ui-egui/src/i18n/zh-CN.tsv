@@ -1,0 +1,461 @@
+# Simplified Chinese (zh-CN) catalog for Nodalia Launcher.
+# Format: context<TAB>English source<TAB>translation.
+# Original translations from the English UI. Product and app names (Letra, Celdas, Lámina, Papel, Buzón, Hito, Ágora, Lienzo, Pluma, Pliego, Luz, Toma, Pulso, Ánima, Trama, Forja, Torno, Vortia, Vinilo, Brújula) and third-party names stay unchanged.
+# Shown with the system's Chinese font (PingFang, Microsoft YaHei, Noto Sans CJK…): see cjk_font.rs.
+# Chinese has one plural form. Placeholders and trailing ellipses are preserved.
+
+	Launcher	Launcher
+	Settings	设置
+	Check for updates	检查更新
+	Grid	网格
+	Table	表格
+	Show apps as cards	以卡片显示应用
+	Show apps as a table	以表格显示应用
+	All	全部
+	Updates	更新
+	Not installed	未安装
+	Search apps	搜索应用
+	Sort	排序
+	Suite order	默认顺序
+	Name	名称
+	Status	状态
+	Installed version	已安装版本
+	Latest version	最新版本
+	Newest release	发布日期
+	GitHub	GitHub
+	Website	网站
+	Classic apps	经典应用
+	New apps	新应用
+	NEW	新
+	Install	安装
+	Update to {v}	更新至 {v}
+	Open	打开
+	Open {version}	打开 {version}
+	Open {installed} without updating. {latest} stays available.	打开 {installed}，不更新。{latest} 仍可稍后安装。
+	{latest} is out, but Nodalia Launcher can't install it over this copy.	{latest} 已发布，但 Nodalia Launcher 无法用它替换此副本。
+	Nodalia Launcher can't install version {version} over this copy.	Nodalia Launcher 无法用版本 {version} 替换此副本。
+	Download for {os}	下载 {os} 版
+	Download	下载
+	Coming soon	即将推出
+	Checking…	正在检查…
+	Not available	不可用
+	Offline	离线
+	Downloading {done} of {total}	正在下载 {done} / {total}
+	Downloading…	正在下载…
+	Reconnecting…	正在重新连接…
+	Verifying…	正在校验…
+	Installing, then restarting…	正在安装，完成后重启…
+	Installing…	正在安装…
+	Removing…	正在卸载…
+	Pause download	暂停下载
+	Cancel download	取消下载
+	Resume download	继续下载
+	Discard download	丢弃下载
+	Release notes	更新说明
+	Reinstall	重新安装
+	Add desktop shortcut	添加桌面快捷方式
+	Uninstall…	卸载…
+	Launch options…	启动选项…
+	{name} launch options	{name} 启动选项
+	Flags added each time the app is opened	每次打开应用时附加的参数
+	Separate flags with spaces. Quote a value that has spaces in it.	用空格分隔各个参数。含有空格的值请用引号括起来。
+	A quote isn't closed.	有引号未闭合。
+	{name} wasn't opened: a quote in its launch options isn't closed.	未打开 {name}：其启动选项中有引号未闭合。
+	Save	保存
+	All releases	所有版本
+	Nodalia Launcher {version} is available.	Nodalia Launcher {version} 已可更新。
+	Dismiss	忽略
+	Update and restart	更新并重启
+	A new version is available. Would you like to relaunch with the updated version?	有新版本可用。是否使用更新后的版本重新启动？
+	A new version is available. Download it to replace this version?	有新版本可用。是否下载以替换当前版本？
+	Later	稍后
+	What's new	更新内容
+	No notes were published with this release.	此版本未提供更新说明。
+	Released {date}	发布于 {date}
+	Open on GitHub	在 GitHub 上打开
+	Close	关闭
+	Nodalia Launcher {version}	Nodalia Launcher {version}
+	Only when I ask	仅手动检查
+	Automatically download and install updates	自动下载并安装更新
+	Ask for permission once when updating all apps	更新所有应用时仅请求一次授权
+	Notify me when an installed app has an update	已安装应用有更新时通知我
+	Include pre-releases (betas and release candidates)	包含预发布版本（测试版和候选版）
+	Installing on Linux	Linux 安装设置
+	Installing on Windows	Windows 安装设置
+	Install new apps as	新应用安装格式
+	System package (recommended)	系统软件包（推荐）
+	Updates always use the format an app was installed with.	更新时始终使用应用原来的安装格式。
+	Running in the background	后台运行
+	Keep running in the tray when the window is closed	关闭窗口后继续在系统托盘中运行
+	Hide Nodalia Launcher from the Dock while in the background	在后台运行时从 Dock 中隐藏 Nodalia Launcher
+	Nodalia Launcher is still running	Nodalia Launcher 仍在运行
+	It's in the tray: open it or quit it from the tray icon, or turn this off in the settings.	它已进入系统托盘：可通过托盘图标打开或退出，也可在设置中关闭此行为。
+	Show the window on the current desktop	在当前桌面显示窗口
+	Start Nodalia Launcher when I log in	登录时启动 Nodalia Launcher
+	Questions, ideas and news from the Nodalia team	与 Nodalia 团队交流问题、想法和动态
+	Appearance	外观
+	Quit Nodalia Launcher	退出 Nodalia Launcher
+	Done	完成
+	Uninstall {name}?	卸载 {name}？
+	The app will be moved to the Trash. Your documents and settings stay.	应用将移到废纸篓。你的文档和设置会保留。
+	Windows will remove it like any installed program. Your documents and settings stay.	Windows 将按常规方式卸载此应用。你的文档和设置会保留。
+	Your system's package manager will remove it, and may ask for your password. Your documents and settings stay.	系统软件包管理器将卸载此应用，可能需要输入密码。你的文档和设置会保留。
+	The app will be removed. Your documents and settings stay.	应用将被卸载。你的文档和设置会保留。
+	Uninstall	卸载
+	Cancel	取消
+	Checked {ago}	上次检查：{ago}
+	just now	刚刚
+	yesterday	昨天
+	{month} {day}, {year}	{year}年{month}{day}日
+month	Jan	1月
+month	Feb	2月
+month	Mar	3月
+month	Apr	4月
+month	May	5月
+month	Jun	6月
+month	Jul	7月
+month	Aug	8月
+month	Sep	9月
+month	Oct	10月
+month	Nov	11月
+month	Dec	12月
+	Not checked yet	尚未检查
+	GitHub's hourly limit was reached; full details return in {min} min	已达到 GitHub 每小时请求上限；{min} 分钟后可获取完整信息
+	GitHub limit hit; back in {min} min	已达 GitHub 限额；{min} 分钟后恢复
+	Installing for {platform}	安装平台：{platform}
+	Downloads for {platform}	下载平台：{platform}
+	No downloads for this system	此系统暂无可用下载
+	Nodalia on {name}	Nodalia 的 {name} 主页
+	Available to install	可安装
+	Available	可用
+	Installed · up to date	已安装 · 已是最新
+	Update available	有可用更新
+	Installed	已安装
+	Not available here	此平台不可用
+	Updating…	正在更新…
+	Update paused	更新已暂停
+	Download paused	下载已暂停
+	{version} installed → {latest} released	已安装 {version} → 最新 {latest}
+	Version {version}	版本 {version}
+	{installed} installed · latest {latest}	已安装 {installed} · 最新 {latest}
+	Installed · latest {latest}	已安装 · 最新 {latest}
+	Version {version} installed	已安装版本 {version}
+	Version {latest}	版本 {latest}
+	No release published yet	尚未发布版本
+	Nodalia Launcher	Nodalia Launcher
+	App	应用
+	Latest	最新
+	Released	发布日期
+	Auto	跟随系统
+	Language	语言
+	Ascending	升序
+	Descending	降序
+	Click to reverse the order	点击切换排序方向
+	Click to sort by this column	点击按此列排序
+	{done} of {total}	{done} / {total}
+	Downloading	正在下载
+	Verifying checksum…	正在验证校验和…
+	Resume	继续
+	{done} of {total} downloaded	已下载 {done} / {total}
+	{done} downloaded	已下载 {done}
+	Checking for updates…	正在检查更新…
+	Downloads the new version, replaces this one and opens it again	下载新版本，替换当前版本并重新打开
+	Couldn't check for updates: {f}	无法检查更新：{f}
+	GitHub repository	GitHub 仓库
+	Nodalia	Nodalia
+	Update 1 app	更新 1 个应用
+	Update all ({count})	全部更新（{count}）
+	⊞  Grid	⊞  网格
+	☰  Table	☰  表格
+	🔍  Search apps	🔍  搜索应用
+	{name} {version}	{name} {version}
+	Match system	跟随系统
+	Dark	深色
+	Light	浅色
+	Full changelog	完整更新日志
+	link	链接
+	No apps match	没有匹配的应用
+	Open Nodalia Launcher to update.	打开 Nodalia Launcher 进行更新。
+	{name} {v} is available	{name} {v} 已可更新
+	{count} updates are available	有 {count} 个可用更新
+	These notes weren't fetched (GitHub's request limit was reached). They're on the release page.	未能获取更新说明（已达到 GitHub 请求上限）。可前往版本发布页面查看。
+	When on, opening the launcher from the menu bar brings its window to the desktop you're on. When off, macOS switches you to the desktop the window was on.	开启后，从菜单栏打开启动器时，窗口会显示在当前桌面。关闭后，macOS 会切换到窗口原来所在的桌面。
+	Couldn't change the login item: {e}	无法更改登录启动项：{e}
+column	App	应用
+column	Installed	已安装版本
+column	Latest	最新版本
+column	Released	发布日期
+filter	Installed	已安装
+	{name} details	{name} 详情
+@plural	{n} min ago|{n} min ago	{n} 分钟前
+@plural	{n} h ago|{n} h ago	{n} 小时前
+@plural	{n} day ago|{n} days ago	{n} 天前
+@id	app.install	安装
+@id	app.update	更新至 {v}
+@id	app.open	打开
+@id	app.download	下载 {os} 版
+@id	app.reveal	在访达中显示
+@id	app.reinstall	重新安装
+@id	app.uninstall	卸载…
+@id	app.notes	更新说明
+@id	app.website	网站
+@id	app.github	GitHub 仓库
+@id	app.releases	所有版本
+@id	launcher.update	更新并重启
+@id	launcher.download	下载
+@id	launcher.notes	更新内容
+@id	launcher.dismiss	忽略
+@id	settings.open	设置
+@id	settings.quit	退出 Nodalia Launcher
+@id	view.grid	网格
+@id	view.table	表格
+@id	filter.all	全部
+@id	filter.installed	已安装
+@id	filter.updates	更新
+@id	filter.notinstalled	未安装
+@id	sort.suite	默认顺序
+@id	sort.name	名称
+@id	sort.status	状态
+@id	sort.installed	已安装版本
+@id	sort.latest	最新版本
+@id	sort.released	发布日期
+@id	help.github	GitHub
+@id	help.website	网站
+@id	update.check	检查更新
+@id	update.check_auto	自动检查更新
+@id	update.notify	已安装应用有更新时通知我
+@id	update.prereleases	包含预发布版本（测试版和候选版）
+@id	linux.preferred_kind	新应用安装格式
+@id	tray.close_to_tray	关闭窗口后继续在系统托盘中运行
+@id	tray.show_on_current_desktop	在当前桌面显示窗口
+@id	tray.login_item	登录时启动 Nodalia Launcher
+@id	appearance.theme	外观
+	Update	更新
+	New	新
+	Classic	经典
+	Minimize	最小化
+	Maximize	最大化
+	Restore	还原
+	Show in Finder	在访达中显示
+	Show in Explorer	在资源管理器中显示
+	Show Nodalia Launcher	显示 Nodalia Launcher
+	Check for Updates	检查更新
+	Visit getnodalia.com	访问 getnodalia.com
+	Nodalia on GitHub	Nodalia 的 GitHub 主页
+@plural	Nodalia Launcher · {n} update available|Nodalia Launcher · {n} updates available	Nodalia Launcher · 有 {n} 个可用更新
+@plural	{n} app|{n} apps	{n} 个应用
+
+	Show in Files	在文件管理器中显示
+	Loading Nodalia Launcher…	正在加载 Nodalia Launcher…
+	Download cancelled	下载已取消
+	Automatically	自动
+	{a} and {b}	{a} 和 {b}
+	Learn more	了解更多
+	OK	确定
+	Open link	打开链接
+	{name} icon	{name} 图标
+	installed	已安装
+	Apps on this computer	此电脑上的应用
+	Installed apps with a newer version	有新版本的已安装应用
+	Apps you can install	可安装的应用
+	Pin to top	置顶
+	Unpin	取消置顶
+	Pinned	已置顶
+	Pin {name} to top	将 {name} 置顶
+	Unpin {name}	取消置顶 {name}
+	Reorder {name}	重新排序 {name}
+	Move up	上移
+	Move down	下移
+	Hide App	隐藏应用
+	Unhide App	取消隐藏应用
+	Hidden Apps	已隐藏的应用
+	Apps you hid	你隐藏的应用
+	Cancel update	取消更新
+	Stop waiting; the update can be started again later	停止等待；稍后可重新开始更新
+	Download again	重新下载
+	Install cancelled	安装已取消
+	Install cancelled. The download is kept for the next try.	安装已取消。已下载的文件会保留，供下次使用。
+	Update cancelled	更新已取消
+	Uninstall cancelled	卸载已取消
+	Retry install	重试安装
+	Retry update	重试更新
+	Retry update to {version}	重试更新至 {version}
+	The download is still here. It's checked again, then installed.	已下载的文件仍在。会先重新校验，然后安装。
+	Waiting for another app…	正在等待其他应用…
+	Waiting for another download…	正在等待其他下载…
+	Simultaneous downloads	同时下载数
+	No limit	不限制
+	Downloads running together share your connection, so each one is slower.	同时进行的下载会共享网络连接，因此每个下载都会变慢。
+	Waiting for other installs…	正在等待其他安装…
+
+# Package formats offered for download (PackageKind::label)
+	Installer (.msi)	安装程序 (.msi)
+	Portable (.zip)	便携版 (.zip)
+	Disk image (.dmg)	磁盘映像 (.dmg)
+	Debian package (.deb)	Debian 软件包 (.deb)
+	RPM package (.rpm)	RPM 软件包 (.rpm)
+	Arch package (.pkg.tar.zst)	Arch 软件包 (.pkg.tar.zst)
+	Flatpak bundle	Flatpak 包
+	Tarball (.tar.gz)	压缩包 (.tar.gz)
+	App details	应用详情
+	More actions for {name}	{name} 的更多操作
+	Close (Esc)	关闭（Esc）
+	Features	功能特性
+	Latest release	最新发布
+	Version	版本
+	Platforms	平台
+	Releases	版本发布
+	Enlarge picture	放大图片
+	Click to enlarge	点击放大
+	Previous picture (←)	上一张（←）
+	Next picture (→)	下一张（→）
+	Loading pictures…	正在加载图片…
+	Pictures couldn't be loaded. Reopen this page to try again.	无法加载图片。重新打开此页面可重试。
+
+# Message templates (@msg): toasts from the backend. {placeholders} match any text.
+@msg	Couldn't open {name}: {e}	无法打开 {name}：{e}
+@msg	Nodalia Launcher couldn't start its window on {backend}: {e}	无法在 {backend} 上启动 Nodalia Launcher 的窗口：{e}
+@msg	Download cancelled	下载已取消
+@msg	{name} updated to {version}	{name} 已更新至 {version}
+@msg	{name} installed: {version}	{name} 已安装：{version}
+@msg	{name} updated to {version} (this release publishes no checksum, so only its size was checked)	{name} 已更新至 {version}（此版本未发布校验和，因此只检查了文件大小）
+@msg	{name} installed: {version} (this release publishes no checksum, so only its size was checked)	{name} 已安装：{version}（此版本未发布校验和，因此只检查了文件大小）
+@msg	{name} was removed	{name} 已卸载
+@msg	{name} is running. Quit it, then try again.	{name} 正在运行。请先退出，然后重试。
+
+	Download size: {size}	下载大小：{size}
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with {cmd} or sudo pacman -Syu	{name} 是从 {repo} 软件仓库或 AUR 安装的（{pkg}）。请使用 {cmd} 或 sudo pacman -Syu 更新。
+@msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg}) or sudo pacman -Syu	{name} 是从 {repo} 软件仓库或 AUR 安装的（{pkg}）。请使用您的 AUR 助手（例如：yay -S {pkg}）或 sudo pacman -Syu 更新。
+@msg	{name} was installed from the AUR ({pkg}). Update it with {cmd}	{name} 是从 AUR 安装的（{pkg}）。请使用 {cmd} 更新。
+@msg	{name} was installed from the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg})	{name} 是从 AUR 安装的（{pkg}）。请使用您的 AUR 助手（例如：yay -S {pkg}）更新。
+	Install folder	安装文件夹
+	Default install folder	默认安装文件夹
+	System default	系统默认
+	Browse…	浏览…
+	Use default	使用默认
+	New installs use this folder. Updates stay in their current location.	新安装的应用使用此文件夹。更新时保留当前位置。
+	Custom folders use AppImage on Linux.	在 Linux 上，自定义文件夹使用 AppImage。
+	On Linux, custom folders use AppImage format.	在 Linux 上，自定义文件夹使用 AppImage。
+	The system manages install locations here.	此环境中的安装位置由系统管理。
+@msg	couldn't use install folder {path}: {reason}	无法使用安装文件夹 {path}：{reason}
+@msg	this release has no AppImage for a custom install folder	此版本没有可用于自定义安装文件夹的 AppImage
+@msg	custom install folders aren't supported on this system	此系统不支持自定义安装文件夹
+@msg	{path} already exists and wasn't installed by Nodalia Launcher	{path} 已存在，且并非由 Nodalia Launcher 安装
+@msg	couldn't move {path} to Trash ({reason}). Remove it in Finder instead.	无法将 {path} 移到废纸篓（{reason}）。请在 Finder 中移除。
+@msg	Desktop shortcut created for {name}	已为 {name} 创建桌面快捷方式
+@msg	Couldn't create the desktop shortcut: {e}	无法创建桌面快捷方式：{e}
+@msg	A desktop shortcut named {name} already exists	名为 {name} 的桌面快捷方式已存在
+	Apps are placed inside this folder.	应用会放置在此文件夹内。
+	Replace what's there?	替换现有内容？
+	{path} already exists. Installing {name} will overwrite it.	{path} 已存在。安装 {name} 将覆盖它。
+	Replace	替换
+	Recently updated	最近更新
+	Name (A–Z)	名称 (A–Z)
+	Name (Z–A)	名称 (Z–A)
+	Frequently used	最常使用
+	Next app	下一个应用
+	Previous app	上一个应用
+	Show {n} more changes	显示另外 {n} 项更改
+	Last updated: {date}	最后更新：{date}
+column	Author	作者
+column	Version	版本
+	Choose version	选择版本
+	latest {version}	最新 {version}
+	{version} (latest release)	{version}（最新发布）
+	Launcher version	启动器版本
+	Nightly	每日构建版
+	Nightly (none published yet)	每日构建版（尚未发布）
+	Install version {version}	安装版本 {version}
+	Download selected version	下载所选版本
+	Older launcher versions require a manual reinstall.	旧版启动器需要手动重新安装。
+	Your files may not open in older versions.	旧版可能无法打开你的文件。
+	Enable automatic installs in Settings to follow new nightly builds.	在设置中启用自动安装，即可跟进新的每日构建版。
+	Migrate Flatpak bundles to Nodalia OCI (experimental)	将 Flatpak 软件包迁移到 Nodalia OCI（实验性）
+	On update, switch first party apps when the matching package is available. Otherwise, keep using bundles.	更新时，如果有对应的软件包，则迁移 Nodalia 官方应用；否则继续使用独立软件包。
+	Version pinned to {version}. Click to unlock.	版本已固定为 {version}。点击解锁。
+	Unlock version?	解锁版本？
+	{app} is pinned to {version}. Follow the latest release instead?	{app} 已固定为 {version}。是否改为跟随最新版本？
+	Unlock	解锁
+
+	Apps agents can reach: {count}	智能体可用的应用：{count}
+	Added	已添加
+	Remove	移除
+	Add	添加
+
+# Nodalia Launcher: the Nodalia apps (context = app id) and the launcher chrome.
+	About Nodalia Launcher	关于 Nodalia Launcher
+	Close this window	关闭此窗口
+	Community	社区
+	Install, update and open the Nodalia apps from one place.	在一个地方安装、更新和打开 Nodalia 应用。
+	Keyboard shortcuts	键盘快捷键
+	Main menu	主菜单
+	Nodalia apps	Nodalia apps
+	Office · Creator · Engineering	Office · Creator · Engineering
+	Report an issue	报告问题
+	Support	支持
+	Support Nodalia	支持 Nodalia
+	Use the desktop's own window controls	使用桌面自带的窗口控件
+	Zoom in the release notes	放大发行说明
+	Zoom out the release notes	缩小发行说明
+suite	Everyday	日常
+column	Suite	套件
+letra	Writing and document design	写作与文档设计
+letra	The word processor that stays out of your way.	不碍事的文字处理器。
+letra	Letters, reports and books in a fast native editor. It opens and saves DOCX and keeps your layout intact.	在快速的原生编辑器中撰写信函、报告和书籍。可打开和保存 DOCX，并完整保留你的版式。
+celdas	Spreadsheets and data	电子表格与数据处理
+celdas	Spreadsheets that open instantly.	秒开的电子表格。
+celdas	Formulas, charts and large tables in a native app, with XLSX files that round-trip.	在原生应用中处理公式、图表和大型表格，XLSX 文件可无损往返。
+lamina	Presentations and slide shows	演示文稿与幻灯片
+lamina	Slides without the weight.	轻盈的幻灯片。
+lamina	Build and present decks in a fast native app, and open and save PPTX files.	在快速的原生应用中制作和演示幻灯片，并可打开和保存 PPTX 文件。
+papel	Reading, organizing and protecting PDFs	PDF 阅读、整理和保护
+papel	Read, organize and protect your PDFs.	阅读、整理并保护你的 PDF。
+papel	View, annotate, fill, merge and sign PDF files, all on your own computer.	查看、批注、填写、合并和签署 PDF 文件，全部在你自己的电脑上完成。
+buzon	Mail, calendar and contacts	邮件、日历和联系人
+buzon	Your mail, calendar and contacts in one place.	邮件、日历和联系人，尽在一处。
+buzon	A native client for IMAP, POP3 and JMAP accounts, with mail rendered safely and your passwords kept in the system keyring.	支持 IMAP、POP3 和 JMAP 账户的原生客户端，邮件安全渲染，密码保存在系统钥匙串中。
+hito	Tasks, milestones and progress	任务、里程碑和进度
+hito	Tasks, milestones and progress for your team.	为你的团队提供任务、里程碑和进度。
+hito	Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption.	在你自己运行的服务器上规划项目、跟踪任务并查看进度，支持端到端加密。
+agora	Team chat on your own server	在你自己的服务器上进行团队聊天
+agora	Team chat on a server you run yourself.	在你自己运行的服务器上进行团队聊天。
+agora	Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app.	工作区、频道、话题和私信，支持端到端加密，运行于原生桌面应用中。
+lienzo	Image editing	图像编辑
+lienzo	The image editor you already know how to use.	你早已会用的图像编辑器。
+lienzo	Layers, masks, adjustment layers, layer styles, type and brushes in a native app, with PSD files that open and save.	在原生应用中使用图层、蒙版、调整图层、图层样式、文字和画笔，可打开和保存 PSD 文件。
+pluma	Vector illustration	矢量插画
+pluma	Vector illustration, drawn natively.	原生绘制的矢量插画。
+pluma	Paths, shapes, type and effects for logos and illustrations, with SVG and PDF in and out.	用于徽标和插画的路径、形状、文字和特效，支持 SVG 和 PDF 的导入与导出。
+pliego	Page layout and publishing	页面排版与出版
+pliego	Page layout and publishing.	版面设计与出版。
+pliego	Lay out magazines, books and posters with precise typography and print-ready PDF export.	以精确的排版和可直接印刷的 PDF 导出来排版杂志、书籍和海报。
+luz	Photo library and raw development	照片管理与 RAW 处理
+luz	Your photo library and raw developer.	你的照片库和 RAW 冲洗工具。
+luz	Organize photos and develop raw files without ever touching the originals.	整理照片并冲洗 RAW 文件，绝不触碰原始文件。
+toma	Video editing, color and sound	视频剪辑、调色和声音处理
+toma	Video editing, color and sound.	视频剪辑、调色与声音。
+toma	Cut, grade and mix video on a fast native timeline.	在快速的原生时间线上剪辑、调色和混音视频。
+pulso	Motion graphics and visual effects	动态图形与视觉特效
+pulso	Motion graphics and visual effects.	动态图形与视觉特效。
+pulso	Animate layers, shapes and text with keyframes, expressions and effects.	用关键帧、表达式和特效为图层、形状和文字制作动画。
+anima	2D animation	2D 动画
+anima	2D animation, frame by frame.	2D 动画，逐帧绘制。
+anima	Draw, tween and animate on a timeline, then export to video, GIF or image sequences.	在时间线上绘制、补间和制作动画，然后导出为视频、GIF 或图像序列。
+trama	Interface design and prototyping	界面设计与原型制作
+trama	Interface design and prototyping.	界面设计与原型制作。
+trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	带自动布局的画板、组件、样式和可点击的原型，并支持实时协作。
+forja	Computer-aided design and drafting	计算机辅助设计与制图
+forja	Computer-aided design and drafting.	计算机辅助设计与绘图。
+forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	精确的 2D 绘图和参数化绘制，支持 DXF 和 DWG 文件。
+torno	Parametric 3D CAD	参数化三维 CAD
+torno	Parametric 3D CAD.	参数化 3D CAD。
+torno	Sketch, constrain and extrude solid parts with a feature timeline and a kernel written in Rust.	绘制草图、添加约束并拉伸实体零件，配备特征时间线和用 Rust 编写的内核。
+vortia	Fluid simulation (CFD)	流体仿真（CFD）
+vortia	Fluid simulation, from geometry to results.	流体仿真，从几何到结果。
+vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	在一个桌面应用中设置、运行和查看 CFD 仿真，内置自有求解引擎。
+vinilo	Apple Music, natively	原生的 Apple Music
+vinilo	Apple Music, drawn natively.	原生绘制的 Apple Music。
+vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	面向 Apple Music 的快速原生界面，支持无缝播放，并可在系统媒体面板中控制。
+brujula	The Nodalix web browser	Nodalix 网页浏览器
+brujula	The browser of Nodalix.	Nodalix 的浏览器。
+brujula	A fast, private web browser that comes with Nodalix.	随 Nodalix 一同提供的快速、私密的网页浏览器。
