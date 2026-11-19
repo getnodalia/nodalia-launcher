@@ -195,17 +195,61 @@ impl GitHubSource {
         if let Some(e) = self.entry(repo, false)
             && let Some(r) = e.release.as_ref().filter(|r| r.tag == tag)
         {
-            return Ok(Answer { latest: LatestRelease::Found(r.clone()), source: Source::GitHubPages });
+            let mut known = r.clone();
+            if known.notes.is_empty() {
+                // A release the pages route made earlier has no notes yet: the repo's own file has them.
+                known.notes = self.pages_notes(repo, &tag);
+                if !known.notes.is_empty() {
+                    self.store(repo, Entry { release: Some(known.clone()), ..e });
+                }
+            }
+            return Ok(Answer { latest: LatestRelease::Found(known), source: Source::GitHubPages });
         }
-        let sums_url = format!("{}{tag}/SHA256SUMS.txt", release::download_prefix(repo));
-        // Not `note_pages_error`: this one redirects to GitHub's asset CDN, so its failure says
-        // nothing about whether github.com itself can be reached for the next app.
-        let sums = self.http.get_text(&sums_url)?.map(|t| release::parse_sha256sums(&t)).unwrap_or_default();
-        let r = release::release_from_sums(repo, &tag, &sums);
+        // The release workflows publish `SHA256SUMS` plus one list per platform; older ones a
+        // single `SHA256SUMS.txt`. Between them they name every file of the release.
+        let mut texts = Vec::new();
+        let mut failure = None;
+        for list in SUMS_LISTS {
+            // Not `note_pages_error`: this one redirects to GitHub's asset CDN, so its failure says
+            // nothing about whether github.com itself can be reached for the next app.
+            match self.http.get_text(&format!("{}{tag}/{list}", release::download_prefix(repo))) {
+                Ok(Some(text)) => texts.push(text),
+                Ok(None) => {}
+                Err(e) => failure = Some(e),
+            }
+        }
+        let sums = release::merge_sha256sums(texts.iter().map(String::as_str));
+        if sums.is_empty()
+            && let Some(e) = failure
+        {
+            return Err(e);
+        }
+        let mut r = release::release_from_sums(repo, &tag, &sums);
+        r.notes = self.pages_notes(repo, &tag);
         self.store(repo, Entry { etag: None, release: Some(r.clone()), prereleases: false, fetched_at: crate::now() });
         Ok(Answer { latest: LatestRelease::Found(r), source: Source::GitHubPages })
     }
+
+    /// The release's notes without the API: every app keeps them in `docs/release-notes/<tag>.md`
+    /// at the tag, and raw.githubusercontent.com costs no quota. Empty when the file isn't there
+    /// or can't be read; the notes are a convenience, never a reason to fail a check.
+    fn pages_notes(&self, repo: &str, tag: &str) -> String {
+        if !release::valid_tag(tag) {
+            return String::new();
+        }
+        match self.http.get_text(&format!("https://raw.githubusercontent.com/{repo}/{tag}/docs/release-notes/{tag}.md")) {
+            Ok(Some(text)) => release::cap_notes(&text),
+            Ok(None) => String::new(),
+            Err(e) => {
+                log::debug!("{repo}: the notes file of {tag}: {e}");
+                String::new()
+            }
+        }
+    }
 }
+
+/// The checksum lists a release can carry, the plain ones first.
+const SUMS_LISTS: [&str; 4] = ["SHA256SUMS", "SHA256SUMS-macos", "SHA256SUMS-windows", "SHA256SUMS.txt"];
 
 /// GitHub's quota refills within the hour, so a later reset is a bad answer.
 const MAX_LIMIT_WAIT: i64 = 60 * 60;

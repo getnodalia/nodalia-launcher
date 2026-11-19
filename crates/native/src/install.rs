@@ -1877,7 +1877,11 @@ pub mod macos {
         expect: &Expect<'_>,
         run: impl FnMut(&str, &[&str], Duration) -> Result<process::RunOutput, String>,
     ) -> Result<(), String> {
-        super::macos_verify::verify_with(app, bundle, run)?;
+        for concern in super::macos_verify::verify_with(app, bundle, run)? {
+            // Advisory: the apps aren't Developer ID signed, so a signature that codesign
+            // dislikes is no reason to refuse a download whose checksum matched.
+            log::warn!("{}: codesign reported a concern about the copy ({concern}); installing anyway", app.id);
+        }
         if let Some(want) = expect.version
             && !found.version.as_ref().is_some_and(|v| same_release(v, want))
         {
@@ -4038,11 +4042,11 @@ mod tests {
         }
 
         #[test]
-        fn an_ad_hoc_signed_bundle_with_the_apps_own_identity_passes() {
+        fn codesign_concerns_are_reported_for_an_unsigned_or_differently_identified_bundle() {
             use crate::install::macos_verify::verify_with;
             let dir = tempfile::tempdir().unwrap();
             let app = bundle(dir.path(), "0.6.0");
-            assert!(verify_with(lienzo(), &app, process::run_with_output).is_err(), "an unsigned bundle passed");
+            assert!(!verify_with(lienzo(), &app, process::run_with_output).unwrap().is_empty(), "an unsigned bundle raised nothing");
 
             // An ad-hoc signature carrying the app's own identifier is what a release ships.
             let ok = std::process::Command::new("codesign")
@@ -4052,9 +4056,9 @@ mod tests {
                 .unwrap()
                 .success();
             assert!(ok, "codesign failed");
-            verify_with(lienzo(), &app, process::run_with_output).unwrap();
+            assert!(verify_with(lienzo(), &app, process::run_with_output).unwrap().is_empty());
 
-            // A valid signature that names another identifier does not stand in for the app's.
+            // A valid signature that names another identifier is reported, not refused.
             let ok = std::process::Command::new("codesign")
                 .args(["--force", "--sign", "-", "--identifier", "com.example.other"])
                 .arg(&app)
@@ -4062,7 +4066,7 @@ mod tests {
                 .unwrap()
                 .success();
             assert!(ok, "codesign failed");
-            assert!(verify_with(lienzo(), &app, process::run_with_output).is_err(), "another identifier passed");
+            assert!(!verify_with(lienzo(), &app, process::run_with_output).unwrap().is_empty(), "another identifier raised nothing");
         }
 
         #[test]
@@ -4107,7 +4111,7 @@ mod tests {
         }
 
         #[test]
-        fn an_unsigned_update_leaves_the_installed_copy_alone() {
+        fn an_unsigned_update_installs_and_a_wrong_version_leaves_the_installed_copy_alone() {
             let dir = tempfile::tempdir().unwrap();
             let apps = dir.path().join("Applications");
             let current = bundle(&apps, "0.5.0");
@@ -4121,11 +4125,17 @@ mod tests {
                 installation: None,
             };
             let image = dmg(dir.path(), "0.6.0");
-            let release = Release { tag: "v0.6.0".into(), version: version::parse("0.6.0"), ..Release::default() };
+            let paths = Paths::under(dir.path());
 
-            let result = install_dmg(lienzo(), &image, Some(&existing), None, None, &Paths::under(dir.path()), &Expect::release(&release));
-            assert!(result.unwrap_err().contains("macOS verification did not succeed (signature integrity"));
+            // The checksum is the gate, not an Apple signature: the releases ship without one.
+            let wrong = Release { tag: "v0.7.0".into(), version: version::parse("0.7.0"), ..Release::default() };
+            let refused = install_dmg(lienzo(), &image, Some(&existing), None, None, &paths, &Expect::release(&wrong));
+            assert!(refused.unwrap_err().contains("isn't version 0.7.0"));
             assert_eq!(std::fs::read_to_string(current.join("Contents/MacOS/Lienzo")).unwrap(), "0.5.0");
+
+            let release = Release { tag: "v0.6.0".into(), version: version::parse("0.6.0"), ..Release::default() };
+            install_dmg(lienzo(), &image, Some(&existing), None, None, &paths, &Expect::release(&release)).unwrap();
+            assert_eq!(std::fs::read_to_string(current.join("Contents/MacOS/Lienzo")).unwrap(), "0.6.0");
             assert_eq!(
                 std::fs::read_dir(&apps).unwrap().map(|e| e.unwrap().file_name()).collect::<Vec<_>>(),
                 [std::ffi::OsString::from("Lienzo.app")]

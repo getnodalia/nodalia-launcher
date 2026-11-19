@@ -470,3 +470,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	El navegador web de Nodalix
 brujula	The browser of Nodalix.	El navegador de Nodalix.
 brujula	A fast, private web browser that comes with Nodalix.	Un navegador web rápido y privado que se incluye con Nodalix.
+	Something went wrong: {detail}	Algo salió mal: {detail}
+@msg	GitHub's request limit was reached. Try again later.	Se alcanzó el límite de peticiones de GitHub. Vuelve a intentarlo más tarde.
+@msg	GitHub refused the request (HTTP {status})	GitHub rechazó la petición (HTTP {status})
+@msg	{host} answered HTTP {status}	{host} respondió HTTP {status}
+@msg	couldn't reach {host} ({e})	no se pudo conectar con {host} ({e})
+@msg	unreadable answer from GitHub ({e})	respuesta ilegible de GitHub ({e})
+@msg	unreadable answer ({e})	respuesta ilegible ({e})
+@msg	the answer is larger than {max} bytes	la respuesta supera los {max} bytes
+@msg	the download doesn't match its published checksum, so it wasn't installed	la descarga no coincide con su suma de comprobación publicada, así que no se instaló
+@msg	couldn't fetch the release's checksums ({e}). Try again	no se pudieron obtener las sumas de comprobación de la versión ({e}). Vuelve a intentarlo
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	la versión no publica una suma de comprobación para {name}, así que no se puede verificar y no se instaló. Inténtalo más tarde o avísanos en GitHub.
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	La descarga se pausó porque la conexión se corta una y otra vez. Pulsa Reanudar para continuar donde se quedó.
+@msg	couldn't save the download ({e})	no se pudo guardar la descarga ({e})
+@msg	{name} isn't installed	{name} no está instalada
+@msg	{path} already exists	{path} ya existe
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} no la instaló el launcher. Quítala de la misma forma en que se añadió.
+@msg	{name} isn't where it was installed ({path})	{name} ya no está donde se instaló ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	No se puede actualizar {name} a {version}: la versión instalada {installed} es más reciente
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	Volver a una versión anterior de {name} aún no está disponible para este tipo de instalación.
+@msg	the selected version isn't available yet. Check for updates before installing.	la versión seleccionada aún no está disponible. Busca actualizaciones antes de instalar.
+@msg	the selected release hasn't been found yet. Check for updates first.	la versión seleccionada aún no se ha encontrado. Busca actualizaciones primero.
+@msg	the app inside isn't version {version}, so it wasn't installed	la aplicación del paquete no es la versión {version}, así que no se instaló
+@msg	the download doesn't contain the app	la descarga no contiene la aplicación
+@msg	the disk image doesn't contain the app	la imagen de disco no contiene la aplicación
+@msg	couldn't open the disk image: {e}	no se pudo abrir la imagen de disco: {e}
+@msg	couldn't copy the app: {e}	no se pudo copiar la aplicación: {e}
+@msg	couldn't put the new copy in place ({e})	no se pudo colocar la nueva copia ({e})
+@msg	couldn't move the old copy aside ({e})	no se pudo apartar la copia anterior ({e})
+@msg	the system installer stopped with error {code}	el instalador del sistema se detuvo con el error {code}
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	el instalador del sistema se detuvo con el error 127 (normalmente se denegó el permiso o falta un agente de autenticación polkit)
+@msg	the system installer was interrupted	el instalador del sistema se interrumpió
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	instalar para todo el sistema requiere polkit (pkexec), que no está instalado
+@msg	the Windows Installer stopped with error {code}	el Instalador de Windows se detuvo con el error {code}
+@msg	the Windows Installer was interrupted	el Instalador de Windows se interrumpió
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows no permitió la instalación (hace falta permiso de administrador)
+@msg	another installation is in progress. Wait for it to finish, then try again.	hay otra instalación en curso. Espera a que termine y vuelve a intentarlo.
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak no pudo instalar el paquete: {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak no pudo instalar el paquete (necesita el repositorio Flathub para su runtime)
+@msg	Flatpak couldn't update {name}: {e}	Flatpak no pudo actualizar {name}: {e}
+@msg	Flatpak couldn't update {name}	Flatpak no pudo actualizar {name}
+@msg	{label} isn't supported on this system	{label} no es compatible con este sistema
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	esta copia de Nodalia Launcher no puede actualizarse sola; descarga la nueva versión
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher se está reiniciando para terminar su actualización. Vuelve a intentarlo cuando regrese.
+@msg	couldn't uninstall {id}	no se pudo desinstalar {id}
+@msg	{name} can't be removed from here	{name} no se puede quitar desde aquí
+@msg	couldn't create {path} ({e})	no se pudo crear {path} ({e})
+@msg	couldn't write {path} ({e})	no se pudo escribir {path} ({e})
+@msg	Couldn't show it: {e}	No se pudo mostrar: {e}
+@msg	couldn't start {program} ({e})	no se pudo iniciar {program} ({e})
+@msg	{program} didn't finish within {seconds} seconds	{program} no terminó en {seconds} segundos

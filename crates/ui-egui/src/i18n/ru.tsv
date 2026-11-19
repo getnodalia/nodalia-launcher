@@ -486,3 +486,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	Веб-браузер Nodalix
 brujula	The browser of Nodalix.	Браузер Nodalix.
 brujula	A fast, private web browser that comes with Nodalix.	Быстрый и приватный веб-браузер, входящий в состав Nodalix.
+	Something went wrong: {detail}	Что-то пошло не так: {detail}
+@msg	GitHub's request limit was reached. Try again later.	Достигнут лимит запросов GitHub. Повторите попытку позже.
+@msg	GitHub refused the request (HTTP {status})	GitHub отклонил запрос (HTTP {status})
+@msg	{host} answered HTTP {status}	{host} ответил HTTP {status}
+@msg	couldn't reach {host} ({e})	не удалось связаться с {host} ({e})
+@msg	unreadable answer from GitHub ({e})	не удалось прочитать ответ GitHub ({e})
+@msg	unreadable answer ({e})	не удалось прочитать ответ ({e})
+@msg	the answer is larger than {max} bytes	ответ больше {max} байт
+@msg	the download doesn't match its published checksum, so it wasn't installed	загрузка не совпадает с опубликованной контрольной суммой, поэтому она не была установлена
+@msg	couldn't fetch the release's checksums ({e}). Try again	не удалось получить контрольные суммы версии ({e}). Повторите попытку
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	в версии не опубликована контрольная сумма для {name}, поэтому её нельзя проверить, и она не была установлена. Повторите позже или сообщите на GitHub.
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	Загрузка приостановлена, потому что соединение постоянно обрывается. Нажмите «Продолжить», чтобы продолжить с того места, где она остановилась.
+@msg	couldn't save the download ({e})	не удалось сохранить загрузку ({e})
+@msg	{name} isn't installed	{name} не установлено
+@msg	{path} already exists	{path} уже существует
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} не устанавливалось лаунчером. Удалите его тем же способом, которым оно было добавлено.
+@msg	{name} isn't where it was installed ({path})	{name} больше нет там, где его установили ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	Невозможно обновить {name} до {version}: установленная версия {installed} новее
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	Возврат к более старой версии {name} для этого типа установки пока недоступен.
+@msg	the selected version isn't available yet. Check for updates before installing.	выбранная версия пока недоступна. Перед установкой проверьте обновления.
+@msg	the selected release hasn't been found yet. Check for updates first.	выбранная версия ещё не найдена. Сначала проверьте обновления.
+@msg	the app inside isn't version {version}, so it wasn't installed	приложение внутри не является версией {version}, поэтому оно не было установлено
+@msg	the download doesn't contain the app	загрузка не содержит приложения
+@msg	the disk image doesn't contain the app	образ диска не содержит приложения
+@msg	couldn't open the disk image: {e}	не удалось открыть образ диска: {e}
+@msg	couldn't copy the app: {e}	не удалось скопировать приложение: {e}
+@msg	couldn't put the new copy in place ({e})	не удалось поместить новую копию на место ({e})
+@msg	couldn't move the old copy aside ({e})	не удалось убрать старую копию в сторону ({e})
+@msg	the system installer stopped with error {code}	системный установщик остановился с ошибкой {code}
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	системный установщик остановился с ошибкой 127 (обычно в доступе отказано или нет агента аутентификации polkit)
+@msg	the system installer was interrupted	системный установщик был прерван
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	для установки во всей системе нужен polkit (pkexec), но он не установлен
+@msg	the Windows Installer stopped with error {code}	установщик Windows остановился с ошибкой {code}
+@msg	the Windows Installer was interrupted	установщик Windows был прерван
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows не разрешила установку (нужны права администратора)
+@msg	another installation is in progress. Wait for it to finish, then try again.	выполняется другая установка. Дождитесь её завершения и повторите попытку.
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak не смог установить пакет: {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak не смог установить пакет (для среды выполнения нужен репозиторий Flathub)
+@msg	Flatpak couldn't update {name}: {e}	Flatpak не смог обновить {name}: {e}
+@msg	Flatpak couldn't update {name}	Flatpak не смог обновить {name}
+@msg	{label} isn't supported on this system	{label} не поддерживается в этой системе
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	эта копия Nodalia Launcher не может обновить себя; скачайте новую версию
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher перезапускается, чтобы завершить обновление. Повторите попытку, когда он вернётся.
+@msg	couldn't uninstall {id}	не удалось удалить {id}
+@msg	{name} can't be removed from here	{name} нельзя удалить отсюда
+@msg	couldn't create {path} ({e})	не удалось создать {path} ({e})
+@msg	couldn't write {path} ({e})	не удалось записать {path} ({e})
+@msg	Couldn't show it: {e}	Не удалось показать: {e}
+@msg	couldn't start {program} ({e})	не удалось запустить {program} ({e})
+@msg	{program} didn't finish within {seconds} seconds	{program} не завершился за {seconds} с

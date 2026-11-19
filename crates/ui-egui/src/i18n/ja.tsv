@@ -493,3 +493,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	Nodalix のウェブブラウザ
 brujula	The browser of Nodalix.	Nodalix のブラウザ。
 brujula	A fast, private web browser that comes with Nodalix.	Nodalix に付属する、高速でプライベートなウェブブラウザ。
+	Something went wrong: {detail}	問題が発生しました: {detail}
+@msg	GitHub's request limit was reached. Try again later.	GitHub のリクエスト上限に達しました。しばらくしてからもう一度お試しください。
+@msg	GitHub refused the request (HTTP {status})	GitHub がリクエストを拒否しました (HTTP {status})
+@msg	{host} answered HTTP {status}	{host} が HTTP {status} を返しました
+@msg	couldn't reach {host} ({e})	{host} に接続できませんでした ({e})
+@msg	unreadable answer from GitHub ({e})	GitHub からの応答を読み取れません ({e})
+@msg	unreadable answer ({e})	応答を読み取れません ({e})
+@msg	the answer is larger than {max} bytes	応答が {max} バイトを超えています
+@msg	the download doesn't match its published checksum, so it wasn't installed	ダウンロードが公開されたチェックサムと一致しないため、インストールされませんでした
+@msg	couldn't fetch the release's checksums ({e}). Try again	リリースのチェックサムを取得できませんでした ({e})。もう一度お試しください
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	このリリースには {name} のチェックサムが公開されていないため、検証できずインストールされませんでした。後でもう一度お試しいただくか、GitHub でご報告ください。
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	接続が何度も切れるため、ダウンロードを一時停止しました。「再開」を押すと続きから再開します。
+@msg	couldn't save the download ({e})	ダウンロードを保存できませんでした ({e})
+@msg	{name} isn't installed	{name} はインストールされていません
+@msg	{path} already exists	{path} は既に存在します
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} はランチャーでインストールされたものではありません。追加した方法で削除してください。
+@msg	{name} isn't where it was installed ({path})	{name} はインストールした場所にありません ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	{name} を {version} に更新できません: インストール済みのバージョン {installed} の方が新しいです
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	この種類のインストールでは、{name} を以前のバージョンに戻す機能はまだ使えません。
+@msg	the selected version isn't available yet. Check for updates before installing.	選択したバージョンはまだ利用できません。インストールする前に更新を確認してください。
+@msg	the selected release hasn't been found yet. Check for updates first.	選択したリリースはまだ見つかっていません。先に更新を確認してください。
+@msg	the app inside isn't version {version}, so it wasn't installed	中のアプリがバージョン {version} ではないため、インストールされませんでした
+@msg	the download doesn't contain the app	ダウンロードにアプリが含まれていません
+@msg	the disk image doesn't contain the app	ディスクイメージにアプリが含まれていません
+@msg	couldn't open the disk image: {e}	ディスクイメージを開けませんでした: {e}
+@msg	couldn't copy the app: {e}	アプリをコピーできませんでした: {e}
+@msg	couldn't put the new copy in place ({e})	新しいコピーを所定の場所に置けませんでした ({e})
+@msg	couldn't move the old copy aside ({e})	古いコピーを退避できませんでした ({e})
+@msg	the system installer stopped with error {code}	システムのインストーラーがエラー {code} で停止しました
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	システムのインストーラーがエラー 127 で停止しました (多くは権限が拒否されたか、polkit 認証エージェントがないことが原因です)
+@msg	the system installer was interrupted	システムのインストーラーが中断されました
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	システム全体へのインストールには polkit (pkexec) が必要ですが、インストールされていません
+@msg	the Windows Installer stopped with error {code}	Windows インストーラーがエラー {code} で停止しました
+@msg	the Windows Installer was interrupted	Windows インストーラーが中断されました
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows がインストールを許可しませんでした (管理者権限が必要です)
+@msg	another installation is in progress. Wait for it to finish, then try again.	別のインストールが進行中です。完了するまで待ってから、もう一度お試しください。
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak がバンドルをインストールできませんでした: {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak がバンドルをインストールできませんでした (ランタイムのために Flathub リモートが必要です)
+@msg	Flatpak couldn't update {name}: {e}	Flatpak が {name} を更新できませんでした: {e}
+@msg	Flatpak couldn't update {name}	Flatpak が {name} を更新できませんでした
+@msg	{label} isn't supported on this system	{label} はこのシステムではサポートされていません
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	この Nodalia Launcher は自分自身を更新できません。代わりに新しいバージョンをダウンロードしてください
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher は更新を完了するため再起動しています。戻ってからもう一度お試しください。
+@msg	couldn't uninstall {id}	{id} をアンインストールできませんでした
+@msg	{name} can't be removed from here	{name} はここから削除できません
+@msg	couldn't create {path} ({e})	{path} を作成できませんでした ({e})
+@msg	couldn't write {path} ({e})	{path} に書き込めませんでした ({e})
+@msg	Couldn't show it: {e}	表示できませんでした: {e}
+@msg	couldn't start {program} ({e})	{program} を起動できませんでした ({e})
+@msg	{program} didn't finish within {seconds} seconds	{program} が {seconds} 秒以内に終了しませんでした

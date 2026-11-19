@@ -12,14 +12,20 @@ use crate::theme::{self, Tokens, tint};
 use crate::widgets;
 
 /// The size of a large dialog: the window less a margin all round, no larger than `max`.
-pub(crate) fn size(ctx: &Context, max: Vec2) -> Vec2 {
+/// `top_inset` is kept clear above the card (the macOS traffic lights); the dialog sits below it.
+pub(crate) fn size(ctx: &Context, max: Vec2, top_inset: f32) -> Vec2 {
     let screen = ctx.content_rect();
-    vec2((screen.width() - 64.0).clamp(1.0, max.x), (screen.height() - 48.0).clamp(1.0, max.y))
+    vec2((screen.width() - 64.0).clamp(1.0, max.x), (screen.height() - 48.0 - top_inset).clamp(1.0, max.y))
 }
 
 /// The modal's frame: no inner margin, so the header can run to the edges.
 pub(crate) fn frame(t: &Tokens) -> Frame {
-    Frame::new().fill(t.bg).stroke(egui::Stroke::new(1.0, t.line_strong)).shadow(crate::theme::shadow(t)).inner_margin(0)
+    Frame::new()
+        .fill(t.bg)
+        .stroke(egui::Stroke::new(1.0, t.line_strong))
+        .corner_radius(theme::R_PANEL)
+        .shadow(crate::theme::shadow(t))
+        .inner_margin(0)
 }
 
 /// The frame of a small prompt: a rounded NDL card.
@@ -37,8 +43,11 @@ pub(crate) fn small_frame(t: &Tokens) -> Frame {
 pub(crate) fn hero(ui: &mut Ui, icon: Option<ImageSource<'static>>, title: &str, caption: &str, right: impl FnOnce(&mut Ui)) -> f32 {
     let t = Tokens::get(ui.ctx());
     let top = ui.cursor().top();
-    let shown =
-        Frame::new().fill(tint(t.accent, if t.dark { 0.09 } else { 0.07 })).inner_margin(Margin::symmetric(theme::PAD as i8, 18)).show(ui, |ui| {
+    let shown = Frame::new()
+        .fill(tint(t.accent, if t.dark { 0.09 } else { 0.07 }))
+        .corner_radius(theme::R_PANEL_TOP)
+        .inner_margin(Margin::symmetric(theme::PAD as i8, 18))
+        .show(ui, |ui| {
             ui.set_width(ui.available_width());
             ui.horizontal(|ui| {
                 if let Some(icon) = icon {
@@ -57,7 +66,13 @@ pub(crate) fn hero(ui: &mut Ui, icon: Option<ImageSource<'static>>, title: &str,
             });
         });
     let r = shown.response.rect;
-    ui.painter().rect_filled(egui::Rect::from_min_size(r.min, vec2(r.width(), 2.0)), CornerRadius::ZERO, t.accent);
+    // The rule stops short of the rounded corners.
+    let round = f32::from(theme::R_PANEL_TOP.nw);
+    ui.painter().rect_filled(
+        egui::Rect::from_min_size(r.min + vec2(round, 0.0), vec2((r.width() - 2.0 * round).max(0.0), 2.0)),
+        CornerRadius::ZERO,
+        t.accent,
+    );
     ui.painter().hline(r.x_range(), r.bottom() - 0.5, t.hairline());
     ui.cursor().top() - top
 }

@@ -23,11 +23,10 @@ impl LauncherUi {
         // uninstall prompt would open as tall as Settings and never shrink (#88).
         // The large dialogs run their header to the card's edges; the small prompts keep a margin.
         let large = matches!(dialog, Dialog::Settings | Dialog::Notes(_));
-        let modal = egui::Modal::new(egui::Id::unique("dialog").with(dialog.key())).frame(if large {
-            crate::sheet::frame(&t)
-        } else {
-            crate::sheet::small_frame(&t)
-        });
+        let modal_id = egui::Id::unique("dialog").with(dialog.key());
+        // Below the macOS traffic lights: the dialog is centred in the window less their strip.
+        let area = egui::Modal::default_area(modal_id).anchor(egui::Align2::CENTER_CENTER, vec2(0.0, self.top_inset / 2.0));
+        let modal = egui::Modal::new(modal_id).area(area).frame(if large { crate::sheet::frame(&t) } else { crate::sheet::small_frame(&t) });
         let mut close = false;
         let response = match &mut dialog {
             Dialog::Notes(id) => modal.show(ctx, |ui| close = self.notes_dialog(ui, id)),
@@ -155,7 +154,7 @@ impl LauncherUi {
         let Some(entry) = self.entry(id).cloned() else { return true };
         let Some(release) = entry.release().cloned() else { return true };
         let t = Tokens::get(ui.ctx());
-        let size = crate::sheet::size(ui.ctx(), vec2(880.0, 760.0) * self.notes_zoom.max(1.0));
+        let size = crate::sheet::size(ui.ctx(), vec2(880.0, 760.0) * self.notes_zoom.max(1.0), self.top_inset);
         ui.set_width(size.x);
         ui.set_max_height(size.y);
         let date = release.published_at.map(|d| fmt(tl!("Released {date}"), &[("date", &crate::views::date_text(d))])).unwrap_or_default();

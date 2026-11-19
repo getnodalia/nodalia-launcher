@@ -200,6 +200,10 @@ pub const BUTTON_SIZE: f32 = 13.0;
 pub const R_CONTROL: CornerRadius = CornerRadius::same(10);
 /// Cards, dialogs and panels: NDL's panel radius.
 pub const R_PANEL: CornerRadius = CornerRadius::same(16);
+/// A card's header: the panel's radius at the top and square below.
+pub const R_PANEL_TOP: CornerRadius = CornerRadius { nw: 16, ne: 16, sw: 0, se: 0 };
+/// How far a card's top is kept below the window's top where macOS draws its traffic lights over the content.
+pub const MAC_TOP_INSET: f32 = 44.0;
 /// Buttons, badges and chips are pills.
 pub const R_PILL: CornerRadius = CornerRadius::same(255);
 /// Small inline marks: pins, keys, bars.

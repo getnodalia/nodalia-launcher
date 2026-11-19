@@ -459,3 +459,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	Nodalix 网页浏览器
 brujula	The browser of Nodalix.	Nodalix 的浏览器。
 brujula	A fast, private web browser that comes with Nodalix.	随 Nodalix 一同提供的快速、私密的网页浏览器。
+	Something went wrong: {detail}	出了点问题：{detail}
+@msg	GitHub's request limit was reached. Try again later.	已达到 GitHub 的请求上限，请稍后再试。
+@msg	GitHub refused the request (HTTP {status})	GitHub 拒绝了请求（HTTP {status}）
+@msg	{host} answered HTTP {status}	{host} 返回了 HTTP {status}
+@msg	couldn't reach {host} ({e})	无法连接到 {host}（{e}）
+@msg	unreadable answer from GitHub ({e})	无法解读 GitHub 的响应（{e}）
+@msg	unreadable answer ({e})	无法解读响应（{e}）
+@msg	the answer is larger than {max} bytes	响应超过 {max} 字节
+@msg	the download doesn't match its published checksum, so it wasn't installed	下载内容与公布的校验和不符，因此未安装
+@msg	couldn't fetch the release's checksums ({e}). Try again	无法获取该版本的校验和（{e}）。请重试
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	该版本未公布 {name} 的校验和，无法验证，因此未安装。请稍后再试，或在 GitHub 上反馈。
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	由于连接不断中断，下载已暂停。点击“继续”即可从中断处接着下载。
+@msg	couldn't save the download ({e})	无法保存下载内容（{e}）
+@msg	{name} isn't installed	{name} 未安装
+@msg	{path} already exists	{path} 已存在
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} 不是通过启动器安装的，请用当初添加它的方式来移除。
+@msg	{name} isn't where it was installed ({path})	{name} 不在安装它的位置了（{path}）
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	无法将 {name} 更新到 {version}：已安装的 {installed} 更新
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	此类安装方式暂不支持将 {name} 回退到旧版本。
+@msg	the selected version isn't available yet. Check for updates before installing.	所选版本暂不可用。请先检查更新再安装。
+@msg	the selected release hasn't been found yet. Check for updates first.	尚未找到所选版本。请先检查更新。
+@msg	the app inside isn't version {version}, so it wasn't installed	其中的应用不是 {version} 版本，因此未安装
+@msg	the download doesn't contain the app	下载内容中没有该应用
+@msg	the disk image doesn't contain the app	磁盘映像中没有该应用
+@msg	couldn't open the disk image: {e}	无法打开磁盘映像：{e}
+@msg	couldn't copy the app: {e}	无法复制应用：{e}
+@msg	couldn't put the new copy in place ({e})	无法将新副本放到位（{e}）
+@msg	couldn't move the old copy aside ({e})	无法移开旧副本（{e}）
+@msg	the system installer stopped with error {code}	系统安装程序因错误 {code} 而停止
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	系统安装程序因错误 127 而停止（通常是权限被拒绝，或没有 polkit 认证代理）
+@msg	the system installer was interrupted	系统安装程序被中断
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	全系统安装需要 polkit（pkexec），但它尚未安装
+@msg	the Windows Installer stopped with error {code}	Windows Installer 因错误 {code} 而停止
+@msg	the Windows Installer was interrupted	Windows Installer 被中断
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows 不允许安装（需要管理员权限）
+@msg	another installation is in progress. Wait for it to finish, then try again.	另一项安装正在进行。请等待其完成后再试。
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak 无法安装该软件包：{e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak 无法安装该软件包（其运行时需要 Flathub 远程仓库）
+@msg	Flatpak couldn't update {name}: {e}	Flatpak 无法更新 {name}：{e}
+@msg	Flatpak couldn't update {name}	Flatpak 无法更新 {name}
+@msg	{label} isn't supported on this system	此系统不支持 {label}
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	此 Nodalia Launcher 副本无法自行更新，请改为下载新版本
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher 正在重新启动以完成更新。待其恢复后请重试。
+@msg	couldn't uninstall {id}	无法卸载 {id}
+@msg	{name} can't be removed from here	无法从此处移除 {name}
+@msg	couldn't create {path} ({e})	无法创建 {path}（{e}）
+@msg	couldn't write {path} ({e})	无法写入 {path}（{e}）
+@msg	Couldn't show it: {e}	无法显示：{e}
+@msg	couldn't start {program} ({e})	无法启动 {program}（{e}）
+@msg	{program} didn't finish within {seconds} seconds	{program} 未在 {seconds} 秒内完成

@@ -610,6 +610,35 @@ fn unescape_works() {
     assert_eq!(unescape("backslash\\\\here"), "backslash\\here");
 }
 
+/// Real messages from the install layer, one per template added for them: each must be translated
+/// in every complete catalog, and an unknown one still gets a translated sentence around it.
+#[test]
+fn install_layer_errors_are_translated_in_every_catalog() {
+    let samples = [
+        ("GitHub's request limit was reached. Try again later.", "GitHub's request limit was reached"),
+        ("GitHub refused the request (HTTP 403)", "403"),
+        ("couldn't reach GitHub (io: connection refused)", "io: connection refused"),
+        ("the download doesn't match its published checksum, so it wasn't installed", ""),
+        ("Lienzo isn't installed", "Lienzo"),
+        ("the app inside isn't version 0.6.0, so it wasn't installed", "0.6.0"),
+        ("the system installer stopped with error 100", "100"),
+        ("the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)", "127"),
+        ("Flatpak couldn't update Lienzo: no remote", "no remote"),
+        ("Cannot update Lienzo to 0.5.0: installed version 0.6.0 is newer", "0.6.0"),
+        ("couldn't create /tmp/x (disk full)", "disk full"),
+    ];
+    for lang in Lang::all().filter(|l| l.complete_menus()) {
+        for (english, keeps) in samples {
+            let translated = message(lang, english);
+            assert_ne!(translated, english, "{}: {english}", lang.code());
+            assert!(translated.contains(keeps) || keeps.len() > 12, "{}: {translated}", lang.code());
+        }
+        let wrapped = tr(lang, "Something went wrong: {detail}");
+        assert!(super::has(lang, "Something went wrong: {detail}"), "{}", lang.code());
+        assert_ne!(wrapped, "Something went wrong: {detail}", "{}", lang.code());
+    }
+}
+
 #[test]
 fn message_templates_match_real_messages() {
     let cat = Catalog::parse(

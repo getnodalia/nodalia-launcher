@@ -125,9 +125,11 @@ impl LauncherUi {
         let t = Tokens::get(ctx);
         // The whole window is the backdrop; the card sits in the middle and rises a little as it fades in.
         let area = ctx.content_rect();
-        let width = (area.width() - 64.0).clamp(480.0, 1280.0).min((area.width() - 16.0).max(1.0));
-        let height = (area.height() - 40.0).clamp(320.0, 1000.0).min((area.height() - 8.0).max(1.0));
-        let panel = Rect::from_center_size(area.center() + vec2(0.0, (1.0 - k) * 24.0), vec2(width, height));
+        // Below the macOS traffic lights, which sit over the window's top corner.
+        let below = Rect::from_min_max(area.min + vec2(0.0, self.top_inset), area.max);
+        let width = (below.width() - 64.0).clamp(480.0, 1280.0).min((below.width() - 16.0).max(1.0));
+        let height = (below.height() - 40.0).clamp(320.0, 1000.0).min((below.height() - 8.0).max(1.0));
+        let panel = Rect::from_center_size(below.center() + vec2(0.0, (1.0 - k) * 24.0), vec2(width, height));
         self.details_scrim(ctx, area, k, &t);
         self.details_page(ctx, details, &id, panel, k, &t);
         if self.detail_zoom && open {
@@ -150,9 +152,9 @@ impl LauncherUi {
             .show(ctx, |ui| {
                 ui.set_opacity(k.clamp(0.0, 1.0));
                 let painter = ui.painter();
-                painter.add(theme::shadow(t).as_shape(panel, CornerRadius::ZERO));
-                painter.rect_filled(panel, CornerRadius::ZERO, t.bg);
-                painter.rect_stroke(panel, CornerRadius::ZERO, Stroke::new(1.0, t.line_strong), egui::StrokeKind::Inside);
+                painter.add(theme::shadow(t).as_shape(panel, theme::R_PANEL));
+                painter.rect_filled(panel, theme::R_PANEL, t.bg);
+                painter.rect_stroke(panel, theme::R_PANEL, Stroke::new(1.0, t.line_strong), egui::StrokeKind::Inside);
 
                 ui.set_min_size(panel.size());
                 ui.set_max_size(panel.size());
@@ -313,23 +315,32 @@ impl LauncherUi {
         let app = entry.app;
         let app_color = rgb(app.color);
         let status = entry.status(self.platform, self.caps.manage_apps);
-        let hero = egui::Frame::new().fill(tint(app_color, if t.dark { 0.09 } else { 0.07 })).inner_margin(Margin::same(PAD as i8)).show(ui, |ui| {
-            ui.set_width(ui.available_width());
-            ui.horizontal(|ui| {
-                widgets::caption(ui, tl!("App details"), t.faint);
-                self.hero_top_row(ui, around, t);
+        let hero = egui::Frame::new()
+            .fill(tint(app_color, if t.dark { 0.09 } else { 0.07 }))
+            .corner_radius(theme::R_PANEL_TOP)
+            .inner_margin(Margin::same(PAD as i8))
+            .show(ui, |ui| {
+                ui.set_width(ui.available_width());
+                ui.horizontal(|ui| {
+                    widgets::caption(ui, tl!("App details"), t.faint);
+                    self.hero_top_row(ui, around, t);
+                });
+                self.hero_identity(ui, entry, details, &status, t, wide);
+                ui.add_space(14.0);
+                // The menu leaves out the links: they are the buttons right below.
+                if !wide {
+                    let row_w = ui.available_width();
+                    ui.horizontal(|ui| self.actions_in(ui, entry, &status, row_w, crate::views::Place::Details));
+                }
+                link_buttons(ui, app);
             });
-            self.hero_identity(ui, entry, details, &status, t, wide);
-            ui.add_space(14.0);
-            // The menu leaves out the links: they are the buttons right below.
-            if !wide {
-                let row_w = ui.available_width();
-                ui.horizontal(|ui| self.actions_in(ui, entry, &status, row_w, crate::views::Place::Details));
-            }
-            link_buttons(ui, app);
-        });
         let r = hero.response.rect;
-        ui.painter().rect_filled(Rect::from_min_size(r.min, vec2(r.width(), 2.0)), CornerRadius::ZERO, app_color);
+        let round = f32::from(theme::R_PANEL_TOP.nw);
+        ui.painter().rect_filled(
+            Rect::from_min_size(r.min + vec2(round, 0.0), vec2((r.width() - 2.0 * round).max(0.0), 2.0)),
+            CornerRadius::ZERO,
+            app_color,
+        );
         ui.painter().hline(r.x_range(), r.bottom() - 0.5, t.hairline());
     }
 
@@ -605,6 +616,10 @@ fn link_buttons(ui: &mut Ui, app: &SuiteApp) {
 
 /// The numbered feature cells.
 fn features(ui: &mut Ui, details: &AppDetails, app: &SuiteApp, t: &Tokens) {
+    // An app with no list yet gets no empty heading.
+    if details.features.is_empty() {
+        return;
+    }
     widgets::caption(ui, tl!("Features"), t.faint);
     ui.add_space(4.0);
     for (i, f) in details.features.iter().enumerate() {

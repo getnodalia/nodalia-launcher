@@ -491,3 +491,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	Nodalix-ის ვებბრაუზერი
 brujula	The browser of Nodalix.	Nodalix-ის ბრაუზერი.
 brujula	A fast, private web browser that comes with Nodalix.	სწრაფი და კონფიდენციალური ვებბრაუზერი, რომელიც Nodalix-ს მოჰყვება.
+	Something went wrong: {detail}	რაღაც არასწორად წარიმართა: {detail}
+@msg	GitHub's request limit was reached. Try again later.	GitHub-ის მოთხოვნების ლიმიტი ამოიწურა. სცადეთ მოგვიანებით.
+@msg	GitHub refused the request (HTTP {status})	GitHub-მა მოთხოვნა უარყო (HTTP {status})
+@msg	{host} answered HTTP {status}	{host}-მა უპასუხა HTTP {status}
+@msg	couldn't reach {host} ({e})	{host}-თან დაკავშირება ვერ მოხერხდა ({e})
+@msg	unreadable answer from GitHub ({e})	GitHub-ის პასუხი ვერ წაიკითხა ({e})
+@msg	unreadable answer ({e})	პასუხი ვერ წაიკითხა ({e})
+@msg	the answer is larger than {max} bytes	პასუხი {max} ბაიტზე დიდია
+@msg	the download doesn't match its published checksum, so it wasn't installed	ჩამოტვირთვა არ ემთხვევა გამოქვეყნებულ საკონტროლო ჯამს, ამიტომ არ დაინსტალირდა
+@msg	couldn't fetch the release's checksums ({e}). Try again	რელიზის საკონტროლო ჯამების მიღება ვერ მოხერხდა ({e}). სცადეთ ხელახლა
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	რელიზი {name}-ისთვის საკონტროლო ჯამს არ აქვეყნებს, ამიტომ მისი შემოწმება შეუძლებელია და არ დაინსტალირდა. სცადეთ მოგვიანებით ან შეგვატყობინეთ GitHub-ზე.
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	ჩამოტვირთვა შეჩერდა, რადგან კავშირი სულ წყდება. დააჭირეთ „გაგრძელებას“, რომ იქიდან გაგრძელდეს, სადაც შეჩერდა.
+@msg	couldn't save the download ({e})	ჩამოტვირთვის შენახვა ვერ მოხერხდა ({e})
+@msg	{name} isn't installed	{name} დაინსტალირებული არ არის
+@msg	{path} already exists	{path} უკვე არსებობს
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} ლანჩერით არ დაინსტალირებულა. წაშალეთ იმავე გზით, როგორც დაემატა.
+@msg	{name} isn't where it was installed ({path})	{name} აღარ არის იქ, სადაც დაინსტალირდა ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	{name}-ის {version}-ზე განახლება შეუძლებელია: დაინსტალირებული {installed} უფრო ახალია
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	{name}-ის ძველ ვერსიაზე დაბრუნება ამ ტიპის ინსტალაციისთვის ჯერ ხელმისაწვდომი არ არის.
+@msg	the selected version isn't available yet. Check for updates before installing.	არჩეული ვერსია ჯერ ხელმისაწვდომი არ არის. ინსტალაციამდე შეამოწმეთ განახლებები.
+@msg	the selected release hasn't been found yet. Check for updates first.	არჩეული რელიზი ჯერ ვერ მოიძებნა. ჯერ შეამოწმეთ განახლებები.
+@msg	the app inside isn't version {version}, so it wasn't installed	შიგნით მყოფი აპი {version} ვერსია არ არის, ამიტომ არ დაინსტალირდა
+@msg	the download doesn't contain the app	ჩამოტვირთვა აპს არ შეიცავს
+@msg	the disk image doesn't contain the app	დისკის გამოსახულება აპს არ შეიცავს
+@msg	couldn't open the disk image: {e}	დისკის გამოსახულების გახსნა ვერ მოხერხდა: {e}
+@msg	couldn't copy the app: {e}	აპის კოპირება ვერ მოხერხდა: {e}
+@msg	couldn't put the new copy in place ({e})	ახალი ასლის ადგილზე მოთავსება ვერ მოხერხდა ({e})
+@msg	couldn't move the old copy aside ({e})	ძველი ასლის განზე გადატანა ვერ მოხერხდა ({e})
+@msg	the system installer stopped with error {code}	სისტემურმა ინსტალერმა შეცდომით {code} შეწყვიტა მუშაობა
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	სისტემურმა ინსტალერმა შეცდომით 127 შეწყვიტა მუშაობა (ჩვეულებრივ ნებართვა უარყოფილია ან polkit-ის ავტორიზაციის აგენტი არ არის)
+@msg	the system installer was interrupted	სისტემური ინსტალერი შეწყდა
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	სისტემური ინსტალაციისთვის საჭიროა polkit (pkexec), რომელიც დაინსტალირებული არ არის
+@msg	the Windows Installer stopped with error {code}	Windows Installer-მა შეცდომით {code} შეწყვიტა მუშაობა
+@msg	the Windows Installer was interrupted	Windows Installer შეწყდა
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows-მა ინსტალაცია არ დაუშვა (საჭიროა ადმინისტრატორის უფლება)
+@msg	another installation is in progress. Wait for it to finish, then try again.	სხვა ინსტალაცია მიმდინარეობს. დაელოდეთ დასრულებას და სცადეთ ხელახლა.
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak-მა პაკეტის ინსტალაცია ვერ შეძლო: {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak-მა პაკეტის ინსტალაცია ვერ შეძლო (გაშვების გარემოსთვის სჭირდება Flathub-ის საცავი)
+@msg	Flatpak couldn't update {name}: {e}	Flatpak-მა {name}-ის განახლება ვერ შეძლო: {e}
+@msg	Flatpak couldn't update {name}	Flatpak-მა {name}-ის განახლება ვერ შეძლო
+@msg	{label} isn't supported on this system	{label} ამ სისტემაზე მხარდაჭერილი არ არის
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	Nodalia Launcher-ის ეს ასლი თავის თავს ვერ განაახლებს; ამის ნაცვლად ჩამოტვირთეთ ახალი ვერსია
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher განახლების დასასრულებლად თავიდან იტვირთება. სცადეთ ხელახლა, როცა დაბრუნდება.
+@msg	couldn't uninstall {id}	{id}-ის წაშლა ვერ მოხერხდა
+@msg	{name} can't be removed from here	{name}-ის აქედან წაშლა შეუძლებელია
+@msg	couldn't create {path} ({e})	{path}-ის შექმნა ვერ მოხერხდა ({e})
+@msg	couldn't write {path} ({e})	{path}-ში ჩაწერა ვერ მოხერხდა ({e})
+@msg	Couldn't show it: {e}	ჩვენება ვერ მოხერხდა: {e}
+@msg	couldn't start {program} ({e})	{program}-ის გაშვება ვერ მოხერხდა ({e})
+@msg	{program} didn't finish within {seconds} seconds	{program} {seconds} წამში არ დასრულდა

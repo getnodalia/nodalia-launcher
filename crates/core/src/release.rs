@@ -65,6 +65,11 @@ impl Release {
 
 const MAX_NOTES: usize = 64 * 1024;
 
+/// Notes read from somewhere other than the API, held to the same cap.
+pub fn cap_notes(text: &str) -> String {
+    truncate(text, MAX_NOTES)
+}
+
 fn is_hex64(s: &str) -> bool {
     s.len() == 64 && s.bytes().all(|b| b.is_ascii_hexdigit())
 }
@@ -330,6 +335,20 @@ pub fn parse_sha256sums(text: &str) -> Vec<(String, String)> {
         .collect()
 }
 
+/// Reads several checksum lists (`SHA256SUMS`, `SHA256SUMS-macos`, ...) as one, a file named by
+/// more than one list keeping the first hash it was given.
+pub fn merge_sha256sums<'a>(lists: impl IntoIterator<Item = &'a str>) -> Vec<(String, String)> {
+    let mut merged: Vec<(String, String)> = Vec::new();
+    for list in lists {
+        for (hash, name) in parse_sha256sums(list) {
+            if !merged.iter().any(|(_, n)| *n == name) {
+                merged.push((hash, name));
+            }
+        }
+    }
+    merged
+}
+
 /// A bare file name we'd be willing to save: only `[A-Za-z0-9._+-]`, no leading or trailing dot,
 /// and not a name Windows reserves for a device (`CON`, `nul.txt`, `COM1.msi`).
 pub fn valid_file_name(name: &str) -> bool {
@@ -357,6 +376,32 @@ pub(crate) fn truncate(s: &str, max: usize) -> String {
 
 #[cfg(test)]
 mod tests {
+
+    #[test]
+    fn checksum_lists_merge_keeping_the_first_hash_of_a_name() {
+        let a = "a".repeat(64);
+        let b = "b".repeat(64);
+        let c = "c".repeat(64);
+        let linux = format!("{a}  tool-1.0-linux-x86_64.deb\n{b}  tool-1.0-linux-x86_64.rpm\n");
+        let mac = format!("{c}  tool-1.0-macos-universal.dmg\n{c}  tool-1.0-linux-x86_64.deb\nnot a checksum line\n");
+        let merged = merge_sha256sums([linux.as_str(), mac.as_str()]);
+        assert_eq!(
+            merged,
+            [
+                (a.clone(), "tool-1.0-linux-x86_64.deb".to_string()),
+                (b, "tool-1.0-linux-x86_64.rpm".to_string()),
+                (c, "tool-1.0-macos-universal.dmg".to_string()),
+            ]
+        );
+        assert!(merge_sha256sums([]).is_empty());
+    }
+
+    #[test]
+    fn notes_from_a_file_are_capped_like_the_apis() {
+        let long = "x".repeat(MAX_NOTES * 2);
+        assert!(cap_notes(&long).len() <= MAX_NOTES + 8);
+        assert_eq!(cap_notes("short"), "short");
+    }
     use super::*;
 
     const REPO: &str = "getnodalia/lienzo";

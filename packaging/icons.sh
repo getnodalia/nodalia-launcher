@@ -19,6 +19,7 @@ ID="dev.danielmiguelt.NodaliaLauncher"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
+command -v magick >/dev/null || command -v convert >/dev/null || { echo "error: ImageMagick not found" >&2; exit 1; }
 command -v resvg >/dev/null || { echo "error: resvg not found (cargo install resvg)" >&2; exit 1; }
 
 # The mark's artwork is untouched. macOS icons get a little more transparent margin (Apple's
@@ -62,8 +63,12 @@ for s in 16 32 64 128 256 512 1024; do
 done
 (cd "$ROOT" && cargo run -q -p xtask -- icns "$DIR/nodalia-launcher.icns" "${ICNS_PNGS[@]}")
 
-# Tray icons: the black mark is the macOS menu-bar template (44 px = 22 pt @2x; macOS tints it);
-# the tiled one is for the Windows notification area and Linux/BSD status notifiers.
-render "$BRAND/nodalia-mark-mono-black.svg" 44 "$BRAND/nodalia-mark-black-44.png"
+# Tray icons: the black mark is the macOS menu-bar template (macOS tints it). tray-icon scales an
+# image to the bar's 22 pt height, so the mark is drawn 36 px (18 pt @2x, the size of the system's
+# own glyphs) centred on a transparent 44 px (22 pt) canvas, which is what leaves the margin.
+# The tiled one is for the Windows notification area and Linux/BSD status notifiers.
+render "$BRAND/nodalia-mark-mono-black.svg" 36 "$TMP/mark-black-36.png"
+if command -v magick >/dev/null; then IM=(magick); else IM=(convert); fi
+"${IM[@]}" "$TMP/mark-black-36.png" -background none -gravity center -extent 44x44 "PNG32:$BRAND/nodalia-mark-black-44.png"
 render "$SVG" 64 "$BRAND/nodalia-mark-64.png"
 echo "icons written to $DIR"

@@ -47,7 +47,7 @@ fn note(ui: &mut Ui, text: &str) {
 impl LauncherUi {
     pub(crate) fn settings_dialog(&mut self, ui: &mut Ui, host: &mut dyn Host) -> bool {
         let t = Tokens::get(ui.ctx());
-        let size = sheet::size(ui.ctx(), vec2(1000.0, 820.0));
+        let size = sheet::size(ui.ctx(), vec2(1000.0, 820.0), self.top_inset);
         ui.set_width(size.x);
         ui.set_max_height(size.y);
         let hero_h =

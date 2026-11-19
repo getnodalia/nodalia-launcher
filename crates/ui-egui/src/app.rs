@@ -162,6 +162,8 @@ pub struct LauncherUi {
     pub(crate) dialog: Option<Dialog>,
     /// Release-note text scale for this session, independent of the main UI zoom.
     pub(crate) notes_zoom: f32,
+    /// Space kept clear above a card or dialog where the OS draws window controls over the content.
+    pub(crate) top_inset: f32,
     /// The app whose details drawer is open (or closing: see `detail_shown`).
     pub(crate) detail: Option<String>,
     /// The app the drawer is drawn for: it outlives `detail` while the drawer slides out.
@@ -296,6 +298,7 @@ impl LauncherUi {
             toasts: Vec::new(),
             dialog: None,
             notes_zoom: 1.0,
+            top_inset: 0.0,
             detail: None,
             detail_shown: None,
             detail_shot: 0,
@@ -705,7 +708,7 @@ impl LauncherUi {
             Err(e) if e == INSTALL_CANCELLED => self.toast(tl!("Install cancelled"), false),
             // The Replace dialog says it all.
             Err(_) if matches!(&self.dialog, Some(Dialog::Replace { app: a, .. }) if *a == app) => {}
-            Err(e) => self.toast(e, true),
+            Err(e) => self.toast(error_text(&e), true),
         }
     }
 
@@ -713,7 +716,7 @@ impl LauncherUi {
     fn on_notice(&mut self, result: Result<String, String>) {
         match result {
             Ok(msg) => self.toast(msg, false),
-            Err(e) => self.toast(e, true),
+            Err(e) => self.toast(error_text(&e), true),
         }
     }
 
@@ -874,6 +877,7 @@ impl LauncherUi {
         let ctx = ui.ctx().clone();
         self.begin_ui_frame(&ctx);
         let bar = self.title_bar(&ctx, host);
+        self.top_inset = if bar == TitleBar::MacOs { theme::MAC_TOP_INSET } else { 0.0 };
         if bar == TitleBar::MacOs && ctx.input_mut(|i| i.consume_key(egui::Modifiers::MAC_CMD, egui::Key::M)) {
             ctx.send_viewport_cmd(egui::ViewportCommand::Minimized(true));
         }
@@ -1154,6 +1158,24 @@ impl LauncherUi {
     }
 }
 
+/// An error from the install layer, in the interface language. Messages with a catalog row are
+/// translated; any other one keeps its English text as the technical detail of a translated
+/// sentence, so nothing reaches the user in a language they didn't pick without saying so.
+pub(crate) fn error_text(raw: &str) -> String {
+    error_text_in(crate::i18n::current(), raw)
+}
+
+fn error_text_in(lang: crate::i18n::Lang, raw: &str) -> String {
+    if lang.code() == "en" {
+        return raw.to_string();
+    }
+    let translated = crate::i18n::message(lang, raw);
+    if translated != raw {
+        return translated;
+    }
+    crate::i18n::fmt(crate::i18n::tr(lang, "Something went wrong: {detail}"), &[("detail", raw)])
+}
+
 #[cfg(test)]
 mod tests {
     use std::cell::RefCell;
@@ -1165,6 +1187,16 @@ mod tests {
 
     struct NoHost;
     impl Host for NoHost {}
+
+    #[test]
+    fn install_errors_are_shown_in_the_interface_language_with_the_detail_kept() {
+        use crate::i18n::Lang;
+        let es = Lang::all().find(|l| l.code() == "es").expect("Spanish is registered");
+        assert_eq!(error_text_in(Lang::EN, "Lienzo isn't installed"), "Lienzo isn't installed");
+        assert_eq!(error_text_in(es, "Lienzo isn't installed"), "Lienzo no está instalada");
+        // A message with no row is wrapped in a translated sentence and kept whole as the detail.
+        assert_eq!(error_text_in(es, "the frobnicator exploded (code 9)"), "Algo salió mal: the frobnicator exploded (code 9)");
+    }
 
     /// A backend that records commands and has no jobs, pictures or events.
     struct Recorder {
