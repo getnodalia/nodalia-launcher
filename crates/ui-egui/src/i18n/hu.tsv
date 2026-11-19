@@ -491,3 +491,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	A Nodalix webböngészője
 brujula	The browser of Nodalix.	A Nodalix böngészője.
 brujula	A fast, private web browser that comes with Nodalix.	Gyors és privát webböngésző, amely a Nodalix részeként érkezik.
+	Something went wrong: {detail}	Valami hiba történt: {detail}
+@msg	GitHub's request limit was reached. Try again later.	Elérted a GitHub kérési korlátját. Próbáld újra később.
+@msg	GitHub refused the request (HTTP {status})	A GitHub elutasította a kérést (HTTP {status})
+@msg	{host} answered HTTP {status}	{host} HTTP {status} választ adott
+@msg	couldn't reach {host} ({e})	nem sikerült elérni: {host} ({e})
+@msg	unreadable answer from GitHub ({e})	olvashatatlan válasz a GitHubtól ({e})
+@msg	unreadable answer ({e})	olvashatatlan válasz ({e})
+@msg	the answer is larger than {max} bytes	a válasz nagyobb, mint {max} bájt
+@msg	the download doesn't match its published checksum, so it wasn't installed	a letöltés nem egyezik a közzétett ellenőrző összeggel, ezért nem lett telepítve
+@msg	couldn't fetch the release's checksums ({e}). Try again	nem sikerült lekérni a kiadás ellenőrző összegeit ({e}). Próbáld újra
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	a kiadás nem tesz közzé ellenőrző összeget ehhez: {name}, ezért nem ellenőrizhető és nem lett telepítve. Próbáld később, vagy jelezd a GitHubon.
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	A letöltés szünetel, mert a kapcsolat folyamatosan megszakad. A Folytatás gombbal ott folytathatod, ahol abbamaradt.
+@msg	couldn't save the download ({e})	nem sikerült elmenteni a letöltést ({e})
+@msg	{name} isn't installed	A(z) {name} nincs telepítve
+@msg	{path} already exists	{path} már létezik
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	A(z) {name} alkalmazást nem az indító telepítette. Úgy távolítsd el, ahogy hozzá lett adva.
+@msg	{name} isn't where it was installed ({path})	A(z) {name} nincs ott, ahová telepítve lett ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	A(z) {name} nem frissíthető erre: {version}, mert a telepített {installed} verzió újabb
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	A(z) {name} régebbi verziójára való visszatérés ennél a telepítési típusnál még nem érhető el.
+@msg	the selected version isn't available yet. Check for updates before installing.	a kiválasztott verzió még nem érhető el. Telepítés előtt keress frissítéseket.
+@msg	the selected release hasn't been found yet. Check for updates first.	a kiválasztott kiadás még nem található. Előbb keress frissítéseket.
+@msg	the app inside isn't version {version}, so it wasn't installed	a csomagban lévő alkalmazás nem a(z) {version} verzió, ezért nem lett telepítve
+@msg	the download doesn't contain the app	a letöltés nem tartalmazza az alkalmazást
+@msg	the disk image doesn't contain the app	a lemezkép nem tartalmazza az alkalmazást
+@msg	couldn't open the disk image: {e}	nem sikerült megnyitni a lemezképet: {e}
+@msg	couldn't copy the app: {e}	nem sikerült átmásolni az alkalmazást: {e}
+@msg	couldn't put the new copy in place ({e})	nem sikerült a helyére tenni az új másolatot ({e})
+@msg	couldn't move the old copy aside ({e})	nem sikerült félrerakni a régi másolatot ({e})
+@msg	the system installer stopped with error {code}	a rendszertelepítő a(z) {code} hibával leállt
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	a rendszertelepítő a 127-es hibával leállt (általában megtagadott engedély vagy hiányzó polkit hitelesítési ügynök)
+@msg	the system installer was interrupted	a rendszertelepítő megszakadt
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	a rendszerszintű telepítéshez polkit (pkexec) kell, de az nincs telepítve
+@msg	the Windows Installer stopped with error {code}	a Windows Installer a(z) {code} hibával leállt
+@msg	the Windows Installer was interrupted	a Windows Installer megszakadt
+@msg	Windows didn't allow the install (administrator permission is needed)	A Windows nem engedte a telepítést (rendszergazdai jogosultság szükséges)
+@msg	another installation is in progress. Wait for it to finish, then try again.	másik telepítés folyik. Várd meg, amíg befejeződik, majd próbáld újra.
+@msg	Flatpak couldn't install the bundle: {e}	A Flatpak nem tudta telepíteni a csomagot: {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	A Flatpak nem tudta telepíteni a csomagot (a futtatókörnyezetéhez szüksége van a Flathub tárolóra)
+@msg	Flatpak couldn't update {name}: {e}	A Flatpak nem tudta frissíteni a(z) {name} alkalmazást: {e}
+@msg	Flatpak couldn't update {name}	A Flatpak nem tudta frissíteni a(z) {name} alkalmazást
+@msg	{label} isn't supported on this system	A(z) {label} nem támogatott ezen a rendszeren
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	a Nodalia Launcher ezen példánya nem tudja önmagát frissíteni; töltsd le inkább az új verziót
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	A Nodalia Launcher újraindul a frissítés befejezéséhez. Próbáld újra, ha visszatért.
+@msg	couldn't uninstall {id}	nem sikerült eltávolítani: {id}
+@msg	{name} can't be removed from here	A(z) {name} nem távolítható el innen
+@msg	couldn't create {path} ({e})	nem sikerült létrehozni: {path} ({e})
+@msg	couldn't write {path} ({e})	nem sikerült írni ide: {path} ({e})
+@msg	Couldn't show it: {e}	Nem sikerült megjeleníteni: {e}
+@msg	couldn't start {program} ({e})	nem sikerült elindítani: {program} ({e})
+@msg	{program} didn't finish within {seconds} seconds	A(z) {program} nem végzett {seconds} másodpercen belül

@@ -488,3 +488,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	Le navigateur web de Nodalix
 brujula	The browser of Nodalix.	Le navigateur de Nodalix.
 brujula	A fast, private web browser that comes with Nodalix.	Un navigateur web rapide et privé fourni avec Nodalix.
+	Something went wrong: {detail}	Un problème est survenu : {detail}
+@msg	GitHub's request limit was reached. Try again later.	La limite de requêtes de GitHub est atteinte. Réessayez plus tard.
+@msg	GitHub refused the request (HTTP {status})	GitHub a refusé la requête (HTTP {status})
+@msg	{host} answered HTTP {status}	{host} a répondu HTTP {status}
+@msg	couldn't reach {host} ({e})	impossible de joindre {host} ({e})
+@msg	unreadable answer from GitHub ({e})	réponse illisible de GitHub ({e})
+@msg	unreadable answer ({e})	réponse illisible ({e})
+@msg	the answer is larger than {max} bytes	la réponse dépasse {max} octets
+@msg	the download doesn't match its published checksum, so it wasn't installed	le téléchargement ne correspond pas à sa somme de contrôle publiée, il n'a donc pas été installé
+@msg	couldn't fetch the release's checksums ({e}). Try again	impossible de récupérer les sommes de contrôle de la version ({e}). Réessayez
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	la version ne publie aucune somme de contrôle pour {name} : elle ne peut pas être vérifiée et n'a pas été installée. Réessayez plus tard ou signalez-le sur GitHub.
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	Le téléchargement est en pause car la connexion ne cesse de tomber. Appuyez sur Reprendre pour continuer là où il s'est arrêté.
+@msg	couldn't save the download ({e})	impossible d'enregistrer le téléchargement ({e})
+@msg	{name} isn't installed	{name} n'est pas installée
+@msg	{path} already exists	{path} existe déjà
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} n'a pas été installée par le lanceur. Supprimez-la comme elle a été ajoutée.
+@msg	{name} isn't where it was installed ({path})	{name} n'est plus à l'endroit où elle a été installée ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	Impossible de mettre {name} à jour vers {version} : la version installée {installed} est plus récente
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	Revenir à une version antérieure de {name} n'est pas encore possible pour ce type d'installation.
+@msg	the selected version isn't available yet. Check for updates before installing.	la version sélectionnée n'est pas encore disponible. Recherchez des mises à jour avant d'installer.
+@msg	the selected release hasn't been found yet. Check for updates first.	la version sélectionnée n'a pas encore été trouvée. Recherchez d'abord des mises à jour.
+@msg	the app inside isn't version {version}, so it wasn't installed	l'application contenue n'est pas la version {version}, elle n'a donc pas été installée
+@msg	the download doesn't contain the app	le téléchargement ne contient pas l'application
+@msg	the disk image doesn't contain the app	l'image disque ne contient pas l'application
+@msg	couldn't open the disk image: {e}	impossible d'ouvrir l'image disque : {e}
+@msg	couldn't copy the app: {e}	impossible de copier l'application : {e}
+@msg	couldn't put the new copy in place ({e})	impossible de mettre la nouvelle copie en place ({e})
+@msg	couldn't move the old copy aside ({e})	impossible de mettre l'ancienne copie de côté ({e})
+@msg	the system installer stopped with error {code}	l'installateur système s'est arrêté avec l'erreur {code}
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	l'installateur système s'est arrêté avec l'erreur 127 (généralement une autorisation refusée ou l'absence d'agent d'authentification polkit)
+@msg	the system installer was interrupted	l'installateur système a été interrompu
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	l'installation pour tout le système nécessite polkit (pkexec), qui n'est pas installé
+@msg	the Windows Installer stopped with error {code}	Windows Installer s'est arrêté avec l'erreur {code}
+@msg	the Windows Installer was interrupted	Windows Installer a été interrompu
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows n'a pas autorisé l'installation (l'autorisation d'un administrateur est requise)
+@msg	another installation is in progress. Wait for it to finish, then try again.	une autre installation est en cours. Attendez qu'elle se termine, puis réessayez.
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak n'a pas pu installer le paquet : {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak n'a pas pu installer le paquet (il a besoin du dépôt Flathub pour son environnement d'exécution)
+@msg	Flatpak couldn't update {name}: {e}	Flatpak n'a pas pu mettre {name} à jour : {e}
+@msg	Flatpak couldn't update {name}	Flatpak n'a pas pu mettre {name} à jour
+@msg	{label} isn't supported on this system	{label} n'est pas pris en charge sur ce système
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	cette copie de Nodalia Launcher ne peut pas se mettre à jour elle-même ; téléchargez plutôt la nouvelle version
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher redémarre pour terminer sa mise à jour. Réessayez dès qu'il est de retour.
+@msg	couldn't uninstall {id}	impossible de désinstaller {id}
+@msg	{name} can't be removed from here	{name} ne peut pas être supprimée d'ici
+@msg	couldn't create {path} ({e})	impossible de créer {path} ({e})
+@msg	couldn't write {path} ({e})	impossible d'écrire {path} ({e})
+@msg	Couldn't show it: {e}	Impossible de l'afficher : {e}
+@msg	couldn't start {program} ({e})	impossible de démarrer {program} ({e})
+@msg	{program} didn't finish within {seconds} seconds	{program} ne s'est pas terminé en {seconds} secondes

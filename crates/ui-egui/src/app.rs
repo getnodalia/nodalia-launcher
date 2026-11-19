@@ -708,7 +708,7 @@ impl LauncherUi {
             Err(e) if e == INSTALL_CANCELLED => self.toast(tl!("Install cancelled"), false),
             // The Replace dialog says it all.
             Err(_) if matches!(&self.dialog, Some(Dialog::Replace { app: a, .. }) if *a == app) => {}
-            Err(e) => self.toast(e, true),
+            Err(e) => self.toast(error_text(&e), true),
         }
     }
 
@@ -716,7 +716,7 @@ impl LauncherUi {
     fn on_notice(&mut self, result: Result<String, String>) {
         match result {
             Ok(msg) => self.toast(msg, false),
-            Err(e) => self.toast(e, true),
+            Err(e) => self.toast(error_text(&e), true),
         }
     }
 
@@ -1158,6 +1158,24 @@ impl LauncherUi {
     }
 }
 
+/// An error from the install layer, in the interface language. Messages with a catalog row are
+/// translated; any other one keeps its English text as the technical detail of a translated
+/// sentence, so nothing reaches the user in a language they didn't pick without saying so.
+pub(crate) fn error_text(raw: &str) -> String {
+    error_text_in(crate::i18n::current(), raw)
+}
+
+fn error_text_in(lang: crate::i18n::Lang, raw: &str) -> String {
+    if lang.code() == "en" {
+        return raw.to_string();
+    }
+    let translated = crate::i18n::message(lang, raw);
+    if translated != raw {
+        return translated;
+    }
+    crate::i18n::fmt(crate::i18n::tr(lang, "Something went wrong: {detail}"), &[("detail", raw)])
+}
+
 #[cfg(test)]
 mod tests {
     use std::cell::RefCell;
@@ -1169,6 +1187,16 @@ mod tests {
 
     struct NoHost;
     impl Host for NoHost {}
+
+    #[test]
+    fn install_errors_are_shown_in_the_interface_language_with_the_detail_kept() {
+        use crate::i18n::Lang;
+        let es = Lang::all().find(|l| l.code() == "es").expect("Spanish is registered");
+        assert_eq!(error_text_in(Lang::EN, "Lienzo isn't installed"), "Lienzo isn't installed");
+        assert_eq!(error_text_in(es, "Lienzo isn't installed"), "Lienzo no está instalada");
+        // A message with no row is wrapped in a translated sentence and kept whole as the detail.
+        assert_eq!(error_text_in(es, "the frobnicator exploded (code 9)"), "Algo salió mal: the frobnicator exploded (code 9)");
+    }
 
     /// A backend that records commands and has no jobs, pictures or events.
     struct Recorder {

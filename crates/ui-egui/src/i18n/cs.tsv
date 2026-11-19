@@ -460,3 +460,53 @@ vinilo	A fast native interface for Apple Music with gapless playback and control
 brujula	The Nodalix web browser	Webový prohlížeč Nodalix
 brujula	The browser of Nodalix.	Prohlížeč systému Nodalix.
 brujula	A fast, private web browser that comes with Nodalix.	Rychlý a soukromý webový prohlížeč, který je součástí systému Nodalix.
+	Something went wrong: {detail}	Něco se nepovedlo: {detail}
+@msg	GitHub's request limit was reached. Try again later.	Byl dosažen limit požadavků GitHubu. Zkuste to znovu později.
+@msg	GitHub refused the request (HTTP {status})	GitHub požadavek odmítl (HTTP {status})
+@msg	{host} answered HTTP {status}	{host} odpověděl HTTP {status}
+@msg	couldn't reach {host} ({e})	{host} se nepodařilo kontaktovat ({e})
+@msg	unreadable answer from GitHub ({e})	nečitelná odpověď od GitHubu ({e})
+@msg	unreadable answer ({e})	nečitelná odpověď ({e})
+@msg	the answer is larger than {max} bytes	odpověď je větší než {max} bajtů
+@msg	the download doesn't match its published checksum, so it wasn't installed	stažený soubor neodpovídá zveřejněnému kontrolnímu součtu, proto nebyl nainstalován
+@msg	couldn't fetch the release's checksums ({e}). Try again	nepodařilo se získat kontrolní součty vydání ({e}). Zkuste to znovu
+@msg	the release publishes no checksum for {name}, so it can't be verified and wasn't installed. Try again later, or report it on GitHub.	vydání nezveřejňuje kontrolní součet pro {name}, takže ho nelze ověřit a nebylo nainstalováno. Zkuste to později nebo to nahlaste na GitHubu.
+@msg	The download paused because the connection keeps dropping. Press Resume to continue where it stopped.	Stahování bylo pozastaveno, protože se připojení stále přerušuje. Klepnutím na Pokračovat budete pokračovat tam, kde se skončilo.
+@msg	couldn't save the download ({e})	stažený soubor se nepodařilo uložit ({e})
+@msg	{name} isn't installed	{name} není nainstalováno
+@msg	{path} already exists	{path} již existuje
+@msg	{name} wasn't installed by the launcher. Remove it the way it was added.	{name} nenainstaloval launcher. Odeberte ji stejným způsobem, jakým byla přidána.
+@msg	{name} isn't where it was installed ({path})	{name} už není tam, kde byla nainstalována ({path})
+@msg	Cannot update {name} to {version}: installed version {installed} is newer	{name} nelze aktualizovat na {version}: nainstalovaná verze {installed} je novější
+@msg	Going back to an older version of {name} isn't available for this kind of install yet.	Návrat ke starší verzi {name} zatím pro tento typ instalace není k dispozici.
+@msg	the selected version isn't available yet. Check for updates before installing.	vybraná verze zatím není k dispozici. Před instalací vyhledejte aktualizace.
+@msg	the selected release hasn't been found yet. Check for updates first.	vybrané vydání ještě nebylo nalezeno. Nejprve vyhledejte aktualizace.
+@msg	the app inside isn't version {version}, so it wasn't installed	aplikace uvnitř není verze {version}, proto nebyla nainstalována
+@msg	the download doesn't contain the app	stažený soubor neobsahuje aplikaci
+@msg	the disk image doesn't contain the app	obraz disku neobsahuje aplikaci
+@msg	couldn't open the disk image: {e}	obraz disku se nepodařilo otevřít: {e}
+@msg	couldn't copy the app: {e}	aplikaci se nepodařilo zkopírovat: {e}
+@msg	couldn't put the new copy in place ({e})	novou kopii se nepodařilo umístit na její místo ({e})
+@msg	couldn't move the old copy aside ({e})	starou kopii se nepodařilo odsunout stranou ({e})
+@msg	the system installer stopped with error {code}	systémový instalátor skončil s chybou {code}
+@msg	the system installer stopped with error 127 (usually refused permission or no polkit authentication agent)	systémový instalátor skončil s chybou 127 (obvykle odepřené oprávnění nebo chybí ověřovací agent polkit)
+@msg	the system installer was interrupted	systémový instalátor byl přerušen
+@msg	installing system-wide needs polkit (pkexec), which isn't installed	instalace pro celý systém vyžaduje polkit (pkexec), který není nainstalován
+@msg	the Windows Installer stopped with error {code}	Windows Installer skončil s chybou {code}
+@msg	the Windows Installer was interrupted	Windows Installer byl přerušen
+@msg	Windows didn't allow the install (administrator permission is needed)	Windows instalaci nepovolil (je potřeba oprávnění správce)
+@msg	another installation is in progress. Wait for it to finish, then try again.	probíhá jiná instalace. Počkejte, až skončí, a zkuste to znovu.
+@msg	Flatpak couldn't install the bundle: {e}	Flatpak balíček nedokázal nainstalovat: {e}
+@msg	Flatpak couldn't install the bundle (it needs the Flathub remote for its runtime)	Flatpak balíček nedokázal nainstalovat (pro svůj runtime potřebuje repozitář Flathub)
+@msg	Flatpak couldn't update {name}: {e}	Flatpak nedokázal aktualizovat {name}: {e}
+@msg	Flatpak couldn't update {name}	Flatpak nedokázal aktualizovat {name}
+@msg	{label} isn't supported on this system	{label} není v tomto systému podporováno
+@msg	this copy of Nodalia Launcher can't update itself; download the new version instead	tato kopie Nodalia Launcheru se nemůže sama aktualizovat; stáhněte si místo toho novou verzi
+@msg	Nodalia Launcher is restarting to finish its update. Try again once it's back.	Nodalia Launcher se restartuje, aby dokončil aktualizaci. Zkuste to znovu, až se vrátí.
+@msg	couldn't uninstall {id}	{id} se nepodařilo odinstalovat
+@msg	{name} can't be removed from here	{name} nelze odtud odebrat
+@msg	couldn't create {path} ({e})	{path} se nepodařilo vytvořit ({e})
+@msg	couldn't write {path} ({e})	do {path} se nepodařilo zapsat ({e})
+@msg	Couldn't show it: {e}	Nepodařilo se to zobrazit: {e}
+@msg	couldn't start {program} ({e})	{program} se nepodařilo spustit ({e})
+@msg	{program} didn't finish within {seconds} seconds	{program} neskončil do {seconds} sekund

@@ -221,7 +221,7 @@ impl LauncherUi {
                         ui.label(tl!("Checking…"));
                     }
                     Some(Err(why)) => {
-                        ui.label(RichText::new(why).color(t.bad));
+                        ui.label(RichText::new(crate::app::error_text(why)).color(t.bad));
                     }
                     Some(Ok(releases)) => {
                         if releases.is_empty() {

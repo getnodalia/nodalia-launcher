@@ -617,7 +617,7 @@ impl LauncherUi {
                 let (text, tone) = model::entry_status_text(&entry, &status, self.caps.manage_apps);
                 let r = widgets::badge(ui, &text, widgets::tone_color(&t, tone));
                 if let Some(f) = entry.failure() {
-                    r.on_hover_text(fmt(tl!("Couldn't check for updates: {f}"), &[("f", f)]));
+                    r.on_hover_text(fmt(tl!("Couldn't check for updates: {f}"), &[("f", &crate::i18n::message(crate::i18n::current(), f))]));
                 }
             });
             ui.add_space(8.0);
@@ -876,7 +876,7 @@ impl LauncherUi {
         };
         let r = widgets::badge(ui, &text, widgets::tone_color(t, tone));
         if let Some(f) = entry.failure() {
-            r.on_hover_text(fmt(tl!("Couldn't check for updates: {f}"), &[("f", f)]));
+            r.on_hover_text(fmt(tl!("Couldn't check for updates: {f}"), &[("f", &crate::i18n::message(crate::i18n::current(), f))]));
         }
     }
 
