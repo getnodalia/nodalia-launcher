@@ -1,18 +1,20 @@
 //! Read-only checks on the private copy, before the installer swaps it into place.
 //!
-//! Nodalia's macOS apps are signed ad hoc: they carry no Apple Developer ID and are not
-//! notarized, so there is no signing team to pin and Gatekeeper would not vouch for them. The
-//! trust in a download is therefore built from what can be proven:
+//! Nodalia's macOS apps carry no Apple Developer ID and are not notarized, so there is no signing
+//! team to pin and Gatekeeper would not vouch for them. Some are signed ad hoc, some carry the
+//! signatures of the frameworks they bundle (Vinilo ships Electron), and none of that can be
+//! demanded of a download. The trust in it is built from what can be proven:
 //!
-//! 1. The disk image's SHA-256 matches the release's `SHA256SUMS.txt` (checked before the image is
-//!    opened, over a connection to GitHub's own release pages).
-//! 2. The app inside has an intact code signature, nested code included, so no file was changed
-//!    after the release was signed.
-//! 3. The app's signed identifier is the app's own bundle id from the catalog, never one the
-//!    downloaded app supplies for itself.
-//! 4. The app reports the release's version (checked by the caller).
+//! 1. The disk image's SHA-256 matches the release's published checksums (checked before the image
+//!    is opened, over a connection to GitHub's own release pages).
+//! 2. The app inside is the catalog's app: its `CFBundleIdentifier` is the bundle id from the
+//!    catalog (checked by the caller when it reads the bundle).
+//! 3. The app reports the release's version (checked by the caller).
 //!
-//! No Gatekeeper assessment is made: it would reject an ad-hoc signature by design.
+//! `codesign` is still asked about the copy, and what it says is returned as concerns for the
+//! caller to log, but it never stops an install: an app with a nested signature that `--strict`
+//! dislikes, or a signed identifier that isn't the bundle id, runs just the same. No Gatekeeper
+//! assessment is made: it would reject these signatures by design.
 
 use std::path::Path;
 use std::time::Duration;
@@ -22,27 +24,33 @@ use nodalia_launcher_core::SuiteApp;
 const CODESIGN: &str = "/usr/bin/codesign";
 const TIMEOUT: Duration = Duration::from_secs(60);
 
+/// Runs the `codesign` checks and returns what they objected to. An `Err` means the check could
+/// not be set up at all (a bundle path or catalog identity that can't be used), never that the
+/// signature is unusual.
 pub(super) fn verify_with(
     app: &SuiteApp,
     bundle: &Path,
     mut run: impl FnMut(&str, &[&str], Duration) -> Result<crate::process::RunOutput, String>,
-) -> Result<(), String> {
+) -> Result<Vec<String>, String> {
     let path = bundle.to_str().ok_or("couldn't check the app's unusual path, so it wasn't installed")?;
     let requirement = identity_requirement(app)?;
+    let mut concerns = Vec::new();
     for (check, args) in [
         // Do not apply the identifier requirement to the app's nested code.
         ("signature integrity", vec!["--verify", "--all-architectures", "--deep", "--strict", path]),
         ("app identity", vec!["--verify", "--all-architectures", "--strict", "-R", &requirement, path]),
     ] {
-        let output = run(CODESIGN, &args, TIMEOUT)
-            .map_err(|reason| format!("macOS verification did not succeed ({check}: {reason}), so the app wasn't installed"))?;
-        if !output.success {
-            let reason = output.stderr.trim();
-            let reason = if reason.is_empty() { output.status } else { reason.to_string() };
-            return Err(format!("macOS verification did not succeed ({check}: {reason}), so the app wasn't installed"));
+        match run(CODESIGN, &args, TIMEOUT) {
+            Err(reason) => concerns.push(format!("{check}: {reason}")),
+            Ok(output) if !output.success => {
+                let reason = output.stderr.trim();
+                let reason = if reason.is_empty() { output.status } else { reason.to_string() };
+                concerns.push(format!("{check}: {reason}"));
+            }
+            Ok(_) => {}
         }
     }
-    Ok(())
+    Ok(concerns)
 }
 
 /// The code requirement pinning the signed identifier to the catalog's bundle id.
@@ -91,25 +99,33 @@ mod tests {
     }
 
     #[test]
-    fn mac_install_rejects_tampering_and_a_wrong_identity() {
+    fn mac_install_reports_signature_concerns_without_refusing() {
         let app = lienzo();
         for (failed_call, reason) in [(0, "signature integrity failed"), (1, "identifier requirement failed")] {
             let mut calls = 0;
-            let error = verify_with(app, Path::new("/private/owned/Lienzo.app"), |_, _, _| {
+            let concerns = verify_with(app, Path::new("/private/owned/Lienzo.app"), |_, _, _| {
                 let call = calls;
                 calls += 1;
                 if call == failed_call { Err(reason.into()) } else { Ok(success(String::new())) }
             })
-            .unwrap_err();
-            assert!(error.contains(reason), "{error}");
-            assert!(error.contains("wasn't installed"), "{error}");
-            assert_eq!(calls, failed_call + 1);
+            .unwrap();
+            assert_eq!(concerns.len(), 1, "{concerns:?}");
+            assert!(concerns[0].contains(reason), "{concerns:?}");
+            // Both checks run whatever the first one said.
+            assert_eq!(calls, 2);
         }
-        let error = verify_with(app, Path::new("/private/owned/Lienzo.app"), |_, _, _| {
+        let concerns = verify_with(app, Path::new("/private/owned/Lienzo.app"), |_, _, _| {
             Ok(crate::process::RunOutput::exit(1, "", "a sealed resource is missing or invalid"))
         })
-        .unwrap_err();
-        assert!(error.contains("a sealed resource is missing or invalid"), "{error}");
+        .unwrap();
+        assert_eq!(concerns.len(), 2);
+        assert!(concerns.iter().all(|c| c.contains("a sealed resource is missing or invalid")), "{concerns:?}");
+    }
+
+    #[test]
+    fn mac_install_with_nothing_to_report_has_no_concerns() {
+        let concerns = verify_with(lienzo(), Path::new("/private/owned/Lienzo.app"), |_, _, _| Ok(success(String::new()))).unwrap();
+        assert!(concerns.is_empty());
     }
 
     #[test]

@@ -161,4 +161,21 @@ mod tests {
             assert_eq!(id.as_ref(), "nodalia-launcher");
         }
     }
+
+    #[test]
+    fn the_macos_template_leaves_a_margin_like_the_systems_own_glyphs() {
+        // tray-icon scales the image to the bar's 22 pt height, so a mark touching the edges of
+        // its canvas fills the whole bar. 18 pt of 22 is what the system's glyphs use.
+        let img = image::load_from_memory_with_format(include_bytes!("../../../assets/brand/nodalia-mark-black-44.png"), image::ImageFormat::Png)
+            .unwrap()
+            .into_rgba8();
+        let (w, h) = img.dimensions();
+        assert_eq!((w, h), (44, 44));
+        let opaque = |x: u32, y: u32| img.get_pixel(x, y).0[3] > 0;
+        let xs: Vec<u32> = (0..w).filter(|&x| (0..h).any(|y| opaque(x, y))).collect();
+        let ys: Vec<u32> = (0..h).filter(|&y| (0..w).any(|x| opaque(x, y))).collect();
+        let (left, right) = (xs[0], w - 1 - xs[xs.len() - 1]);
+        let (top, bottom) = (ys[0], h - 1 - ys[ys.len() - 1]);
+        assert!([left, right, top, bottom].iter().all(|m| *m >= 3), "margins {left} {right} {top} {bottom}");
+    }
 }

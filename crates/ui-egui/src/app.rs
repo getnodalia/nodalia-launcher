@@ -162,6 +162,8 @@ pub struct LauncherUi {
     pub(crate) dialog: Option<Dialog>,
     /// Release-note text scale for this session, independent of the main UI zoom.
     pub(crate) notes_zoom: f32,
+    /// Space kept clear above a card or dialog where the OS draws window controls over the content.
+    pub(crate) top_inset: f32,
     /// The app whose details drawer is open (or closing: see `detail_shown`).
     pub(crate) detail: Option<String>,
     /// The app the drawer is drawn for: it outlives `detail` while the drawer slides out.
@@ -296,6 +298,7 @@ impl LauncherUi {
             toasts: Vec::new(),
             dialog: None,
             notes_zoom: 1.0,
+            top_inset: 0.0,
             detail: None,
             detail_shown: None,
             detail_shot: 0,
@@ -874,6 +877,7 @@ impl LauncherUi {
         let ctx = ui.ctx().clone();
         self.begin_ui_frame(&ctx);
         let bar = self.title_bar(&ctx, host);
+        self.top_inset = if bar == TitleBar::MacOs { theme::MAC_TOP_INSET } else { 0.0 };
         if bar == TitleBar::MacOs && ctx.input_mut(|i| i.consume_key(egui::Modifiers::MAC_CMD, egui::Key::M)) {
             ctx.send_viewport_cmd(egui::ViewportCommand::Minimized(true));
         }
