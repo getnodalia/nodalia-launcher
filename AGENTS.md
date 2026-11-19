@@ -21,7 +21,7 @@ docs prose. Machine names stay lowercase: crates and binaries (`nodalia-launcher
 credited in `NOTICE` and `LICENSE-MIT`, which must stay as they are. Never describe the launcher as
 a fork or a port in the README, the website, the UI or release notes.
 
-## Workspace map
+## Architecture
 
 ```text
 crates/
