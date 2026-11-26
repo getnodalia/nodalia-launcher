@@ -14,7 +14,7 @@ use std::path::{Path, PathBuf};
 const ID: &str = "dev.danielmiguelt.NodaliaLauncher";
 /// The command-line flag a login start passes.
 pub const HIDDEN_FLAG: &str = "--hidden";
-/// The command the Flatpak exports (`command:` in `packaging/linux/flatpak/*.yml`).
+/// The command a Flatpak install of the launcher exports.
 #[cfg_attr(any(target_os = "macos", windows), allow(dead_code))]
 const FLATPAK_COMMAND: &str = "nodalia-launcher";
 
