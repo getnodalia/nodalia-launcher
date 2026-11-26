@@ -198,8 +198,8 @@ mod tests {
     #[test]
     fn the_suites_group_the_apps() {
         let in_suite = |suite| SUITE.iter().filter(|a| a.suite == suite).map(|a| a.id).collect::<Vec<_>>();
-        assert_eq!(in_suite(Suite::Engineering), ["forja", "torno", "vortia", "circuito", "abaco"]);
-        assert_eq!(in_suite(Suite::Everyday), ["vinilo", "brujula", "codigo"]);
+        assert_eq!(in_suite(Suite::Engineering), ["forja", "torno", "vortia", "circuito", "abaco", "codigo"]);
+        assert_eq!(in_suite(Suite::Everyday), ["vinilo", "brujula"]);
         assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Office).count(), 7);
         assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Creator).count(), 9);
     }
