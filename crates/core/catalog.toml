@@ -79,36 +79,6 @@ headline = "Your mail, calendar and contacts in one place."
 about = "A native client for IMAP, POP3 and JMAP accounts, with mail rendered safely and your passwords kept in the system keyring."
 
 [[apps]]
-id = "hito"
-name = "Hito"
-suite = "office"
-tagline = "Tasks, milestones and progress"
-color = [52, 134, 36]
-ink_light = [40, 106, 28]
-ink_dark = [89, 203, 68]
-repo = "getnodalia/hito"
-bundle = "dev.danielmiguelt.Hito"
-mac_bundle_name = "Hito"
-[apps.details]
-headline = "Tasks, milestones and progress for your team."
-about = "Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption."
-
-[[apps]]
-id = "agora"
-name = "Ágora"
-suite = "office"
-tagline = "Team chat on your own server"
-color = [16, 130, 135]
-ink_light = [12, 103, 107]
-ink_dark = [49, 198, 203]
-repo = "getnodalia/agora"
-bundle = "dev.danielmiguelt.Agora"
-mac_bundle_name = "Agora"
-[apps.details]
-headline = "Team chat on a server you run yourself."
-about = "Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app."
-
-[[apps]]
 id = "lienzo"
 name = "Lienzo"
 suite = "creator"
@@ -318,6 +288,36 @@ mac_bundle_name = "Abaco"
 [apps.details]
 headline = "Engineering calculation, done natively."
 about = "Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering."
+
+[[apps]]
+id = "agora"
+name = "Ágora"
+suite = "enterprise"
+tagline = "Team chat on your own server"
+color = [16, 130, 135]
+ink_light = [12, 103, 107]
+ink_dark = [49, 198, 203]
+repo = "getnodalia/agora"
+bundle = "dev.danielmiguelt.Agora"
+mac_bundle_name = "Agora"
+[apps.details]
+headline = "Team chat on a server you run yourself."
+about = "Workspaces, channels, threads and direct messages with end-to-end encryption, in a native desktop app."
+
+[[apps]]
+id = "hito"
+name = "Hito"
+suite = "enterprise"
+tagline = "Tasks, milestones and progress"
+color = [52, 134, 36]
+ink_light = [40, 106, 28]
+ink_dark = [89, 203, 68]
+repo = "getnodalia/hito"
+bundle = "dev.danielmiguelt.Hito"
+mac_bundle_name = "Hito"
+[apps.details]
+headline = "Tasks, milestones and progress for your team."
+about = "Plan projects, track tasks and see progress on a server you run yourself, with end-to-end encryption."
 
 [[apps]]
 id = "vinilo"

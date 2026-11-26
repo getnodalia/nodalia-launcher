@@ -81,7 +81,7 @@ impl LauncherUi {
             name: "Nodalia Launcher",
             version: &version,
             tagline: tl!("Install, update and open the Nodalia apps from one place."),
-            suite: tl!("Office · Creator · Engineering"),
+            suite: tl!("Office · Creator · Engineering · Enterprise"),
             links: &links,
             footer: "MIT OR Apache-2.0",
         };
