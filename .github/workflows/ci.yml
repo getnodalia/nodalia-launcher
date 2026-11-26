@@ -29,6 +29,6 @@ jobs:
         cargo clippy --workspace --all-targets --locked -- -D warnings
         cargo test --workspace --locked
   git-sources:
-    uses: getnodalia/foundation/.github/workflows/git-sources.yml@e756876881280ba136ec527be594f616c9a65a5a # foundation main 2026-11-14
+    uses: getnodalia/foundation/.github/workflows/git-sources.yml@4debdfe28cf5820d1748864efbd8d6996922d1ac # foundation main
   agents:
     uses: getnodalia/foundation/.github/workflows/agents-check.yml@e756876881280ba136ec527be594f616c9a65a5a # foundation main 2026-11-14
