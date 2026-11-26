@@ -13,12 +13,14 @@ pub enum Suite {
     Office,
     Creator,
     Engineering,
-    /// Everyday apps that belong to none of the three work suites.
+    /// Business apps: team chat, work tracking and the tools to come for customers, resources and finance.
+    Enterprise,
+    /// Everyday apps that belong to none of the work suites.
     Everyday,
 }
 
 impl Suite {
-    pub const ALL: [Suite; 4] = [Self::Office, Self::Creator, Self::Engineering, Self::Everyday];
+    pub const ALL: [Suite; 5] = [Self::Office, Self::Creator, Self::Engineering, Self::Enterprise, Self::Everyday];
 
     /// English name; the UI translates it.
     pub fn label(self) -> &'static str {
@@ -26,6 +28,7 @@ impl Suite {
             Self::Office => "Office",
             Self::Creator => "Creator",
             Self::Engineering => "Engineering",
+            Self::Enterprise => "Enterprise",
             Self::Everyday => "Everyday",
         }
     }
@@ -116,7 +119,7 @@ impl SuiteApp {
     }
 }
 
-// The bundled suite, in display order: Office, Creator, Engineering, Everyday.
+// The bundled suite, in display order: Office, Creator, Engineering, Enterprise, Everyday.
 include!(concat!(env!("OUT_DIR"), "/catalog.rs"));
 
 /// The name every Nodalia installer registers as its publisher (the Windows Installer's
@@ -199,8 +202,9 @@ mod tests {
     fn the_suites_group_the_apps() {
         let in_suite = |suite| SUITE.iter().filter(|a| a.suite == suite).map(|a| a.id).collect::<Vec<_>>();
         assert_eq!(in_suite(Suite::Engineering), ["forja", "torno", "vortia", "circuito", "abaco"]);
+        assert_eq!(in_suite(Suite::Enterprise), ["agora", "hito"]);
         assert_eq!(in_suite(Suite::Everyday), ["vinilo", "brujula", "codigo"]);
-        assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Office).count(), 7);
+        assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Office).count(), 5);
         assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Creator).count(), 9);
     }
 

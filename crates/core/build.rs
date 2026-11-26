@@ -81,6 +81,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             "office" => "Office",
             "creator" => "Creator",
             "engineering" => "Engineering",
+            "enterprise" => "Enterprise",
             "everyday" => "Everyday",
             _ => return Err(format!("unknown suite for {}", app.id).into()),
         };
