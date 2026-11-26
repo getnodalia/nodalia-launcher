@@ -36,6 +36,10 @@ pub fn meta(app: &SuiteApp) -> (&'static str, Option<&'static str>) {
         "hito" => ("Graphics;3DGraphics;", Some("hito")),
         "agora" => ("Graphics;3DGraphics;", Some("agora")),
         "brujula" => ("Development;Debugger;", None),
+        "codigo" => ("Development;IDE;TextEditor;", None),
+        "orbe" => ("Development;IDE;Game;", Some("Orbe")),
+        "circuito" => ("Engineering;Electronics;", None),
+        "abaco" => ("Education;Science;Math;", None),
         _ => ("Graphics;", None),
     }
 }

@@ -476,6 +476,9 @@ anima	Draw, tween and animate on a timeline, then export to video, GIF or image 
 trama	Interface design and prototyping	ინტერფეისის დიზაინი და პროტოტიპირება
 trama	Interface design and prototyping.	ინტერფეისის დიზაინი და პროტოტიპირება.
 trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	ავტომატური განლაგების ჩარჩოები, კომპონენტები, სტილები და დაწკაპუნებადი პროტოტიპები, რეალურ დროში თანამშრომლობით.
+orbe	Game engine and editor	თამაშების ძრავა და რედაქტორი
+orbe	Make 2D and 3D games.	შექმენი 2D და 3D თამაშები.
+orbe	Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in.	ააგე თამაშები სცენებისა და კვანძებისგან, დაწერე მათთვის სკრიპტები და გაიტანე ერთი რედაქტორიდან, ჩაშენებული ფიზიკით, რენდერინგითა და აუდიოთი.
 forja	Computer-aided design and drafting	დაპროექტება და ნახაზები
 forja	Computer-aided design and drafting.	კომპიუტერით მხარდაჭერილი დაპროექტება და ნახაზები.
 forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	ზუსტი 2D ნახაზები და პარამეტრული ხატვა DXF და DWG ფაილებით.
@@ -485,12 +488,21 @@ torno	Sketch, constrain and extrude solid parts with a feature timeline and a ke
 vortia	Fluid simulation (CFD)	სითხეების სიმულაცია (CFD)
 vortia	Fluid simulation, from geometry to results.	სითხეების სიმულაცია გეომეტრიიდან შედეგებამდე.
 vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	დააყენეთ, გაუშვით და შეამოწმეთ CFD სიმულაციები ერთ დესკტოპ აპში საკუთარი ამომხსნელი ძრავით.
+circuito	Electronics design and simulation	ელექტრონიკის დაპროექტება და სიმულაცია
+circuito	Electronics, from schematic to simulation.	ელექტრონიკა სქემიდან სიმულაციამდე.
+circuito	Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering.	დააპროექტე ელექტრონული სქემები და ნახე, როგორ იქცევიან ისინი, მშობლიურ აპლიკაციაში, რომელიც Nodalia Engineering-ის ნაწილია.
+abaco	Engineering calculation	საინჟინრო გათვლები
+abaco	Engineering calculation, done natively.	საინჟინრო გათვლები მშობლიურად.
+abaco	Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering.	დათვალე საინჟინრო პროექტის მონაცემები სწრაფ მშობლიურ აპლიკაციაში, რომელიც Nodalia Engineering-ის ნაწილია.
 vinilo	Apple Music, natively	Apple Music ნატიურად
 vinilo	Apple Music, drawn natively.	Apple Music, ნატიურად დახატული.
 vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	სწრაფი ნატიური ინტერფეისი Apple Music-ისთვის, უწყვეტი დაკვრითა და მართვით სისტემის მედია პანელიდან.
 brujula	The Nodalix web browser	Nodalix-ის ვებბრაუზერი
 brujula	The browser of Nodalix.	Nodalix-ის ბრაუზერი.
 brujula	A fast, private web browser that comes with Nodalix.	სწრაფი და კონფიდენციალური ვებბრაუზერი, რომელიც Nodalix-ს მოჰყვება.
+codigo	Code editor	კოდის რედაქტორი
+codigo	A fast, native code editor.	სწრაფი, მშობლიური კოდის რედაქტორი.
+codigo	Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust.	დაარედაქტირე კოდი ნებისმიერ ენაზე სინტაქსის გამოყოფით, ენის სერვერის დიაგნოსტიკით, პროექტებითა და ძიებით, ყველაფერი Rust-ზე დაწერილ მშობლიურ აპლიკაციაში.
 	Something went wrong: {detail}	რაღაც არასწორად წარიმართა: {detail}
 @msg	GitHub's request limit was reached. Try again later.	GitHub-ის მოთხოვნების ლიმიტი ამოიწურა. სცადეთ მოგვიანებით.
 @msg	GitHub refused the request (HTTP {status})	GitHub-მა მოთხოვნა უარყო (HTTP {status})

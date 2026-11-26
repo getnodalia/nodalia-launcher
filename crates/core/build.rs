@@ -51,6 +51,25 @@ fn system(name: &str) -> Result<&'static str, String> {
         other => return Err(format!("unknown system {other}")),
     })
 }
+/// `app_icon_png`: every catalog app's 128 px icon, read from `assets/app-icons/<id>.png`. The
+/// icon is bundled when the file exists, so a new app needs only its row in `catalog.toml` and its
+/// icon dropped into that folder.
+fn app_icons(manifest: &Manifest) -> Result<String, Box<dyn Error>> {
+    let dir = PathBuf::from(env::var_os("CARGO_MANIFEST_DIR").ok_or("CARGO_MANIFEST_DIR missing")?).join("../../assets/app-icons");
+    println!("cargo:rerun-if-changed={}", dir.display());
+    let mut arms = String::new();
+    for app in &manifest.apps {
+        let file = dir.join(format!("{}.png", app.id));
+        println!("cargo:rerun-if-changed={}", file.display());
+        if file.is_file() {
+            let path = file.canonicalize()?;
+            writeln!(arms, "{:?} => include_bytes!({:?}),", app.id, path.to_string_lossy())?;
+        }
+    }
+    Ok(format!(
+        "/// An app's 128 px icon (PNG), from `assets/app-icons`: the UI draws it, and the Linux install\n/// puts it in the desktop menu. `None` for an app with no icon file yet.\npub fn app_icon_png(id: &str) -> Option<&'static [u8]> {{\n    Some(match id {{\n{arms}        _ => return None,\n    }})\n}}\n"
+    ))
+}
 fn main() -> Result<(), Box<dyn Error>> {
     println!("cargo:rerun-if-changed=catalog.toml");
     let manifest: Manifest = toml::from_str(&fs::read_to_string("catalog.toml")?)?;
@@ -86,6 +105,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     apps.push_str("];\n");
     details.push_str("];\n");
     let out = PathBuf::from(env::var_os("OUT_DIR").ok_or("OUT_DIR missing")?);
+    fs::write(out.join("app_icons.rs"), app_icons(&manifest)?)?;
     fs::write(out.join("catalog.rs"), apps)?;
     fs::write(out.join("details.rs"), details)?;
     Ok(())

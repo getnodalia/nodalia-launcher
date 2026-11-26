@@ -464,6 +464,9 @@ anima	Draw, tween and animate on a timeline, then export to video, GIF or image 
 trama	Interface design and prototyping	Дизайн інтерфейсів та прототипування
 trama	Interface design and prototyping.	Проєктування інтерфейсів і прототипування.
 trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	Фрейми з автоматичною компоновкою, компоненти, стилі та клікабельні прототипи, зі спільною роботою в реальному часі.
+orbe	Game engine and editor	Ігровий рушій і редактор
+orbe	Make 2D and 3D games.	Створюйте 2D- і 3D-ігри.
+orbe	Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in.	Збирайте ігри зі сцен і вузлів, пишіть для них скрипти й експортуйте їх з одного редактора з вбудованими фізикою, рендерингом і звуком.
 forja	Computer-aided design and drafting	Комп’ютерне проєктування та креслення
 forja	Computer-aided design and drafting.	Автоматизоване проєктування та креслення.
 forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	Точне 2D-креслення та параметричне малювання з файлами DXF і DWG.
@@ -473,12 +476,21 @@ torno	Sketch, constrain and extrude solid parts with a feature timeline and a ke
 vortia	Fluid simulation (CFD)	Моделювання течій (CFD)
 vortia	Fluid simulation, from geometry to results.	Моделювання течій: від геометрії до результатів.
 vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	Налаштовуйте, запускайте та аналізуйте CFD-розрахунки в одному настільному застосунку з власним розв'язувачем.
+circuito	Electronics design and simulation	Проєктування та моделювання електроніки
+circuito	Electronics, from schematic to simulation.	Електроніка: від схеми до моделювання.
+circuito	Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering.	Проєктуйте електронні схеми та дивіться, як вони працюють, у нативному застосунку з родини Nodalia Engineering.
+abaco	Engineering calculation	Інженерні розрахунки
+abaco	Engineering calculation, done natively.	Інженерні розрахунки в нативному застосунку.
+abaco	Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering.	Виконуйте розрахунки інженерного проєкту в швидкому нативному застосунку з родини Nodalia Engineering.
 vinilo	Apple Music, natively	Apple Music, нативно
 vinilo	Apple Music, drawn natively.	Apple Music, намальована нативно.
 vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	Швидкий нативний інтерфейс Apple Music з безперервним відтворенням і керуванням на медіапанелі вашої системи.
 brujula	The Nodalix web browser	Веббраузер Nodalix
 brujula	The browser of Nodalix.	Браузер Nodalix.
 brujula	A fast, private web browser that comes with Nodalix.	Швидкий і приватний веббраузер, що входить до складу Nodalix.
+codigo	Code editor	Редактор коду
+codigo	A fast, native code editor.	Швидкий нативний редактор коду.
+codigo	Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust.	Редагуйте код будь-якою мовою з підсвічуванням синтаксису, діагностикою мовного сервера, проєктами й пошуком — усе в нативному застосунку, написаному на Rust.
 	Something went wrong: {detail}	Щось пішло не так: {detail}
 @msg	GitHub's request limit was reached. Try again later.	Досягнуто ліміту запитів GitHub. Повторіть спробу пізніше.
 @msg	GitHub refused the request (HTTP {status})	GitHub відхилив запит (HTTP {status})

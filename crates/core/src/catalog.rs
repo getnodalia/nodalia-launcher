@@ -166,22 +166,7 @@ pub const LAUNCHER_REPO: &str = "getnodalia/nodalia-launcher";
 /// The launcher's own asset stem.
 pub const LAUNCHER_ID: &str = "nodalia-launcher";
 
-macro_rules! app_icon {
-    ($($id:literal),* $(,)?) => {
-        /// An app's 128 px icon (PNG), as copied from Nodalia's brand folder into `assets/app-icons`:
-        /// the UI draws it, and the Linux install puts it in the desktop menu.
-        pub fn app_icon_png(id: &str) -> Option<&'static [u8]> {
-            Some(match id {
-                $($id => include_bytes!(concat!("../../../assets/app-icons/", $id, ".png")),)*
-                _ => return None,
-            })
-        }
-    };
-}
-app_icon!(
-    "agora", "anima", "brujula", "buzon", "celdas", "forja", "hito", "lamina", "letra", "lienzo", "luz", "papel", "pliego", "pluma", "pulso", "toma",
-    "torno", "trama", "vinilo", "vortia"
-);
+include!(concat!(env!("OUT_DIR"), "/app_icons.rs"));
 
 #[cfg(test)]
 mod tests {
@@ -197,8 +182,8 @@ mod tests {
     }
 
     #[test]
-    fn suite_has_twenty_apps_with_unique_ids() {
-        assert_eq!(SUITE.len(), 20);
+    fn suite_has_twenty_four_apps_with_unique_ids() {
+        assert_eq!(SUITE.len(), 24);
         let mut ids: Vec<_> = SUITE.iter().map(|a| a.id).collect();
         ids.sort_unstable();
         ids.dedup();
@@ -213,10 +198,10 @@ mod tests {
     #[test]
     fn the_suites_group_the_apps() {
         let in_suite = |suite| SUITE.iter().filter(|a| a.suite == suite).map(|a| a.id).collect::<Vec<_>>();
-        assert_eq!(in_suite(Suite::Engineering), ["forja", "torno", "vortia"]);
-        assert_eq!(in_suite(Suite::Everyday), ["vinilo", "brujula"]);
+        assert_eq!(in_suite(Suite::Engineering), ["forja", "torno", "vortia", "circuito", "abaco"]);
+        assert_eq!(in_suite(Suite::Everyday), ["vinilo", "brujula", "codigo"]);
         assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Office).count(), 7);
-        assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Creator).count(), 8);
+        assert_eq!(SUITE.iter().filter(|a| a.suite == Suite::Creator).count(), 9);
     }
 
     #[test]

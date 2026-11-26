@@ -455,6 +455,9 @@ anima	Draw, tween and animate on a timeline, then export to video, GIF or image 
 trama	Interface design and prototyping	Diseño de interfaces y prototipos
 trama	Interface design and prototyping.	Diseño de interfaces y prototipos.
 trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	Marcos con diseño automático, componentes, estilos y prototipos interactivos, con colaboración en vivo.
+orbe	Game engine and editor	Motor de juegos y editor
+orbe	Make 2D and 3D games.	Crea juegos 2D y 3D.
+orbe	Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in.	Crea juegos a partir de escenas y nodos, prográmalos y expórtalos, desde un único editor con física, renderizado y audio integrados.
 forja	Computer-aided design and drafting	CAD: diseño y dibujo técnico
 forja	Computer-aided design and drafting.	Diseño y delineación asistidos por ordenador.
 forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	Delineación 2D precisa y dibujo paramétrico, con archivos DXF y DWG.
@@ -464,12 +467,21 @@ torno	Sketch, constrain and extrude solid parts with a feature timeline and a ke
 vortia	Fluid simulation (CFD)	Simulación de fluidos (CFD)
 vortia	Fluid simulation, from geometry to results.	Simulación de fluidos, de la geometría a los resultados.
 vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	Configura, ejecuta e inspecciona simulaciones CFD en una sola app de escritorio con su propio motor de resolución.
+circuito	Electronics design and simulation	Diseño y simulación electrónica
+circuito	Electronics, from schematic to simulation.	Electrónica, del esquema a la simulación.
+circuito	Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering.	Diseña circuitos electrónicos y comprueba cómo se comportan, en una app nativa que forma parte de Nodalia Engineering.
+abaco	Engineering calculation	Cálculo de ingeniería
+abaco	Engineering calculation, done natively.	Cálculo de ingeniería, de forma nativa.
+abaco	Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering.	Resuelve las cuentas de un proyecto de ingeniería en una app nativa y rápida que forma parte de Nodalia Engineering.
 vinilo	Apple Music, natively	Apple Music, de forma nativa
 vinilo	Apple Music, drawn natively.	Apple Music, dibujado de forma nativa.
 vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	Una interfaz nativa y rápida para Apple Music con reproducción sin pausas y controles en el panel multimedia de tu sistema.
 brujula	The Nodalix web browser	El navegador web de Nodalix
 brujula	The browser of Nodalix.	El navegador de Nodalix.
 brujula	A fast, private web browser that comes with Nodalix.	Un navegador web rápido y privado que se incluye con Nodalix.
+codigo	Code editor	Editor de código
+codigo	A fast, native code editor.	Un editor de código nativo y rápido.
+codigo	Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust.	Edita código en cualquier lenguaje con resaltado de sintaxis, diagnósticos del servidor de lenguaje, proyectos y búsqueda, todo en una app nativa escrita en Rust.
 	Something went wrong: {detail}	Algo salió mal: {detail}
 @msg	GitHub's request limit was reached. Try again later.	Se alcanzó el límite de peticiones de GitHub. Vuelve a intentarlo más tarde.
 @msg	GitHub refused the request (HTTP {status})	GitHub rechazó la petición (HTTP {status})

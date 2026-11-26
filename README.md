@@ -24,7 +24,7 @@
 ## What it does
 
 Every Nodalia app ships its own builds for every platform. Nodalia Launcher saves you from hunting
-through twenty release pages: it lists every app, shows which ones you have and at which version,
+through two dozen release pages: it lists every app, shows which ones you have and at which version,
 installs the right build for your operating system and processor, and tells you when an update is
 out. It is a small native app, drawn in the Nodalia Design Language, that can sit in your menu bar
 or system tray.

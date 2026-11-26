@@ -113,7 +113,7 @@ function New-InstallerArt([string] $BannerOut, [string] $DialogOut) {
   $line = [System.Drawing.Color]::FromArgb(38, 242, 241, 238)
   # The Nodalia apps, in the launcher's order (crates/core/src/catalog.rs).
   $apps = 'letra', 'celdas', 'lamina', 'papel', 'buzon', 'hito', 'agora', 'lienzo', 'pluma', 'pliego',
-    'luz', 'toma', 'pulso', 'anima', 'trama', 'forja', 'torno', 'vortia', 'vinilo', 'brujula'
+    'luz', 'toma', 'pulso', 'anima', 'trama', 'orbe', 'forja', 'torno', 'vortia', 'circuito', 'abaco', 'vinilo', 'brujula', 'codigo'
   $mark = [System.Drawing.Image]::FromFile((Join-Path $Root 'assets\app-icon\hicolor\256x256\apps\dev.danielmiguelt.NodaliaLauncher.png'))
   $icons = $apps | ForEach-Object { [System.Drawing.Image]::FromFile((Join-Path $Root "assets\app-icons\$_.png")) }
   # The site's faces; GDI+ draws a variable font at its default instance (Regular).
@@ -152,7 +152,7 @@ function New-InstallerArt([string] $BannerOut, [string] $DialogOut) {
             $x += $g.MeasureString([string]$ch, $labelFont, 100, [System.Drawing.StringFormat]::GenericTypographic).Width + 1.35
           }
           $brush.Dispose()
-          # The twenty apps in four columns of 30 px cells: x=22..142, y=118..268.
+          # The apps in four columns of 30 px cells: x=22..142, y=118 down, six rows for 24 apps (to y=298 in the 312 px dialog).
           $pen = New-Object System.Drawing.Pen $line, 1
           $left = 22; $top = 118; $cell = 30; $columns = 4
           for ($i = 0; $i -lt $icons.Count; $i++) {

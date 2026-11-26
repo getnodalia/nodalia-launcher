@@ -478,6 +478,9 @@ anima	Draw, tween and animate on a timeline, then export to video, GIF or image 
 trama	Interface design and prototyping	インターフェースデザインとプロトタイピング
 trama	Interface design and prototyping.	インターフェースのデザインとプロトタイピング。
 trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	オートレイアウト対応のフレーム、コンポーネント、スタイル、クリックできるプロトタイプ、リアルタイムの共同編集に対応します。
+orbe	Game engine and editor	ゲームエンジンとエディター
+orbe	Make 2D and 3D games.	2D・3Dゲームを作ろう。
+orbe	Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in.	シーンとノードからゲームを組み立て、スクリプトを書いて書き出せます。物理演算、レンダリング、オーディオを備えた1つのエディターで完結します。
 forja	Computer-aided design and drafting	コンピューター支援設計と製図
 forja	Computer-aided design and drafting.	コンピュータ支援による設計と製図。
 forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	正確な 2D 製図とパラメトリック作図。DXF と DWG ファイルに対応します。
@@ -487,12 +490,21 @@ torno	Sketch, constrain and extrude solid parts with a feature timeline and a ke
 vortia	Fluid simulation (CFD)	流体シミュレーション（CFD）
 vortia	Fluid simulation, from geometry to results.	ジオメトリから結果まで、流体シミュレーション。
 vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	独自のソルバーエンジンを備えた 1 つのデスクトップアプリで、CFD シミュレーションの設定、実行、確認ができます。
+circuito	Electronics design and simulation	電子回路の設計とシミュレーション
+circuito	Electronics, from schematic to simulation.	回路図からシミュレーションまで。
+circuito	Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering.	電子回路を設計し、その動作を確かめられます。Nodalia Engineering の一員であるネイティブアプリです。
+abaco	Engineering calculation	エンジニアリング計算
+abaco	Engineering calculation, done natively.	ネイティブで行うエンジニアリング計算。
+abaco	Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering.	エンジニアリングプロジェクトの数値を、Nodalia Engineering の一員である高速なネイティブアプリで計算します。
 vinilo	Apple Music, natively	Apple Music をネイティブで
 vinilo	Apple Music, drawn natively.	ネイティブで描かれた Apple Music。
 vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	ギャップレス再生と、システムのメディアパネルからの操作に対応した、Apple Music 用の高速なネイティブインターフェース。
 brujula	The Nodalix web browser	Nodalix のウェブブラウザ
 brujula	The browser of Nodalix.	Nodalix のブラウザ。
 brujula	A fast, private web browser that comes with Nodalix.	Nodalix に付属する、高速でプライベートなウェブブラウザ。
+codigo	Code editor	コードエディター
+codigo	A fast, native code editor.	高速なネイティブコードエディター。
+codigo	Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust.	構文ハイライト、言語サーバーによる診断、プロジェクト、検索を備え、あらゆる言語のコードを編集できます。Rust で書かれたネイティブアプリです。
 	Something went wrong: {detail}	問題が発生しました: {detail}
 @msg	GitHub's request limit was reached. Try again later.	GitHub のリクエスト上限に達しました。しばらくしてからもう一度お試しください。
 @msg	GitHub refused the request (HTTP {status})	GitHub がリクエストを拒否しました (HTTP {status})
