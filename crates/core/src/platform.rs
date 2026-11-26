@@ -365,6 +365,30 @@ mod tests {
         assert_eq!(pick_asset(&native_only, &["vinilo"], silicon, &[PackageKind::Dmg]), None);
     }
 
+    /// Buzón names its AppImage `Buzon-<version>-x86_64.AppImage` (no OS), beside a .deb and an .rpm
+    /// named after their distributions: the Launcher must offer the AppImage on Linux.
+    #[test]
+    fn buzon_selects_its_versioned_osless_appimage() {
+        let buzon = crate::release::parse_github_release(include_str!("../tests/fixtures/buzon-release.json"), "getnodalia/buzon").unwrap();
+        let linux = Platform { os: Os::Linux, arch: Arch::X64 };
+        let (asset, kind) = pick_asset(&buzon, &["buzon"], linux, &[PackageKind::AppImage]).unwrap();
+        assert_eq!(asset.name, "Buzon-0.1.9-x86_64.AppImage");
+        assert_eq!(kind, PackageKind::AppImage);
+        assert!(pick_asset(&buzon, &["buzon"], linux, linux.download_kinds()).is_some());
+    }
+
+    /// Without the API the release is rebuilt from its checksum lists alone; Buzón's only list is
+    /// `SHA256SUMS-linux`, and its AppImage must come out of it.
+    #[test]
+    fn buzon_is_offered_from_its_linux_checksum_list_alone() {
+        let sums = crate::release::merge_sha256sums([include_str!("../tests/fixtures/buzon-sha256sums-linux.txt")]);
+        let release = crate::release::release_from_sums("getnodalia/buzon", "v0.1.9", &sums);
+        let linux = Platform { os: Os::Linux, arch: Arch::X64 };
+        let (asset, _) = pick_asset(&release, &["buzon"], linux, linux.download_kinds()).unwrap();
+        assert_eq!(asset.name, "Buzon-0.1.9-x86_64.AppImage");
+        assert!(asset.sha256.is_some());
+    }
+
     #[test]
     fn freebsd_picks_the_tarball_for_the_processor() {
         let r = release(&["vinilo-0.10.0-freebsd-x86_64.tar.gz", "vinilo-0.10.0-freebsd-aarch64.tar.gz"]);
