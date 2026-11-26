@@ -1704,6 +1704,8 @@ fn assert_update_commands(sent: &RefCell<Vec<Command>>, apps: &[&str]) {
 #[test]
 fn downloads_can_be_paused_resumed_and_discarded() {
     let (mut h, sent) = harness(ViewMode::Grid, egui::Theme::Dark, true);
+    // Tall enough that every not-installed card is on screen, however many apps the catalog has.
+    h.set_size(egui::vec2(1180.0, 1700.0));
     h.run_steps(4);
     // Bring the paused and reconnecting apps on screen.
     if let Some(l) = h.state_mut().as_mut() {

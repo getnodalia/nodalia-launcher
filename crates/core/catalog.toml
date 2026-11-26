@@ -229,6 +229,21 @@ headline = "Interface design and prototyping."
 about = "Frames with auto layout, components, styles and clickable prototypes, with live collaboration."
 
 [[apps]]
+id = "orbe"
+name = "Orbe"
+suite = "creator"
+tagline = "Game engine and editor"
+color = [153, 110, 4]
+ink_light = [121, 87, 4]
+ink_dark = [229, 170, 36]
+repo = "getnodalia/orbe"
+bundle = "dev.danielmiguelt.Orbe"
+mac_bundle_name = "Orbe"
+[apps.details]
+headline = "Make 2D and 3D games."
+about = "Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in."
+
+[[apps]]
 id = "forja"
 name = "Forja"
 suite = "engineering"
@@ -275,6 +290,36 @@ headline = "Fluid simulation, from geometry to results."
 about = "Set up, run and inspect CFD simulations in one desktop app with its own solver engine."
 
 [[apps]]
+id = "circuito"
+name = "Circuito"
+suite = "engineering"
+tagline = "Electronics design and simulation"
+color = [148, 112, 3]
+ink_light = [117, 88, 3]
+ink_dark = [222, 173, 35]
+repo = "getnodalia/circuito"
+bundle = "dev.danielmiguelt.Circuito"
+mac_bundle_name = "Circuito"
+[apps.details]
+headline = "Electronics, from schematic to simulation."
+about = "Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering."
+
+[[apps]]
+id = "abaco"
+name = "Ábaco"
+suite = "engineering"
+tagline = "Engineering calculation"
+color = [194, 72, 138]
+ink_light = [155, 56, 109]
+ink_dark = [233, 157, 192]
+repo = "getnodalia/abaco"
+bundle = "dev.danielmiguelt.Abaco"
+mac_bundle_name = "Abaco"
+[apps.details]
+headline = "Engineering calculation, done natively."
+about = "Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering."
+
+[[apps]]
 id = "vinilo"
 name = "Vinilo"
 suite = "everyday"
@@ -305,3 +350,18 @@ systems = ["linux"]
 [apps.details]
 headline = "The browser of Nodalix."
 about = "A fast, private web browser that comes with Nodalix."
+
+[[apps]]
+id = "codigo"
+name = "Código"
+suite = "everyday"
+tagline = "Code editor"
+color = [8, 133, 110]
+ink_light = [7, 105, 87]
+ink_dark = [43, 202, 169]
+repo = "getnodalia/codigo"
+bundle = "dev.danielmiguelt.Codigo"
+mac_bundle_name = "Codigo"
+[apps.details]
+headline = "A fast, native code editor."
+about = "Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust."

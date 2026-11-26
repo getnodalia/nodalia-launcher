@@ -476,6 +476,9 @@ anima	Draw, tween and animate on a timeline, then export to video, GIF or image 
 trama	Interface design and prototyping	Felülettervezés és prototípus-készítés
 trama	Interface design and prototyping.	Felülettervezés és prototípus-készítés.
 trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	Automatikus elrendezésű keretek, komponensek, stílusok és kattintható prototípusok, élő együttműködéssel.
+orbe	Game engine and editor	Játékmotor és szerkesztő
+orbe	Make 2D and 3D games.	Készíts 2D-s és 3D-s játékokat.
+orbe	Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in.	Építs játékokat jelenetekből és csomópontokból, szkriptelj hozzájuk és exportáld őket egyetlen szerkesztőből, beépített fizikával, rendereléssel és hanggal.
 forja	Computer-aided design and drafting	Számítógépes tervezés és műszaki rajz
 forja	Computer-aided design and drafting.	Számítógéppel segített tervezés és rajzolás.
 forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	Pontos 2D rajzolás és parametrikus rajzolás DXF és DWG fájlokkal.
@@ -485,12 +488,21 @@ torno	Sketch, constrain and extrude solid parts with a feature timeline and a ke
 vortia	Fluid simulation (CFD)	Áramlásszimuláció (CFD)
 vortia	Fluid simulation, from geometry to results.	Áramlásszimuláció a geometriától az eredményekig.
 vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	Állíts be, futtass és vizsgálj CFD-szimulációkat egyetlen asztali alkalmazásban, saját megoldómotorral.
+circuito	Electronics design and simulation	Elektronikai tervezés és szimuláció
+circuito	Electronics, from schematic to simulation.	Elektronika a kapcsolási rajztól a szimulációig.
+circuito	Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering.	Tervezz elektronikus áramköröket, és nézd meg, hogyan viselkednek, egy natív alkalmazásban, amely a Nodalia Engineering része.
+abaco	Engineering calculation	Mérnöki számítások
+abaco	Engineering calculation, done natively.	Mérnöki számítások natívan.
+abaco	Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering.	Számold ki egy mérnöki projekt számait egy gyors, natív alkalmazásban, amely a Nodalia Engineering része.
 vinilo	Apple Music, natively	Apple Music, natívan
 vinilo	Apple Music, drawn natively.	Apple Music, natívan megrajzolva.
 vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	Gyors natív felület az Apple Musichoz szünetmentes lejátszással és vezérlőkkel a rendszer médiapaneljén.
 brujula	The Nodalix web browser	A Nodalix webböngészője
 brujula	The browser of Nodalix.	A Nodalix böngészője.
 brujula	A fast, private web browser that comes with Nodalix.	Gyors és privát webböngésző, amely a Nodalix részeként érkezik.
+codigo	Code editor	Kódszerkesztő
+codigo	A fast, native code editor.	Gyors, natív kódszerkesztő.
+codigo	Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust.	Szerkessz kódot bármilyen nyelven szintaxiskiemeléssel, nyelvi kiszolgáló diagnosztikával, projektekkel és kereséssel, mindezt egy Rustban írt natív alkalmazásban.
 	Something went wrong: {detail}	Valami hiba történt: {detail}
 @msg	GitHub's request limit was reached. Try again later.	Elérted a GitHub kérési korlátját. Próbáld újra később.
 @msg	GitHub refused the request (HTTP {status})	A GitHub elutasította a kérést (HTTP {status})

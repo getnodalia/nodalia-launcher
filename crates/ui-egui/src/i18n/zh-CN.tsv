@@ -444,6 +444,9 @@ anima	Draw, tween and animate on a timeline, then export to video, GIF or image 
 trama	Interface design and prototyping	界面设计与原型制作
 trama	Interface design and prototyping.	界面设计与原型制作。
 trama	Frames with auto layout, components, styles and clickable prototypes, with live collaboration.	带自动布局的画板、组件、样式和可点击的原型，并支持实时协作。
+orbe	Game engine and editor	游戏引擎与编辑器
+orbe	Make 2D and 3D games.	制作 2D 和 3D 游戏。
+orbe	Build games from scenes and nodes, script them and export them, from one editor with physics, rendering and audio built in.	用场景和节点构建游戏，编写脚本并导出，一个编辑器即可完成，内置物理、渲染和音频。
 forja	Computer-aided design and drafting	计算机辅助设计与制图
 forja	Computer-aided design and drafting.	计算机辅助设计与绘图。
 forja	Precise 2D drafting and parametric drawing, with DXF and DWG files.	精确的 2D 绘图和参数化绘制，支持 DXF 和 DWG 文件。
@@ -453,12 +456,21 @@ torno	Sketch, constrain and extrude solid parts with a feature timeline and a ke
 vortia	Fluid simulation (CFD)	流体仿真（CFD）
 vortia	Fluid simulation, from geometry to results.	流体仿真，从几何到结果。
 vortia	Set up, run and inspect CFD simulations in one desktop app with its own solver engine.	在一个桌面应用中设置、运行和查看 CFD 仿真，内置自有求解引擎。
+circuito	Electronics design and simulation	电子设计与仿真
+circuito	Electronics, from schematic to simulation.	电子电路，从原理图到仿真。
+circuito	Design electronic circuits and see how they behave, in a native app that is part of Nodalia Engineering.	设计电子电路并观察其行为，这是一款隶属于 Nodalia Engineering 的原生应用。
+abaco	Engineering calculation	工程计算
+abaco	Engineering calculation, done natively.	原生的工程计算。
+abaco	Work out the numbers behind an engineering project in a fast native app that is part of Nodalia Engineering.	在隶属于 Nodalia Engineering 的快速原生应用中，算出工程项目背后的数字。
 vinilo	Apple Music, natively	原生的 Apple Music
 vinilo	Apple Music, drawn natively.	原生绘制的 Apple Music。
 vinilo	A fast native interface for Apple Music with gapless playback and controls in your system's media panel.	面向 Apple Music 的快速原生界面，支持无缝播放，并可在系统媒体面板中控制。
 brujula	The Nodalix web browser	Nodalix 网页浏览器
 brujula	The browser of Nodalix.	Nodalix 的浏览器。
 brujula	A fast, private web browser that comes with Nodalix.	随 Nodalix 一同提供的快速、私密的网页浏览器。
+codigo	Code editor	代码编辑器
+codigo	A fast, native code editor.	快速的原生代码编辑器。
+codigo	Edit code in any language with syntax highlighting, language-server diagnostics, projects and search, all in a native app written in Rust.	以语法高亮、语言服务器诊断、项目和搜索编辑任何语言的代码，全部在一款用 Rust 编写的原生应用中完成。
 	Something went wrong: {detail}	出了点问题：{detail}
 @msg	GitHub's request limit was reached. Try again later.	已达到 GitHub 的请求上限，请稍后再试。
 @msg	GitHub refused the request (HTTP {status})	GitHub 拒绝了请求（HTTP {status}）
