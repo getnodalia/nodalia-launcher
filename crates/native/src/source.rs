@@ -248,8 +248,10 @@ impl GitHubSource {
     }
 }
 
-/// The checksum lists a release can carry, the plain ones first.
-const SUMS_LISTS: [&str; 4] = ["SHA256SUMS", "SHA256SUMS-macos", "SHA256SUMS-windows", "SHA256SUMS.txt"];
+/// The checksum lists a release can carry, the plain ones first. A release with only Linux packages
+/// (Buzón's) publishes just `SHA256SUMS-linux`; without it here, a lookup that cannot use the API
+/// finds no file for such an app and the card reads "Not available here".
+const SUMS_LISTS: [&str; 5] = ["SHA256SUMS", "SHA256SUMS-macos", "SHA256SUMS-windows", "SHA256SUMS-linux", "SHA256SUMS.txt"];
 
 /// GitHub's quota refills within the hour, so a later reset is a bad answer.
 const MAX_LIMIT_WAIT: i64 = 60 * 60;
@@ -399,6 +401,16 @@ mod tests {
             asked.set(true);
             reply
         }
+    }
+
+    /// The quota-free route names a release's files from its checksum lists only. Buzón publishes
+    /// one list, `SHA256SUMS-linux`, so it must be among them (it read "Not available here" while
+    /// the API was out of quota).
+    #[test]
+    fn the_quota_free_route_reads_the_linux_checksum_list() {
+        assert!(SUMS_LISTS.contains(&"SHA256SUMS-linux"));
+        // The API route already takes every `SHA256SUMS-*` list; the two must agree.
+        assert!(["SHA256SUMS", "SHA256SUMS-macos", "SHA256SUMS-windows"].iter().all(|n| SUMS_LISTS.contains(n)));
     }
 
     #[test]

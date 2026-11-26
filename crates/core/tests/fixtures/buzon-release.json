@@ -1,0 +1,52 @@
+{
+ "tag_name": "v0.1.9",
+ "name": "Buzón 0.1.9",
+ "draft": false,
+ "prerelease": false,
+ "html_url": "https://github.com/getnodalia/buzon/releases/tag/v0.1.9",
+ "published_at": "2026-11-26T21:11:38Z",
+ "assets": [
+  {
+   "name": "appinfo",
+   "size": 71,
+   "browser_download_url": "https://github.com/getnodalia/buzon/releases/download/v0.1.9/appinfo",
+   "digest": "sha256:74b2720faab59b67c7b70be44b6342e1c6a4c6c4623dc8732fe34ed0ae1fe97b",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "name": "buzon-0.1.9-1.fc43.x86_64.rpm",
+   "size": 16328359,
+   "browser_download_url": "https://github.com/getnodalia/buzon/releases/download/v0.1.9/buzon-0.1.9-1.fc43.x86_64.rpm",
+   "digest": "sha256:34103e4be3140e468c1210f4951c51140348268031f5ad4d5f99ae17def70311",
+   "content_type": "application/x-rpm"
+  },
+  {
+   "name": "Buzon-0.1.9-x86_64.AppImage",
+   "size": 129049993,
+   "browser_download_url": "https://github.com/getnodalia/buzon/releases/download/v0.1.9/Buzon-0.1.9-x86_64.AppImage",
+   "digest": "sha256:39d6a46de97450ff857fa1af59675713f37209af11d5b512e4066725332ef832",
+   "content_type": "application/vnd.appimage"
+  },
+  {
+   "name": "Buzon-0.1.9-x86_64.AppImage.zsync",
+   "size": 220736,
+   "browser_download_url": "https://github.com/getnodalia/buzon/releases/download/v0.1.9/Buzon-0.1.9-x86_64.AppImage.zsync",
+   "digest": "sha256:eea86ad6032639b1d6dca33f502fe4b13827d9b08d1a82838cb6a5858fed8e1d",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "name": "buzon_0.1.9-1_amd64.deb",
+   "size": 16209944,
+   "browser_download_url": "https://github.com/getnodalia/buzon/releases/download/v0.1.9/buzon_0.1.9-1_amd64.deb",
+   "digest": "sha256:8cabe22503bf76d6f54ed51b1e08e6f3125a6859042319f37a75daaa5ca5a356",
+   "content_type": "application/x-debian-package"
+  },
+  {
+   "name": "SHA256SUMS-linux",
+   "size": 454,
+   "browser_download_url": "https://github.com/getnodalia/buzon/releases/download/v0.1.9/SHA256SUMS-linux",
+   "digest": "sha256:5379d72c534be65f093d61e37ecb43617a0107d802775f6a94782fc725b863d0",
+   "content_type": "application/octet-stream"
+  }
+ ]
+}
