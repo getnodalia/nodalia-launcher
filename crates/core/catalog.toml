@@ -354,7 +354,7 @@ about = "A fast, private web browser that comes with Nodalix."
 [[apps]]
 id = "codigo"
 name = "Código"
-suite = "everyday"
+suite = "engineering"
 tagline = "Code editor"
 color = [8, 133, 110]
 ink_light = [7, 105, 87]
