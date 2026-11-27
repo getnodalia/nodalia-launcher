@@ -1,4 +1,10 @@
 <p align="center">
+  <a href="https://getnodalia.com">
+    <img src="https://raw.githubusercontent.com/getnodalia/nodalia-web/main/assets/brand/nodalia-wordmark-badge.svg" width="150" alt="Nodalia">
+  </a>
+</p>
+
+<p align="center">
   <img src="assets/app-icon/hicolor/256x256/apps/dev.danielmiguelt.NodaliaLauncher.png" width="128" height="128" alt="Nodalia Launcher icon">
 </p>
 
@@ -113,6 +119,12 @@ New contributors and AI agents: start with [`AGENTS.md`](AGENTS.md). Release pac
 A pull request that bumps `version` in `Cargo.toml` and adds `docs/release-notes/vX.Y.Z.md` releases
 it when it merges: the tag, the packages and the release are all automatic. See
 [`docs/release-notes/README.md`](docs/release-notes/README.md).
+
+## The Nodalia suite
+
+Nodalia Launcher is the application that installs and updates the others in [Nodalia](https://getnodalia.com),
+an independent software project developed in public by
+[Daniel Miguel Tejedor](https://danielmigueltejedor.com).
 
 ## License and credits
 
